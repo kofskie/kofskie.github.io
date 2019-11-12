@@ -20,7 +20,7 @@ body {
 
 .background-head {
     top: 500px;
-    background-image: url("mountainous_forest_banner.png");
+    background-image: url("resources/mountainous_forest_banner.png");
     height: inherit;
     margin: 0px 0px 0px 0px;
     background-repeat: no-repeat;
@@ -93,7 +93,7 @@ body {
 }
 
 #select-oak {
-    background-image: url("oak.jpg");
+    background-image: url("resources/oak.jpg");
     position: relative;
     text-align: center;
     background-color: rgb(94, 80, 21);
@@ -104,7 +104,7 @@ body {
 }
 
 #select-cherry {
-    background-image: url("cherry.jpg");
+    background-image: url("resources/cherry.jpg");
     position: relative;
     text-align: center;
     background-color: rgb(151, 21, 21);
@@ -115,7 +115,7 @@ body {
 }
 
 #select-spruce {
-    background-image: url("birch.jpg");
+    background-image: url("resources/birch.jpg");
     position: relative;
     text-align: center;
     background-color: green;
@@ -126,7 +126,7 @@ body {
 }
 
 #select-pine {
-    background-image: url("pine.jpg");
+    background-image: url("resources/pine.jpg");
     position: relative;
     text-align: center;
     background-color: rgb(162, 197, 34);
