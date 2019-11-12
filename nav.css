@@ -40,6 +40,11 @@ body {
     left: 4.95vw;
     font-size: 1.5em;
     top: -60%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
 }
 
 .title {
@@ -55,6 +60,10 @@ body {
     left: 4.95vw;
     top: -60%;
     font-size: 2.3em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 #selector-tag {
