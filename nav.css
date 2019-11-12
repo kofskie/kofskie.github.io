@@ -1,0 +1,137 @@
+* {
+    margin: 0 0 0 0;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: rgb(23, 61, 11);
+    font-family: sans-serif;
+    height: 4000px;
+}
+
+.main-block {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    height: 100vh;
+    /* border: solid red 2px;   */
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+}
+
+.background-head {
+    top: 500px;
+    background-image: url("mountainous_forest_banner.png");
+    height: inherit;
+    margin: 0px 0px 0px 0px;
+    background-repeat: no-repeat;
+    /* border: solid white 2px; */
+    clip-path: polygon(0 0, 100% 0, 100% 55%, 0% 110.5%);
+}
+
+
+/* "Welcome to" */
+.title-intro {
+    position: relative;
+    /* background-color: rgb(255, 0, 0, 0.5); */
+    font-family: 'Great Vibes', cursive, serif;
+    color: white;
+    text-align: center;
+    width: 90vw;
+    left: 4.95vw;
+    font-size: 1.5em;
+    top: -60%;
+}
+
+.title {
+    line-height: 1.8em;
+    /* background-color: rgb(0, 0, 255, 0.5); */
+    font-family: 'Playfair Display SC', serif;
+    color: white;
+    text-align: center;
+    width: 90vw;
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+    left: 4.95vw;
+    top: -60%;
+    font-size: 2.3em;
+}
+
+#selector-tag {
+    top: 66vh;
+    right: 10vh;
+    position: absolute;
+    color: white;
+    font-family: 'Yellowtail', cursive;
+    font-size: 2em;
+    transform: rotate(-9deg);
+    z-index: -1;
+}
+
+.selector-border {
+    position: absolute;
+    top: 17vh;
+    width: 100vw;
+    height: 150vh;
+    background-color: white;
+    clip-path: polygon(0 54.5%, 100% 33%, 100% 70.5%, 0% 94.5%);
+    z-index: 1;
+}
+
+.selector-block {
+    position: relative;
+    overflow: hidden;
+    top: -32.5vh;
+    background-color: white;
+    gap: 9px;
+    width: 100vw;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    clip-path: polygon(0 36%, 100% 0, 100% 60%, 0% 100%);
+    z-index: 2;
+}
+
+#select-oak {
+    background-image: url("oak.jpg");
+    position: relative;
+    text-align: center;
+    background-color: rgb(94, 80, 21);
+    transition: transform .175s;
+    top: 0%;
+    width: 100%;
+    height: 200%;
+}
+
+#select-cherry {
+    background-image: url("cherry.jpg");
+    position: relative;
+    text-align: center;
+    background-color: rgb(151, 21, 21);
+    transition: transform .175s;
+    top: 0%;
+    width: 100%;
+    height: 200%;
+}
+
+#select-spruce {
+    background-image: url("birch.jpg");
+    position: relative;
+    text-align: center;
+    background-color: green;
+    transition: transform .175s;
+    top: 0%;
+    width: 100%;
+    height: 200%;
+}
+
+#select-pine {
+    background-image: url("pine.jpg");
+    position: relative;
+    text-align: center;
+    background-color: rgb(162, 197, 34);
+    transition: transform .175s;
+    top: 0%;
+    width: 100%;
+    height: 200%;
+}
