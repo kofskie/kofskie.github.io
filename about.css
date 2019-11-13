@@ -25,10 +25,7 @@ h2 {
 }
 
 code {
-    border-top: 8px solid rgb(61, 66, 87);
-    border-right: 8px solid rgb(16, 17, 29);
-    border-bottom: 8px solid rgb(16, 17, 29);
-    border-left: 8px solid rgb(61, 66, 87);
+    border: 8px solid rgb(61, 66, 87);
     font-size: 1.1em;
 }
 
