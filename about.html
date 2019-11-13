@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="about.css" rel="stylesheet">
+
+    <!-- Snippet highlighting -->
+    <link href="atom-one-dark.css" rel="stylesheet">
+    <script src="scripts/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div>
+        <a href="index.html">Back</a>
+    </div>
+    <!-- Update to include better method of entering large amounts of text -->
+    <h1>About (under construction!)</h1>
+    <p>
+        This site was designed with various explorative methods to give me practice <br>
+        and experience with various web design methods and techniques. Forest Club went <br>
+        through multiple iterations, and as such many techniques used didn't make it into <br>
+        the final version. This page documents the different methods and libraries used, as well <br>
+        as their difficulty, performance, and effectiveness. Note that most of this code has changed <br>
+        dramatically, and is provided just to show some of the techniques.
+    </p>
+    <h2>Menu Block (CSS Grid)</h2>
+    <p>
+        CSS Grid was originally used to create the tree selector. The purpose of this was to have <br>
+        easily modifiable and responsive menu items without relying on 3rd party libs or excessive JS. <br>
+        This was achieved by writing a JS script that expanded the hovered item's column width from <br>
+        <b>25%&nbsp;25%&nbsp;25%&nbsp;25%</b>&nbsp;&nbsp;to&nbsp;&nbsp;<b>40%&nbsp;20%&nbsp;20%&nbsp;20%</b>,
+        accordingly. Using the fractions unit will automatically <br>
+        reduce the column width of the other items to make room. Implementation is fairly easy.<br>
+        <br>
+        Here's a snippet of making the menu with a scale and squeeze effect on hover.
+    </p>
+    <pre><code class="javascript">
+    $(function () {
+        $('#select-oak').hover(function () {
+            $('.selector-block').css('grid-template-columns', '2fr 1fr 1fr 1fr');
+        }, function () {
+            $('.selector-block').css('grid-template-columns', '1fr 1fr 1fr 1fr')
+        })
+
+        $('#select-cherry').hover(function () {
+            $('.selector-block').css('grid-template-columns', '1fr 2fr 1fr 1fr');
+        }, function () {
+            $('.selector-block').css('grid-template-columns', '1fr 1fr 1fr 1fr')
+        })
+
+        $('#select-spruce').hover(function () {
+            $('.selector-block').css('grid-template-columns', '1fr 1fr 2fr 1fr');
+        }, function () {
+            $('.selector-block').css('grid-template-columns', '1fr 1fr 1fr 1fr')
+        })
+
+        $('#select-pine').hover(function () {
+            $('.selector-block').css('grid-template-columns', '1fr 1fr 1fr 2fr');
+        }, function () {
+            $('.selector-block').css('grid-template-columns', '1fr 1fr 1fr 1fr')
+        })
+    })
+    </code></pre>
+    <p>The relevant CSS:</p>
+    <pre><code class="css">
+    .selector-block {
+        position: relative;
+        overflow: hidden;
+        top: -32.5vh;
+        background-color: white;
+        gap: 9px;
+        width: 100vw;
+        height: 90vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        clip-path: polygon(0 36%, 100% 0, 100% 60%, 0% 100%);
+        z-index: 2;
+    }
+
+    #select-pine {
+        background-image: url("resources/pine.jpg");
+        position: relative;
+        text-align: center;
+        top: 0%;
+        width: 100%;
+        height: 200%;
+    }
+    </code></pre>
+    <p>The result:</p>
+    <img src="resources/hover1.gif">
+</body>
+
+</html>

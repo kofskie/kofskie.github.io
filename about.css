@@ -1,0 +1,40 @@
+body {
+    background-color: cornsilk;
+    margin-left: 1vw;
+}
+
+p {
+    font-family: "Roboto",
+        sans-serif;
+    font-size: 1.1em;
+    margin-left: 1.2vw;
+}
+
+h1 {
+    font-family: "Roboto",
+        sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: "Roboto",
+        sans-serif;
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+code {
+    border-top: 8px solid rgb(61, 66, 87);
+    border-right: 8px solid rgb(16, 17, 29);
+    border-bottom: 8px solid rgb(16, 17, 29);
+    border-left: 8px solid rgb(61, 66, 87);
+    font-size: 1.1em;
+}
+
+a {
+    text-decoration: none;
+    position: absolute;
+    top: 1vh;
+    font-size: 1.1em;
+}
