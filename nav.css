@@ -20,7 +20,7 @@ body {
 
 .background-head {
     top: 500px;
-    background-image: url("resources/mountainous_forest_banner.png");
+    background-image: url("resources/mountainous_forest_banner.jpg");
     height: inherit;
     margin: 0px 0px 0px 0px;
     background-repeat: no-repeat;
@@ -106,8 +106,7 @@ body {
     position: relative;
     text-align: center;
     background-color: rgb(94, 80, 21);
-    transition: transform .175s;
-    top: 0%;
+    top: 43%;
     width: 100%;
     height: 200%;
 }
