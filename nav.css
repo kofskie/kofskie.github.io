@@ -16,6 +16,7 @@ body {
     height: 100vh;
     /* border: solid red 2px;   */
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    z-index: 2;
 }
 
 .background-head {
@@ -66,15 +67,19 @@ body {
     user-select: none;
 }
 
-#selector-tag {
-    top: 66vh;
-    right: 10vh;
+.selctor-tag {
+    overflow: hidden;
+}
+
+#selector-tag-text {
+    top: 64vh;
+    right: 7vh;
     position: absolute;
     color: white;
     font-family: 'Yellowtail', cursive;
-    font-size: 2em;
+    font-size: 2.75em;
     transform: rotate(-9deg);
-    z-index: 1;
+    z-index: -1;
 }
 
 .selector-border {
