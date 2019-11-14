@@ -3,8 +3,10 @@
 }
 
 body {
+    margin: 0 0 0 0;
     overflow-x: hidden;
     background-color: rgb(23, 61, 11);
+    background-color: black;
     font-family: sans-serif;
     height: 4000px;
 }
@@ -20,15 +22,19 @@ body {
 }
 
 .background-head {
-    top: 500px;
-    background-image: url("resources/mountainous_forest_banner.jpg");
-    height: inherit;
+    position: absolute;
+    top: -17vh;
+    left: 0px;
     margin: 0px 0px 0px 0px;
     background-repeat: no-repeat;
     /* border: solid white 2px; */
     clip-path: polygon(0 0, 100% 0, 100% 55%, 0% 110.5%);
 }
 
+#background-image {
+    width: inherit;
+    height: inherit;
+}
 
 /* "Welcome to" */
 .title-intro {
@@ -40,12 +46,12 @@ body {
     width: 90vw;
     left: 4.95vw;
     font-size: 1.5em;
-    top: -60%;
+    top: -65vh;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-
+    z-index: 9;
 }
 
 .title {
@@ -59,12 +65,13 @@ body {
     padding-top: 0;
     padding-bottom: 0;
     left: 4.95vw;
-    top: -60%;
+    top: -65vh;
     font-size: 2.3em;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    z-index: 9;
 }
 
 .selctor-tag {
@@ -84,12 +91,25 @@ body {
 
 .selector-border {
     position: absolute;
-    top: 17vh;
+    top: 20vh;
     width: 100vw;
-    height: 150vh;
+    height: 146vh;
     background-color: white;
-    clip-path: polygon(0 54.5%, 100% 33%, 100% 70.5%, 0% 94.5%);
+    clip-path: polygon(0 54.5%, 100% 32.25%, 100% 69.75%, 0% 94.5%);
     z-index: 2;
+}
+
+.info-window {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    margin: 10vh 15vw 6vh 15vw;
+    width: 70vw;
+    height: 80vh;
+    background-color: rgb(16, 51, 16);
+    z-index: 10;
+    display: none;
+    border: 20px solid rgb(39, 75, 22);
 }
 
 .selector-block {
@@ -97,7 +117,7 @@ body {
     overflow: hidden;
     top: -32.5vh;
     background-color: white;
-    gap: 9px;
+    gap: 5px;
     width: 100vw;
     height: 90vh;
     display: grid;
@@ -107,7 +127,7 @@ body {
 }
 
 #select-oak {
-    background-image: url("resources/oak.jpg");
+    background-image: url("resources/oak_1.jpg");
     position: relative;
     text-align: center;
     background-color: rgb(94, 80, 21);
@@ -116,30 +136,36 @@ body {
     height: 200%;
 }
 
+
+#inner-oak {
+    position: relative;
+    top: 25vh;
+}
+
 #select-cherry {
-    background-image: url("resources/cherry.jpg");
+    background-image: url("resources/cherry_2.jpg");
     position: relative;
     text-align: center;
     background-color: rgb(151, 21, 21);
     transition: transform .175s;
-    top: 0%;
+    top: 25%;
     width: 100%;
     height: 200%;
 }
 
 #select-spruce {
-    background-image: url("resources/birch.jpg");
+    background-image: url("resources/birch_1.jpg");
     position: relative;
     text-align: center;
     background-color: green;
     transition: transform .175s;
-    top: 0%;
+    top: 13%;
     width: 100%;
     height: 200%;
 }
 
 #select-pine {
-    background-image: url("resources/pine.jpg");
+    background-image: url("resources/pine_1.jpg");
     position: relative;
     text-align: center;
     top: 0%;
