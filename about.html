@@ -96,7 +96,11 @@
     <p>The result:</p>
     <img src="resources/hover1.gif">
 
-    <p>We could do better though. Here's a snippet for the expanding animation.</p>
+    <p><b>The problem with Grid:</b><br>
+        Natively, the CSS Grid property <i>grid-template-columns</i> doesn't support keyframe iterpolation. <br>
+        A workaround using requestAnimationFrame() is required.<br>
+        Here's a snippet for the expanding animation.
+    </p>
     <pre><code class="javascript">
     let start;
     let elapsed = 0;
