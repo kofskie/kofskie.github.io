@@ -1,11 +1,5 @@
 $(function () {
 
-
-
-
-
-
-
     let start;
     let elapsed = 0;
     let rafHandle;
@@ -29,19 +23,11 @@ $(function () {
         elapsed = 0;
         rafHandle = window.requestAnimationFrame(hoverAnimationOak);
     }, function () {
-        // handle mouse leave animation here instead
+        // TODO: animate mouse leave here
         window.cancelAnimationFrame(rafHandle);
         elapsed = Infinity;
         $('.selector-block').css('grid-template-columns', `1fr 1fr 1fr 1fr`);
     })
-
-
-
-
-
-
-
-
 
     function hoverAnimationCherry() {
         if (elapsed <= 100) {
@@ -62,7 +48,7 @@ $(function () {
         elapsed = 0;
         rafHandle = window.requestAnimationFrame(hoverAnimationCherry);
     }, function () {
-        // handle mouse leave animation here instead
+        // handle mouse leave animation
         window.cancelAnimationFrame(rafHandle);
         elapsed = Infinity;
         $('.selector-block').css('grid-template-columns', `1fr 1fr 1fr 1fr`);

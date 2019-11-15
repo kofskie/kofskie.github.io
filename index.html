@@ -7,27 +7,100 @@
     <link
         href="https://fonts.googleapis.com/css?family=Playfair+Display+SC|Great+Vibes|Yellowtail|Noto+Sans+JP&display=swap"
         rel="stylesheet">
-    <link href="main.css" rel="stylesheet">
+    <link href="nav.css" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script src="scripts/popup.js"></script>
 </head>
 
 <body>
-    <a href="forestclub.html">Forest Club (under construction)</a>
+    <div class="main-block">
 
-    <div class="grid">
+        <a id="about-link" href="about.html">About</a>
 
-        <div class="item1">
-            <img src="resources/birch.jpg">
+        <div class="background-head" data-rellax-speed="-7">
+            <img id="background-image" src="resources/mountainous_forest_banner.jpg">
+            <div class="title-intro" data-rellax-speed="-1.7">Welcome to The</div>
+            <div class="title" data-rellax-speed="-1.9">
+                <h1>Forest Club.</h1>
+            </div>
         </div>
-        <div class="item2">
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/rellax@1.10.0/rellax.min.js"></script>
+
+        <script>
+            var rellaxBackground = new Rellax('.background-head');
+            var rellaxTitleIntro = new Rellax('.title-intro');
+            var rellaxTitle = new Rellax('.title');
+        </script>
+    </div>
+
+    <div class="selector-tag">
+        <a id="selector-tag-text">Under Construction!</a>
+    </div>
+
+    <div class="info-window">
+        <h3>About</h3>
+    </div>
+
+    <div class="selector-border"></div>
+    <div class="selector-block">
+
+        <a id="select-oak">
             <img src="resources/oak.jpg">
+            <h2 id="inner-oak">Oak</h2>
+        </a>
+        <div id="select-cherry">
+            <img src="resources/cherry_1.jpg">
+            Cherry
         </div>
-        <div class="item3">
-            <img src="resources/cherry.jpg">
+        <div id="select-spruce">
+            <img src="resources/birch.jpg">
+            Spruce
+        </div>
+        <div id="select-pine">
+            <img src="resources/pine.jpg">
+            Pine
         </div>
     </div>
+    <script src="scripts/hoverbehavior.js"></script>
+
+    <!--LIST MENU<div class="selector-block">
+        <ul>
+            <li>
+                <div id="select-oak">
+                    Oak
+                </div>
+            </li>
+            <li>
+                <div id="select-cherry">
+                    Cherry
+                </div>
+            </li>
+            <li>
+                <div id="select-spruce">
+                    Spruce
+                </div>
+            <li>
+            </li>
+            <div id="select-pine">
+                Pine
+            </div>
+            </li>
+            <li>
+                <div id="select-redwood">
+                </div>
+            </li>
+            <li>
+                <div id="select-palm">
+                </div>
+            </li>
+        </ul>
+    </div>-->
 </body>
 
 </html>
