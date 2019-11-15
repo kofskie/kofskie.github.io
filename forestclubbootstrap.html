@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Forest Club</title>
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Playfair+Display+SC|Great+Vibes|Yellowtail|Noto+Sans+JP&display=swap"
+        rel="stylesheet">
+    <link href="nav.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script src="scripts/hoverbehavior.js"></script>
+    <script src="scripts/popup.js"></script>
+</head>
+
+<body>
+    <div class="main-block">
+
+        <a id="about-link">About</a>
+
+        <div class="background-head" data-rellax-speed="-7">
+            <img id="background-image" src="resources/mountainous_forest_banner.jpg">
+            <div class="title-intro" data-rellax-speed="2.3">Welcome to The</div>
+            <div class="title" data-rellax-speed="1.7">
+                <h1>Forest Club.</h1>
+            </div>
+        </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/rellax@1.10.0/rellax.min.js"></script>
+
+        <script>
+            var rellaxBackground = new Rellax('.background-head');
+            var rellaxTitleIntro = new Rellax('.title-intro');
+            var rellaxTitle = new Rellax('.title');
+        </script>
+    </div>
+
+    <div class="selector-tag">
+        <a id="selector-tag-text">Under Construction!</a>
+    </div>
+
+    <div class="info-window">
+        <h3>About</h3>
+    </div>
+
+    <div class="selector-border"></div>
+    <div class="selector-block">
+
+
+        <img src="resources/oak.jpg"></img>
+
+        <img src="resources/cherry.jpg"></img>
+
+        <div id="select-spruce">
+            <img src="resources/birch.jpg"></img>
+            Spruce
+        </div>
+        <div id="select-pine">
+            <img src="resources/pine.jpg"></img>
+            Pine
+        </div>
+        <div id="select-redwood">
+        </div>
+        <div id="select-palm">
+        </div>
+    </div>
+</body>
+
+</html>

@@ -127,15 +127,27 @@ body {
 }
 
 #select-oak {
-    background-image: url("resources/oak_1.jpg");
     position: relative;
+    overflow: hidden;
     text-align: center;
     background-color: rgb(94, 80, 21);
-    top: 43%;
+    top: 21.5%;
     width: 100%;
     height: 200%;
 }
 
+#select-oak img {
+    position: relative;
+    left: -10vw;
+    transform: scale(1.06);
+    filter: blur(5px);
+}
+
+#select-oak img:hover {
+    filter: none;
+    transform: scale(1.1);
+    transition: ease-in-out 0.4s;
+}
 
 #inner-oak {
     position: relative;
@@ -146,31 +158,71 @@ body {
     background-image: url("resources/cherry_2.jpg");
     position: relative;
     text-align: center;
+    overflow: hidden;
     background-color: rgb(151, 21, 21);
-    transition: transform .175s;
-    top: 25%;
+    top: 12vh;
     width: 100%;
     height: 200%;
+}
+
+#select-cherry img {
+    position: relative;
+    left: -10vw;
+    transform: scale(1.1);
+    filter: blur(5px);
+}
+
+#select-cherry img:hover {
+    filter: none;
+    transform: scale(1.15);
+    transition: all ease-in-out 0.4s;
 }
 
 #select-spruce {
-    background-image: url("resources/birch_1.jpg");
+    background-image: url("resources/birch.jpg");
     position: relative;
+    overflow: hidden;
     text-align: center;
     background-color: green;
-    transition: transform .175s;
-    top: 13%;
+    top: 2vh;
     width: 100%;
     height: 200%;
 }
 
-#select-pine {
-    background-image: url("resources/pine_1.jpg");
+#select-spruce img {
     position: relative;
+    left: -10vw;
+    transform: scale(1.06);
+    filter: blur(5px);
+}
+
+#select-spruce img:hover {
+    filter: none;
+    transform: scale(1.11);
+    transition: all ease-in-out 0.4s;
+}
+
+#select-pine {
+    background-image: url("resources/pine.jpg");
+    position: relative;
+    overflow: hidden;
     text-align: center;
     top: 0%;
     width: 100%;
     height: 200%;
+}
+
+#select-pine img {
+    position: relative;
+    left: -2vw;
+    transform: scale(1.06);
+    filter: blur(5px);
+}
+
+#select-pine img:hover {
+    filter: none;
+    transform: scale(1.11);
+    transition: all ease-in-out 0.4s;
 }
 
 #about-link {
@@ -182,4 +234,14 @@ body {
     left: 1.5vw;
     font-size: 2em;
     font-family: "Yellowtail", cursive, serif;
+}
+
+@keyframes changeWidthOak {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 200%;
+    }
 }
