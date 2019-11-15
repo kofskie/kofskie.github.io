@@ -39,7 +39,7 @@
         accordingly. Using the fractions unit will automatically <br>
         reduce the column width of the other items to make room. Implementation is fairly easy.<br>
         <br>
-        Here's a snippet of making the menu with a scale and squeeze effect on hover.
+        Here's a snippet of making the menu that scales on hover.
     </p>
     <pre><code class="javascript">
     $(function () {
@@ -95,6 +95,24 @@
     </code></pre>
     <p>The result:</p>
     <img src="resources/hover1.gif">
+
+    <p>We could do better though. Here's a snippet for the expanding animation.</p>
+    <pre><code class="javascript">
+            let start;
+            let elapsed = 0;
+            let rafHandle;
+
+            function hoverAnimationOak() {
+            if (elapsed &lt;= 100) { elapsed=new Date().getTime() - start; let val=elapsed / 100;
+                $('.selector-block').css('grid-template-columns', `${1.0 + val}fr 1fr 1fr 1fr`); //console.log(1 +
+                val); //console.log(elapsed); window.setTimeout(function () {
+                rafHandle=window.requestAnimationFrame(hoverAnimationOak); }, 100 / 60); // about 60 FPS } }
+                $('#select-oak').hover(function () { start=new Date().getTime(); elapsed=0;
+                rafHandle=window.requestAnimationFrame(hoverAnimationOak); }, function () { // handle mouse leave
+                animation here instead window.cancelAnimationFrame(rafHandle); elapsed=Infinity;
+                $('.selector-block').css('grid-template-columns', `1fr 1fr 1fr 1fr`); })
+    </code></pre>
+
 </body>
 
 </html>
