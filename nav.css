@@ -8,13 +8,13 @@ body {
     background-color: rgb(23, 61, 11);
     background-color: black;
     font-family: sans-serif;
-    height: 4000px;
+    height: 300vh;
 }
 
 .main-block {
     overflow-x: hidden;
     overflow-y: hidden;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     /* border: solid red 2px;   */
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
@@ -23,8 +23,10 @@ body {
 
 .background-head {
     position: absolute;
+    text-align: center;
+    overflow-x: hidden;
     top: -17vh;
-    left: 0px;
+    left: 0vw;
     margin: 0px 0px 0px 0px;
     background-repeat: no-repeat;
     /* border: solid white 2px; */
@@ -32,13 +34,16 @@ body {
 }
 
 #background-image {
-    width: inherit;
-    height: inherit;
+    position: relative;
+    top: 0vh;
+    max-width: 200vw;
+    min-width: 100vw;
+    height: 100%;
 }
 
 /* "Welcome to" */
 .title-intro {
-    position: relative;
+    position: absolute;
     /* background-color: rgb(255, 0, 0, 0.5); */
     font-family: 'Great Vibes', cursive, serif;
     color: white;
@@ -46,7 +51,7 @@ body {
     width: 90vw;
     left: 4.95vw;
     font-size: 1.5em;
-    top: -65vh;
+    top: 45vh;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -61,11 +66,11 @@ body {
     color: white;
     text-align: center;
     width: 90vw;
-    position: relative;
+    position: absolute;
     padding-top: 0;
     padding-bottom: 0;
     left: 4.95vw;
-    top: -65vh;
+    top: 50vh;
     font-size: 2.3em;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -101,8 +106,8 @@ body {
 
 .info-window {
     position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 0vh;
+    left: 0vw;
     margin: 10vh 15vw 6vh 15vw;
     width: 70vw;
     height: 80vh;
@@ -112,6 +117,8 @@ body {
     border: 20px solid rgb(39, 75, 22);
 }
 
+
+/* MENU */
 .selector-block {
     position: relative;
     overflow: hidden;
@@ -140,22 +147,28 @@ body {
     position: relative;
     left: -10vw;
     transform: scale(1.06);
-    filter: blur(5px);
+    filter: blur(5px) brightness(30%);
 }
 
 #select-oak img:hover {
-    filter: none;
+    filter: blur(2px) brightness(55%);
     transform: scale(1.1);
     transition: ease-in-out 0.4s;
 }
 
 #inner-oak {
-    position: relative;
-    top: 25vh;
+    transform: rotate(-10deg);
+    font-family: "Raleway", serif;
+    font-style: italic;
+    font-size: 6em;
+    color: rgb(253, 249, 244);
+    position: absolute;
+    top: 35vh;
+    left: 6vw;
+    z-index: 10;
 }
 
-#select-cherry {
-    background-image: url("resources/cherry_2.jpg");
+#select-redwood {
     position: relative;
     text-align: center;
     overflow: hidden;
@@ -165,20 +178,20 @@ body {
     height: 200%;
 }
 
-#select-cherry img {
+#select-redwood img {
     position: relative;
     left: -10vw;
     transform: scale(1.1);
-    filter: blur(5px);
+    filter: blur(5px) brightness(50%);
 }
 
-#select-cherry img:hover {
+#select-redwood img:hover {
     filter: none;
     transform: scale(1.15);
     transition: all ease-in-out 0.4s;
 }
 
-#select-spruce {
+#select-birch {
     background-image: url("resources/birch.jpg");
     position: relative;
     overflow: hidden;
@@ -189,14 +202,14 @@ body {
     height: 200%;
 }
 
-#select-spruce img {
+#select-birch img {
     position: relative;
     left: -10vw;
     transform: scale(1.06);
-    filter: blur(5px);
+    filter: blur(5px) brightness(50%);
 }
 
-#select-spruce img:hover {
+#select-birch img:hover {
     filter: none;
     transform: scale(1.11);
     transition: all ease-in-out 0.4s;
@@ -216,7 +229,7 @@ body {
     position: relative;
     left: -2vw;
     transform: scale(1.06);
-    filter: blur(5px);
+    filter: blur(5px) brightness(50%);
 }
 
 #select-pine img:hover {
@@ -236,12 +249,15 @@ body {
     font-family: "Yellowtail", cursive, serif;
 }
 
-@keyframes changeWidthOak {
-    0% {
-        width: 100%;
-    }
+.main-content {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 122vh;
+    background-color: rgb(13, 58, 24);
+}
 
-    100% {
-        width: 200%;
-    }
+#article {
+    display: hidden;
+    background-color: green;
 }

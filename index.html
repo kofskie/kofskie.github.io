@@ -2,17 +2,17 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forest Club</title>
 
     <link
-        href="https://fonts.googleapis.com/css?family=Playfair+Display+SC|Great+Vibes|Yellowtail|Noto+Sans+JP&display=swap"
+        href="https://fonts.googleapis.com/css?family=Playfair+Display+SC|Great+Vibes|Yellowtail|Noto+Sans+JP|Raleway:100i&display=swap"
         rel="stylesheet">
     <link href="nav.css" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-    <script src="scripts/popup.js"></script>
 </head>
 
 <body>
@@ -27,8 +27,6 @@
                 <h1>Forest Club.</h1>
             </div>
         </div>
-
-
 
         <script src="https://cdn.jsdelivr.net/npm/rellax@1.10.0/rellax.min.js"></script>
 
@@ -50,24 +48,32 @@
     <div class="selector-border"></div>
     <div class="selector-block">
 
-        <a id="select-oak">
+        <a id="select-oak" href="#article">
             <img src="resources/oak.jpg">
-            <h2 id="inner-oak">Oak</h2>
+            <h2 id="inner-oak">OAK</h2>
         </a>
-        <div id="select-cherry">
+        <div id="select-redwood">
             <img src="resources/cherry_1.jpg">
-            Cherry
+            <h2 id="inner-redwood">REDWOOD</h2>
         </div>
-        <div id="select-spruce">
+        <div id="select-birch">
             <img src="resources/birch.jpg">
-            Spruce
+            <h2 id="inner-birch">BIRCH</h2>
         </div>
         <div id="select-pine">
             <img src="resources/pine.jpg">
-            Pine
+            <h2 id="inner-pine">PINE</h2>
         </div>
     </div>
+
+    <div class="main-content">
+        <div id="article">
+
+        </div>
+    </div>
+
     <script src="scripts/hoverbehavior.js"></script>
+    <script src="scripts/smoothscroll.js"></script>
 
     <!--LIST MENU<div class="selector-block">
         <ul>

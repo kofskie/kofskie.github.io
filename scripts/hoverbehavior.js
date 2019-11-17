@@ -10,7 +10,7 @@ $(function () {
             let val = elapsed / 100;
 
             $('.selector-block').css('grid-template-columns', `${1.0 + val}fr 1fr 1fr 1fr`);
-            //console.log(1 + val);
+            //console.log(1 + val); 
             //console.log(elapsed);
             window.setTimeout(function () {
                 rafHandle = window.requestAnimationFrame(hoverAnimationOak);
@@ -19,17 +19,36 @@ $(function () {
     }
 
     $('#select-oak').hover(function () {
+
+        // nested hover function to ensure filters aren't lost when mouse target is
+        // an item inside the selector element
+        $('#select-oak img').css('filter', 'blur(2px) brightness(55%)')
+        $('#select-oak img').css('transform', 'scale(1.1)')
+
+        $('#inner-oak').hover(function () {
+            $('#select-oak img').css('filter', 'blur(2px) brightness(55%)')
+            $('#select-oak img').css('transform', 'scale(1.1)')
+        })
+
+        $('#inner-oak').css('left', '14vw');
+        $('#inner-oak').css('top', '31vh');
+        $('#inner-oak').css('font-size', '7em')
         start = new Date().getTime();
         elapsed = 0;
         rafHandle = window.requestAnimationFrame(hoverAnimationOak);
     }, function () {
+        $('#inner-oak').css('left', '7vw');
+        $('#inner-oak').css('top', '35vh');
+        $('#inner-oak').css('font-size', '6em')
+        $('#select-oak img').css('filter', 'blur(5px) brightness(30%)')
+        $('#select-oak img').css('transform', 'scale(1)')
         // TODO: animate mouse leave here
         window.cancelAnimationFrame(rafHandle);
         elapsed = Infinity;
         $('.selector-block').css('grid-template-columns', `1fr 1fr 1fr 1fr`);
     })
 
-    function hoverAnimationCherry() {
+    function hoverAnimationRedwood() {
         if (elapsed <= 100) {
             elapsed = new Date().getTime() - start;
             let val = elapsed / 100;
@@ -38,15 +57,21 @@ $(function () {
             //console.log(1 + val);
             //console.log(elapsed);
             window.setTimeout(function () {
-                rafHandle = window.requestAnimationFrame(hoverAnimationCherry);
+                rafHandle = window.requestAnimationFrame(hoverAnimationRedwood);
             }, 100 / 60); // about 60 FPS
         }
     }
 
-    $('#select-cherry').hover(function () {
+    $('#select-redwood').hover(function () {
+
+        $('#inner-redwood').hover(function () {
+            $('#select-redwood img').css('filter', 'blur(2px) brightness(55%)')
+            $('#select-redwood img').css('transform', 'scale(1.1)')
+        })
+
         start = new Date().getTime();
         elapsed = 0;
-        rafHandle = window.requestAnimationFrame(hoverAnimationCherry);
+        rafHandle = window.requestAnimationFrame(hoverAnimationRedwood);
     }, function () {
         // handle mouse leave animation
         window.cancelAnimationFrame(rafHandle);
@@ -57,7 +82,7 @@ $(function () {
 
 
 
-    function hoverAnimationSpruce() {
+    function hoverAnimationBirch() {
         if (elapsed <= 100) {
             elapsed = new Date().getTime() - start;
             let val = elapsed / 100;
@@ -66,15 +91,15 @@ $(function () {
             //console.log(1 + val);
             //console.log(elapsed);
             window.setTimeout(function () {
-                rafHandle = window.requestAnimationFrame(hoverAnimationSpruce);
+                rafHandle = window.requestAnimationFrame(hoverAnimationBirch);
             }, 100 / 60); // about 60 FPS
         }
     }
 
-    $('#select-spruce').hover(function () {
+    $('#select-birch').hover(function () {
         start = new Date().getTime();
         elapsed = 0;
-        rafHandle = window.requestAnimationFrame(hoverAnimationSpruce);
+        rafHandle = window.requestAnimationFrame(hoverAnimationBirch);
     }, function () {
         // handle mouse leave animation here instead
         window.cancelAnimationFrame(rafHandle);
