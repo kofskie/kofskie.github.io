@@ -162,7 +162,7 @@ body {
     text-decoration: none;
     font-family: "Raleway", serif;
     font-style: italic;
-    font-size: 6vw;
+    font-size: 4vw;
     color: rgb(253, 249, 244);
     position: relative;
     top: -22vh;
@@ -193,6 +193,18 @@ body {
     transition: all ease-in-out 0.4s;
 }
 
+#inner-redwood {
+    text-decoration: none;
+    font-family: "Raleway", serif;
+    font-style: italic;
+    font-size: 4vw;
+    color: rgb(253, 249, 244);
+    position: relative;
+    top: -22vh;
+    left: -6vw;
+    z-index: 10;
+}
+
 #select-birch {
     position: relative;
     overflow: hidden;
@@ -216,6 +228,18 @@ body {
     transition: all ease-in-out 0.4s;
 }
 
+#inner-birch {
+    text-decoration: none;
+    font-family: "Raleway", serif;
+    font-style: italic;
+    font-size: 4vw;
+    color: rgb(253, 249, 244);
+    position: relative;
+    top: -22vh;
+    left: -6vw;
+    z-index: 10;
+}
+
 #select-pine {
     position: relative;
     overflow: hidden;
@@ -236,6 +260,18 @@ body {
     filter: none;
     transform: scale(1.11);
     transition: all ease-in-out 0.4s;
+}
+
+#inner-pine {
+    text-decoration: none;
+    font-family: "Raleway", serif;
+    font-style: italic;
+    font-size: 4vw;
+    color: rgb(253, 249, 244);
+    position: relative;
+    top: -22vh;
+    left: -6vw;
+    z-index: 10;
 }
 
 #about-link {
