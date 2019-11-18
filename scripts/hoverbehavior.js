@@ -4,12 +4,29 @@ $(function () {
     let elapsed = 0;
     let rafHandle;
 
+    let medQ = window.matchMedia("(max-width: 900px)");
+    window.addEventListener("resize", checkGrid);
+
+    function checkGrid() {
+
+        let medQC = window.matchMedia("(max-width: 900px)");
+        if (!medQC.matches) {
+            $('.selector-block').css('grid-template-columns', `1fr 1fr 1fr 1fr`);
+        } else {
+            $('.selector-block').css('grid-template-columns', `1fr 1fr`);
+        }
+    }
+
     function hoverAnimationOak() {
         if (elapsed <= 100) {
             elapsed = new Date().getTime() - start;
             let val = elapsed / 100;
 
-            $('.selector-block').css('grid-template-columns', `${1.0 + val}fr 1fr 1fr 1fr`);
+            if (!medQ.matches) {
+                $('.selector-block').css('grid-template-columns', `${1.0 + val}fr 1fr 1fr 1fr`);
+            } else {
+                $('.selector-block').css('grid-template-columns', `${1.0 + val}fr 1fr`);
+            }
             //console.log(1 + val); 
             //console.log(elapsed);
             window.setTimeout(function () {
@@ -45,7 +62,11 @@ $(function () {
         // TODO: animate mouse leave here
         window.cancelAnimationFrame(rafHandle);
         elapsed = Infinity;
-        $('.selector-block').css('grid-template-columns', `1fr 1fr 1fr 1fr`);
+        if (!medQ.matches) {
+            $('.selector-block').css('grid-template-columns', '1fr 1fr 1fr 1fr');
+        } else {
+            $('.selector-block').css('grid-template-columns', '1fr 1fr');
+        }
     })
 
     function hoverAnimationRedwood() {
@@ -53,7 +74,11 @@ $(function () {
             elapsed = new Date().getTime() - start;
             let val = elapsed / 100;
 
-            $('.selector-block').css('grid-template-columns', `1fr ${1.0 + val}fr 1fr 1fr`);
+            if (!medQ.matches) {
+                $('.selector-block').css('grid-template-columns', `1fr ${1.0 + val}fr 1fr 1fr`);
+            } else {
+                $('.selector-block').css('grid-template-columns', `1fr ${1.0 + val}fr`);
+            }
             //console.log(1 + val);
             //console.log(elapsed);
             window.setTimeout(function () {
@@ -76,7 +101,11 @@ $(function () {
         // handle mouse leave animation
         window.cancelAnimationFrame(rafHandle);
         elapsed = Infinity;
-        $('.selector-block').css('grid-template-columns', `1fr 1fr 1fr 1fr`);
+        if (!medQ.matches) {
+            $('.selector-block').css('grid-template-columns', '1fr 1fr 1fr 1fr');
+        } else {
+            $('.selector-block').css('grid-template-columns', '1fr 1fr');
+        }
     })
 
 
@@ -87,7 +116,11 @@ $(function () {
             elapsed = new Date().getTime() - start;
             let val = elapsed / 100;
 
-            $('.selector-block').css('grid-template-columns', `1fr 1fr ${1.0 + val}fr 1fr`);
+            if (!medQ.matches) {
+                $('.selector-block').css('grid-template-columns', `1fr 1fr ${1.0 + val}fr 1fr`);
+            } else {
+                $('.selector-block').css('grid-template-columns', `${1.0 + val}fr 1fr`);
+            }
             //console.log(1 + val);
             //console.log(elapsed);
             window.setTimeout(function () {
@@ -104,7 +137,12 @@ $(function () {
         // handle mouse leave animation here instead
         window.cancelAnimationFrame(rafHandle);
         elapsed = Infinity;
-        $('.selector-block').css('grid-template-columns', `1fr 1fr 1fr 1fr`);
+
+        if (!medQ.matches) {
+            $('.selector-block').css('grid-template-columns', `1fr 1fr 1fr 1fr`);
+        } else {
+            $('.selector-block').css('grid-template-columns', `1fr 1fr`);
+        }
     })
 
 
@@ -115,7 +153,11 @@ $(function () {
             elapsed = new Date().getTime() - start;
             let val = elapsed / 100;
 
-            $('.selector-block').css('grid-template-columns', `1fr 1fr 1fr ${1.0 + val}fr`);
+            if (!medQ.matches) {
+                $('.selector-block').css('grid-template-columns', `1fr 1fr 1fr ${1.0 + val}fr`);
+            } else {
+                $('.selector-block').css('grid-template-columns', `1fr ${1.0 + val}fr`);
+            }
             //console.log(1 + val);
             //console.log(elapsed);
             window.setTimeout(function () {
@@ -132,7 +174,11 @@ $(function () {
         // handle mouse leave animation here instead
         window.cancelAnimationFrame(rafHandle);
         elapsed = Infinity;
-        $('.selector-block').css('grid-template-columns', `1fr 1fr 1fr 1fr`);
+        if (!medQ.matches) {
+            $('.selector-block').css('grid-template-columns', '1fr 1fr 1fr 1fr');
+        } else {
+            $('.selector-block').css('grid-template-columns', '1fr 1fr');
+        }
     })
 
 
