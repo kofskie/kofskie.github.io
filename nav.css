@@ -162,8 +162,9 @@ body {
     top: -23.65vh;
     z-index: 10;
     background-color: rgb(36, 58, 34);
-    border-top: 6px solid rgb(27, 43, 25);
-    border-bottom: 6px solid rgb(27, 43, 25);
+    border-top: 6px solid rgb(24, 39, 22);
+    border-bottom: 6px solid rgb(24, 39, 22);
+    box-shadow: 0px 0px 5px 1px rgb(1, 5, 0);
 }
 
 #select-redwood {
@@ -194,8 +195,9 @@ body {
     top: -22vh;
     z-index: 10;
     background-color: rgb(36, 58, 34);
-    border-top: 6px solid rgb(27, 43, 25);
-    border-bottom: 6px solid rgb(27, 43, 25);
+    border-top: 6px solid rgb(24, 39, 22);
+    border-bottom: 6px solid rgb(24, 39, 22);
+    box-shadow: 0px 0px 5px 1px rgb(1, 5, 0);
 }
 
 #select-birch {
@@ -227,8 +229,9 @@ body {
     top: -45.4vh;
     left: 0vw;
     z-index: 10;
-    border-top: 6px solid rgb(27, 43, 25);
-    border-bottom: 6px solid rgb(27, 43, 25);
+    border-top: 6px solid rgb(24, 39, 22);
+    border-bottom: 6px solid rgb(24, 39, 22);
+    box-shadow: 0px 0px 5px 1px rgb(1, 5, 0);
 }
 
 #select-pine {
@@ -259,8 +262,9 @@ body {
     left: -3vw;
     z-index: 10;
     background-color: rgb(36, 58, 34);
-    border-top: 6px solid rgb(27, 43, 25);
-    border-bottom: 6px solid rgb(27, 43, 25);
+    border-top: 6px solid rgb(24, 39, 22);
+    border-bottom: 6px solid rgb(24, 39, 22);
+    box-shadow: 0px 0px 5px 1px rgb(1, 5, 0);
 }
 
 #about-link {
@@ -300,7 +304,10 @@ body {
 
     #select-oak img {
         left: -30vw;
+    }
 
+    #inner-oak {
+        top: -24vh;
     }
 
     #select-redwood {
@@ -310,6 +317,20 @@ body {
 
     #select-redwood img {
         top: 20vh;
+    }
+
+    #inner-redwood {
+        top: -22.1vh;
+    }
+
+
+    #inner-birch {
+        top: -78vh;
+
+    }
+
+    #inner-pine {
+        top: -69vh;
     }
 
 }
