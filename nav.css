@@ -146,7 +146,7 @@ body {
 
 #select-oak img {
     position: relative;
-    left: -5vw;
+    left: -2vw;
     transform: scale(1.07);
     filter: blur(5px) brightness(30%);
 }
