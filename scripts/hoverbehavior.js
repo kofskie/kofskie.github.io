@@ -35,30 +35,33 @@ $(function () {
         }
     }
 
-    $('#select-oak').hover(function () {
+    $('#select-oak').mouseenter(function () {
 
         // nested hover function to ensure filters aren't lost when mouse target is
         // an item inside the selector element
-        $('#select-oak img').css('filter', 'blur(2px) brightness(55%)')
-        $('#select-oak img').css('transform', 'scale(1.1)')
+        $('#select-oak img').css('filter', 'blur(2px) brightness(60%)');
+        $('#select-oak img').css('transform', 'scale(1)');
+        $('#select-oak img').css('transition', 'ease-in-out 0.3s');
 
-        $('#inner-oak').hover(function () {
-            $('#select-oak img').css('filter', 'blur(2px) brightness(55%)')
-            $('#select-oak img').css('transform', 'scale(1.1)')
-        })
+        // BORDER AND TEXT MANIPULATION
+        // $('#inner-oak').css('border-top', '10px solid rgb(27, 43, 25)');
+        // $('#inner-oak').css('border-bottom', '10px solid rgb(27, 43, 25)');
 
-        $('#inner-oak').css('left', '14vw');
-        $('#inner-oak').css('top', '31vh');
-        $('#inner-oak').css('font-size', '7em')
+        // $('#inner-oak').css('left', '14vw');
+        // $('#inner-oak').css('top', '31vh');
+        // $('#inner-oak').css('font-size', '7em')
         start = new Date().getTime();
         elapsed = 0;
         rafHandle = window.requestAnimationFrame(hoverAnimationOak);
-    }, function () {
-        $('#inner-oak').css('left', '7vw');
-        $('#inner-oak').css('top', '35vh');
-        $('#inner-oak').css('font-size', '6em')
+    });
+    $('#select-oak').mouseleave(function (e) {
+        // $('#inner-oak').css('left', '7vw');
+        // $('#inner-oak').css('top', '35vh');
+        // $('#inner-oak').css('font-size', '6em')
+
         $('#select-oak img').css('filter', 'blur(5px) brightness(30%)')
-        $('#select-oak img').css('transform', 'scale(1)')
+        $('#select-oak img').css('transform', 'scale(1.05)')
+
         // TODO: animate mouse leave here
         window.cancelAnimationFrame(rafHandle);
         elapsed = Infinity;
@@ -87,17 +90,22 @@ $(function () {
         }
     }
 
-    $('#select-redwood').hover(function () {
+    $('#select-redwood').mouseenter(function () {
 
-        $('#inner-redwood').hover(function () {
-            $('#select-redwood img').css('filter', 'blur(2px) brightness(55%)')
-            $('#select-redwood img').css('transform', 'scale(1.1)')
-        })
+        $('#select-redwood img').css('filter', 'blur(2px) brightness(60%)');
+        $('#select-redwood img').css('transform', 'scale(1.1)');
+        $('#select-redwood img').css('transition', 'ease-in-out 0.3s');
 
         start = new Date().getTime();
         elapsed = 0;
         rafHandle = window.requestAnimationFrame(hoverAnimationRedwood);
-    }, function () {
+    });
+
+    $('#select-redwood').mouseleave(function () {
+
+        $('#select-redwood img').css('filter', 'blur(5px) brightness(30%)');
+        $('#select-redwood img').css('transform', 'scale(1.15)');
+
         // handle mouse leave animation
         window.cancelAnimationFrame(rafHandle);
         elapsed = Infinity;
@@ -107,8 +115,6 @@ $(function () {
             $('.selector-block').css('grid-template-columns', '1fr 1fr');
         }
     })
-
-
 
 
     function hoverAnimationBirch() {
@@ -129,11 +135,22 @@ $(function () {
         }
     }
 
-    $('#select-birch').hover(function () {
+    $('#select-birch').mouseenter(function () {
+
+        $('#select-birch img').css('filter', 'blur(2px) brightness(60%)');
+        $('#select-birch img').css('transform', 'scale(1.06)');
+        $('#select-birch img').css('transition', 'ease-in-out 0.3s');
+
         start = new Date().getTime();
         elapsed = 0;
         rafHandle = window.requestAnimationFrame(hoverAnimationBirch);
-    }, function () {
+    });
+
+    $('#select-birch').mouseleave(function () {
+
+        $('#select-birch img').css('filter', 'blur(5px) brightness(30%)');
+        $('#select-birch img').css('transform', 'scale(1.11)');
+
         // handle mouse leave animation here instead
         window.cancelAnimationFrame(rafHandle);
         elapsed = Infinity;
@@ -166,11 +183,22 @@ $(function () {
         }
     }
 
-    $('#select-pine').hover(function () {
+    $('#select-pine').mouseenter(function () {
+
+        $('#select-pine img').css('filter', 'blur(2px) brightness(60%)');
+        $('#select-pine img').css('transform', 'scale(1.06)');
+        $('#select-pine img').css('transition', 'ease-in-out 0.3s');
+
         start = new Date().getTime();
         elapsed = 0;
         rafHandle = window.requestAnimationFrame(hoverAnimationPine);
-    }, function () {
+    });
+
+    $('#select-pine').mouseleave(function () {
+
+        $('#select-pine img').css('filter', 'blur(5px) brightness(30%)');
+        $('#select-pine img').css('transform', 'scale(1.11)');
+
         // handle mouse leave animation here instead
         window.cancelAnimationFrame(rafHandle);
         elapsed = Infinity;
