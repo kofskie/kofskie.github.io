@@ -124,7 +124,7 @@ body {
     top: 82.5vh;
     left: -2vw;
     background-color: white;
-    gap: 5px;
+    gap: 6px;
     width: 110vw;
     height: 60vh;
     display: grid;
@@ -330,7 +330,7 @@ body {
     }
 
     #inner-pine {
-        top: -69vh;
+        top: -69.75vh;
     }
 
 }
