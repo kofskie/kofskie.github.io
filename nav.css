@@ -6,17 +6,15 @@
 body {
     margin: 0 0 0 0;
     overflow-x: hidden;
-    background-color: rgb(23, 61, 11);
-    background-color: black;
+    background-color: rgb(13, 58, 24);
     font-family: sans-serif;
-    height: 300vh;
 }
 
 .main-block {
     overflow-x: hidden;
     overflow-y: hidden;
     width: 100vw;
-    height: 100vh;
+    height: 163vh;
     /* border: solid red 2px;   */
     z-index: 2;
 }
@@ -278,19 +276,167 @@ body {
     font-family: "Yellowtail", cursive, serif;
 }
 
-.main-content {
+#main-content {
+    display: none;
     position: absolute;
     width: 100vw;
-    height: 100vh;
-    top: 122vh;
+    height: 150vh;
+    top: 165vh;
     background-color: rgb(13, 58, 24);
 }
 
-#article {
-    display: hidden;
-    background-color: green;
+#main-content h2 {
+    position: relative;
+    left: 25vw;
+    /* transform: rotate(-9deg); */
 }
 
+.content-head-main {
+    font-family: "Playfair Display SC", serif;
+    font-size: 6vw;
+    color: white;
+    text-shadow: 3px 3px 2px black;
+}
+
+.content-head-taxonomic {
+    font-family: "Great Vibes", serif;
+    font-style: italic;
+    font-size: 4vw;
+    color: wheat;
+    text-shadow: 3px 3px 2px black;
+}
+
+#article {
+    position: relative;
+    display: hidden;
+    font-size: 2vw;
+    color: white;
+    top: 15vh;
+    left: 13vw;
+}
+
+/* Sidebar Tags */
+
+#tag-1 {
+    display: none;
+    position: fixed;
+    top: 25vh;
+    left: 3vw;
+    z-index: 10;
+    filter: drop-shadow(-2px 4px wheat)
+}
+
+#tag-1 span {
+    display: inherit;
+    font-family: "Yellowtail", serif;
+    font-size: 2vw;
+    position: relative;
+    top: 5.75vh;
+    left: 3.5vw;
+    color: white;
+    z-index: 10;
+}
+
+
+#tag-2 {
+    display: none;
+    position: fixed;
+    top: 35vh;
+    left: 3vw;
+    z-index: 10;
+    filter: drop-shadow(-2px 4px wheat)
+}
+
+#tag-2 span {
+    display: inherit;
+    font-family: "Yellowtail", serif;
+    font-size: 2vw;
+    position: relative;
+    top: 5.75vh;
+    left: 3.5vw;
+    color: white;
+    z-index: 10;
+}
+
+
+#tag-3 {
+    display: none;
+    position: fixed;
+    top: 45vh;
+    left: 3vw;
+    z-index: 10;
+    filter: drop-shadow(-2px 4px wheat)
+}
+
+#tag-3 span {
+    display: inherit;
+    font-family: "Yellowtail", serif;
+    font-size: 2vw;
+    position: relative;
+    top: 5.75vh;
+    left: 3.5vw;
+    color: white;
+    z-index: 10;
+}
+
+
+#tag-4 {
+    display: none;
+    position: fixed;
+    top: 55vh;
+    left: 3vw;
+    z-index: 10;
+    filter: drop-shadow(-2px 4px wheat)
+}
+
+#tag-4 span {
+    display: inherit;
+    font-family: "Yellowtail", serif;
+    font-size: 2vw;
+    position: relative;
+    top: 5.75vh;
+    left: 3.5vw;
+    color: white;
+    z-index: 10;
+}
+
+/* Animations */
+@keyframes header2-slide-in {
+    from {
+        top: -60vh;
+        opacity: 0;
+    }
+
+    to {
+        top: 2vh;
+        opacity: 1;
+    }
+}
+
+@keyframes article-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.8;
+    }
+}
+
+@keyframes tag-slide-in {
+    from {
+        left: -10vw;
+        opacity: 0;
+    }
+
+    to {
+        left: 3vw;
+        opacity: 1;
+    }
+}
+
+
+/* Responsive functions */
 @media only screen and (max-width: 900px) {
     .selector-block {
         grid-template-columns: 1fr 1fr;

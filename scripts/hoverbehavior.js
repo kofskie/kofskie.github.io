@@ -39,7 +39,7 @@ $(function () {
 
         // nested hover function to ensure filters aren't lost when mouse target is
         // an item inside the selector element
-        $('#select-oak img').css('filter', 'blur(2px) brightness(60%)');
+        $('#select-oak img').css('filter', 'blur(0px) brightness(60%)');
         $('#select-oak img').css('transform', 'scale(1)');
         $('#select-oak img').css('transition', 'ease-in-out 0.3s');
 
@@ -92,7 +92,7 @@ $(function () {
 
     $('#select-redwood').mouseenter(function () {
 
-        $('#select-redwood img').css('filter', 'blur(2px) brightness(60%)');
+        $('#select-redwood img').css('filter', 'blur(0px) brightness(60%)');
         $('#select-redwood img').css('transform', 'scale(1.1)');
         $('#select-redwood img').css('transition', 'ease-in-out 0.3s');
 
@@ -137,7 +137,7 @@ $(function () {
 
     $('#select-birch').mouseenter(function () {
 
-        $('#select-birch img').css('filter', 'blur(2px) brightness(60%)');
+        $('#select-birch img').css('filter', 'blur(0px) brightness(60%)');
         $('#select-birch img').css('transform', 'scale(1.06)');
         $('#select-birch img').css('transition', 'ease-in-out 0.3s');
 
@@ -185,7 +185,7 @@ $(function () {
 
     $('#select-pine').mouseenter(function () {
 
-        $('#select-pine img').css('filter', 'blur(2px) brightness(60%)');
+        $('#select-pine img').css('filter', 'blur(0px) brightness(60%)');
         $('#select-pine img').css('transform', 'scale(1.06)');
         $('#select-pine img').css('transition', 'ease-in-out 0.3s');
 
