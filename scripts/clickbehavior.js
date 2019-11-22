@@ -19,42 +19,73 @@ $(function () {
     // var birchStrM = "Redwood ";
     // var birchStrT = " (Sequoia sempervirens)";
 
-    var birchStrM = "Yellow Birch ";
+    var birchStrM = "Birch ";
     var birchStrT = " (Betula Alleghaniensis)";
 
     var scrollPos;
+    var isTagActive = false;
 
     $(window).scroll(function () {
         scrollPos = $(document).scrollTop();
         console.log(scrollPos);
 
         if (scrollPos >= 1400) {
+            isTagActive = true;
+            // Start staggered tag slide-in animation
             $('#tag-1').css({
                 "display": "block",
                 "animation-name": "tag-slide-in",
-                "animation-duration": "0.8s"
+                "animation-duration": "0.6s"
             });
             $('#tag-2').css({
                 "display": "block",
                 "animation-name": "tag-slide-in",
-                "animation-duration": "1s"
+                "animation-duration": "0.8s"
             });
             $('#tag-3').css({
                 "display": "block",
                 "animation-name": "tag-slide-in",
-                "animation-duration": "1.2s"
+                "animation-duration": "1s"
             });
             $('#tag-4').css({
                 "display": "block",
                 "animation-name": "tag-slide-in",
-                "animation-duration": "1.4s"
+                "animation-duration": "1.2s"
             });
             console.log("confirm");
-        } else if (scrollPos < 1200) {
-            $('#tag-1').css("display", "none");
-            $('#tag-2').css("display", "none");
-            $('#tag-3').css("display", "none");
-            $('#tag-4').css("display", "none");
+
+        } else if (scrollPos < 1100) {
+            if (isTagActive) {
+                $('#tag-1').css({
+                    "display": "block",
+                    "animation-name": "tag-slide-out",
+                    "animation-duration": "0.5s",
+                    "animation-iteration-count": "1",
+                    "animation-fill-mode": "forwards"
+                });
+                $('#tag-2').css({
+                    "display": "block",
+                    "animation-name": "tag-slide-out",
+                    "animation-duration": "0.4s",
+                    "animation-iteration-count": "1",
+                    "animation-fill-mode": "forwards"
+                });
+                $('#tag-3').css({
+                    "display": "block",
+                    "animation-name": "tag-slide-out",
+                    "animation-duration": "0.3s",
+                    "animation-iteration-count": "1",
+                    "animation-fill-mode": "forwards"
+                });
+                $('#tag-4').css({
+                    "display": "block",
+                    "animation-name": "tag-slide-out",
+                    "animation-duration": "0.2s",
+                    "animation-iteration-count": "1",
+                    "animation-fill-mode": "forwards"
+                });
+            }
+            isTagActive = false;
         }
     });
 
@@ -63,7 +94,7 @@ $(function () {
         var target = $(event.target);
 
 
-        // Make sure this.hash has a value before overriding default behavior
+        // Ensures this.hash has a value before overriding default behavior
         if (this.hash !== "") {
 
             $('#main-content').css("display", "block");
@@ -76,7 +107,6 @@ $(function () {
 
 
             if ($(target).parents('#select-oak').length) {
-
                 $('.content-head-main').html(oakStrM);
                 $('.content-head-taxonomic').html(oakStrT);
                 $('#article').html(lorem);

@@ -6,7 +6,7 @@
 body {
     margin: 0 0 0 0;
     overflow-x: hidden;
-    background-color: rgb(13, 58, 24);
+    background-color: rgb(14, 49, 23);
     font-family: sans-serif;
 }
 
@@ -110,7 +110,7 @@ body {
     height: 61vh;
     left: -2vw;
     background-color: white;
-    z-index: 3;
+    z-index: 8;
     transform: rotate(-9deg) skew(-9deg);
 }
 
@@ -128,7 +128,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     transform: rotate(-9deg) skew(-9deg);
-    z-index: 3;
+    z-index: 9;
 }
 
 
@@ -280,14 +280,14 @@ body {
     display: none;
     position: absolute;
     width: 100vw;
-    height: 150vh;
+    height: 100vh;
     top: 165vh;
-    background-color: rgb(13, 58, 24);
+    background-color: rgb(14, 49, 23);
 }
 
 #main-content h2 {
     position: relative;
-    left: 25vw;
+    left: 26vw;
     /* transform: rotate(-9deg); */
 }
 
@@ -318,11 +318,12 @@ body {
 /* Sidebar Tags */
 
 #tag-1 {
+    fill: rgb(2, 22, 8);
     display: none;
     position: fixed;
     top: 25vh;
     left: 3vw;
-    z-index: 10;
+    z-index: 6;
     filter: drop-shadow(-2px 4px wheat)
 }
 
@@ -334,16 +335,17 @@ body {
     top: 5.75vh;
     left: 3.5vw;
     color: white;
-    z-index: 10;
+    z-index: 7;
 }
 
 
 #tag-2 {
+    fill: rgb(2, 22, 8);
     display: none;
     position: fixed;
     top: 35vh;
     left: 3vw;
-    z-index: 10;
+    z-index: 6;
     filter: drop-shadow(-2px 4px wheat)
 }
 
@@ -355,16 +357,17 @@ body {
     top: 5.75vh;
     left: 3.5vw;
     color: white;
-    z-index: 10;
+    z-index: 7;
 }
 
 
 #tag-3 {
+    fill: rgb(2, 22, 8);
     display: none;
     position: fixed;
     top: 45vh;
     left: 3vw;
-    z-index: 10;
+    z-index: 6;
     filter: drop-shadow(-2px 4px wheat)
 }
 
@@ -376,16 +379,17 @@ body {
     top: 5.75vh;
     left: 3.5vw;
     color: white;
-    z-index: 10;
+    z-index: 7;
 }
 
 
 #tag-4 {
+    fill: rgb(2, 22, 8);
     display: none;
     position: fixed;
     top: 55vh;
     left: 3vw;
-    z-index: 10;
+    z-index: 6;
     filter: drop-shadow(-2px 4px wheat)
 }
 
@@ -397,7 +401,7 @@ body {
     top: 5.75vh;
     left: 3.5vw;
     color: white;
-    z-index: 10;
+    z-index: 7;
 }
 
 /* Animations */
@@ -432,6 +436,18 @@ body {
     to {
         left: 3vw;
         opacity: 1;
+    }
+}
+
+@keyframes tag-slide-out {
+    from {
+        left: 3vw;
+        opacity: 1;
+    }
+
+    to {
+        left: -10vw;
+        opacity: 0;
     }
 }
 
