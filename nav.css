@@ -276,18 +276,27 @@ body {
     font-family: "Yellowtail", cursive, serif;
 }
 
-#main-content {
-    display: none;
+#main-layout {
     position: absolute;
-    width: 100vw;
-    height: 100vh;
-    top: 165vh;
-    background-color: rgb(14, 49, 23);
+    display: none;
+    margin-left: 2.5%;
+    margin-right: 50px;
+    width: 95%;
+    top: 1500px;
+    grid-template-columns: [sidebar-start] 20% [content-start] auto [content-end];
+    grid-template-rows: 20% auto;
+    background-color: red;
 }
 
-#main-content h2 {
-    position: relative;
-    left: 26vw;
+/* #main-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(14, 49, 23);
+} */
+
+#main-content-header {
+    grid-column-start: content-start;
+    grid-column-end: content-end;
     /* transform: rotate(-9deg); */
 }
 
@@ -311,18 +320,22 @@ body {
     display: hidden;
     font-size: 2vw;
     color: white;
-    top: 15vh;
-    left: 13vw;
+    height: 1000px;
+    grid-area: content;
 }
 
 /* Sidebar Tags */
 
+.tags {
+    display: inline-block;
+    grid-column-start: 1;
+    z-index: 10;
+}
+
 #tag-1 {
-    fill: rgb(2, 22, 8);
-    display: none;
     position: fixed;
-    top: 25vh;
-    left: 3vw;
+    top: 20%;
+    fill: rgb(2, 22, 8);
     z-index: 6;
     filter: drop-shadow(-2px 4px wheat)
 }
@@ -340,11 +353,9 @@ body {
 
 
 #tag-2 {
-    fill: rgb(2, 22, 8);
-    display: none;
     position: fixed;
-    top: 35vh;
-    left: 3vw;
+    top: 30%;
+    fill: rgb(2, 22, 8);
     z-index: 6;
     filter: drop-shadow(-2px 4px wheat)
 }
@@ -362,11 +373,9 @@ body {
 
 
 #tag-3 {
-    fill: rgb(2, 22, 8);
-    display: none;
     position: fixed;
-    top: 45vh;
-    left: 3vw;
+    top: 40%;
+    fill: rgb(2, 22, 8);
     z-index: 6;
     filter: drop-shadow(-2px 4px wheat)
 }
@@ -384,11 +393,9 @@ body {
 
 
 #tag-4 {
-    fill: rgb(2, 22, 8);
-    display: none;
     position: fixed;
-    top: 55vh;
-    left: 3vw;
+    top: 50%;
+    fill: rgb(2, 22, 8);
     z-index: 6;
     filter: drop-shadow(-2px 4px wheat)
 }

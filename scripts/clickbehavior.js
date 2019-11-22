@@ -16,8 +16,8 @@ $(function () {
     var redwoodStrM = "Redwood ";
     var redwoodStrT = " (Sequoia Sempervirens)";
 
-    // var birchStrM = "Redwood ";
-    // var birchStrT = " (Sequoia sempervirens)";
+    var pineStrM = "Pine ";
+    var pineStrT = " (Pinus lambertiana)";
 
     var birchStrM = "Birch ";
     var birchStrT = " (Betula Alleghaniensis)";
@@ -29,64 +29,58 @@ $(function () {
         scrollPos = $(document).scrollTop();
         console.log(scrollPos);
 
-        if (scrollPos >= 1400) {
-            isTagActive = true;
-            // Start staggered tag slide-in animation
-            $('#tag-1').css({
-                "display": "block",
-                "animation-name": "tag-slide-in",
-                "animation-duration": "0.6s"
-            });
-            $('#tag-2').css({
-                "display": "block",
-                "animation-name": "tag-slide-in",
-                "animation-duration": "0.8s"
-            });
-            $('#tag-3').css({
-                "display": "block",
-                "animation-name": "tag-slide-in",
-                "animation-duration": "1s"
-            });
-            $('#tag-4').css({
-                "display": "block",
-                "animation-name": "tag-slide-in",
-                "animation-duration": "1.2s"
-            });
-            console.log("confirm");
+        // if (scrollPos >= 1300) {
+        //     isTagActive = true;
+        //     $('.tags').css("display", "inline-block");
+        //     // Start staggered tag slide-in animation
+        //     $('#tag-1').css({
+        //         "animation-name": "tag-slide-in",
+        //         "animation-duration": "0.6s"
+        //     });
+        //     $('#tag-2').css({
+        //         "animation-name": "tag-slide-in",
+        //         "animation-duration": "0.8s"
+        //     });
+        //     $('#tag-3').css({
+        //         "animation-name": "tag-slide-in",
+        //         "animation-duration": "1s"
+        //     });
+        //     $('#tag-4').css({
+        //         "animation-name": "tag-slide-in",
+        //         "animation-duration": "1.2s"
+        //     });
+        //     console.log("confirm");
 
-        } else if (scrollPos < 1100) {
-            if (isTagActive) {
-                $('#tag-1').css({
-                    "display": "block",
-                    "animation-name": "tag-slide-out",
-                    "animation-duration": "0.5s",
-                    "animation-iteration-count": "1",
-                    "animation-fill-mode": "forwards"
-                });
-                $('#tag-2').css({
-                    "display": "block",
-                    "animation-name": "tag-slide-out",
-                    "animation-duration": "0.4s",
-                    "animation-iteration-count": "1",
-                    "animation-fill-mode": "forwards"
-                });
-                $('#tag-3').css({
-                    "display": "block",
-                    "animation-name": "tag-slide-out",
-                    "animation-duration": "0.3s",
-                    "animation-iteration-count": "1",
-                    "animation-fill-mode": "forwards"
-                });
-                $('#tag-4').css({
-                    "display": "block",
-                    "animation-name": "tag-slide-out",
-                    "animation-duration": "0.2s",
-                    "animation-iteration-count": "1",
-                    "animation-fill-mode": "forwards"
-                });
-            }
-            isTagActive = false;
-        }
+        // } else if (scrollPos < 1100) {
+        //     if (isTagActive) {
+        //         $('.tags').css("display", "block");
+        //         $('#tag-1').css({
+        //             "animation-name": "tag-slide-out",
+        //             "animation-duration": "0.5s",
+        //             "animation-iteration-count": "1",
+        //             "animation-fill-mode": "forwards"
+        //         });
+        //         $('#tag-2').css({
+        //             "animation-name": "tag-slide-out",
+        //             "animation-duration": "0.4s",
+        //             "animation-iteration-count": "1",
+        //             "animation-fill-mode": "forwards"
+        //         });
+        //         $('#tag-3').css({
+        //             "animation-name": "tag-slide-out",
+        //             "animation-duration": "0.3s",
+        //             "animation-iteration-count": "1",
+        //             "animation-fill-mode": "forwards"
+        //         });
+        //         $('#tag-4').css({
+        //             "animation-name": "tag-slide-out",
+        //             "animation-duration": "0.2s",
+        //             "animation-iteration-count": "1",
+        //             "animation-fill-mode": "forwards"
+        //         });
+        //     }
+        //     isTagActive = false;
+        // }
     });
 
     $("a").on('click', function (event) {
@@ -94,11 +88,11 @@ $(function () {
         var target = $(event.target);
 
 
-        // Ensures this.hash has a value before overriding default behavior
+        // Ensure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
 
-            $('#main-content').css("display", "block");
-            $('#main-content h2').css({
+            $('#main-layout').css("display", "grid");
+            $('#main-content-header').css({
                 "animation-name": "header2-slide-in",
                 "animation-duration": "1s",
                 "animation-iteration-count": "1",
@@ -139,9 +133,9 @@ $(function () {
                     "animation-fill-mode": "forwards"
                 })
 
-            } else if ($(target).parents('#select-redwood').length) {
-                $('.content-head-main').html(redwoodStrM);
-                $('.content-head-taxonomic').html(redwoodStrT);
+            } else if ($(target).parents('#select-pine').length) {
+                $('.content-head-main').html(pineStrM);
+                $('.content-head-taxonomic').html(pineStrT);
                 $('#article').html(lorem);
                 $('#article').css({
                     "animation-name": "article-fade-in",
