@@ -29,58 +29,58 @@ $(function () {
         scrollPos = $(document).scrollTop();
         console.log(scrollPos);
 
-        // if (scrollPos >= 1300) {
-        //     isTagActive = true;
-        //     $('.tags').css("display", "inline-block");
-        //     // Start staggered tag slide-in animation
-        //     $('#tag-1').css({
-        //         "animation-name": "tag-slide-in",
-        //         "animation-duration": "0.6s"
-        //     });
-        //     $('#tag-2').css({
-        //         "animation-name": "tag-slide-in",
-        //         "animation-duration": "0.8s"
-        //     });
-        //     $('#tag-3').css({
-        //         "animation-name": "tag-slide-in",
-        //         "animation-duration": "1s"
-        //     });
-        //     $('#tag-4').css({
-        //         "animation-name": "tag-slide-in",
-        //         "animation-duration": "1.2s"
-        //     });
-        //     console.log("confirm");
+        if (scrollPos >= 900) {
+            isTagActive = true;
+            $('.tags').css("display", "inline-block");
+            // Start staggered tag slide-in animation
+            $('#tag-1').css({
+                "animation-name": "tag-slide-in",
+                "animation-duration": "0.6s"
+            });
+            $('#tag-2').css({
+                "animation-name": "tag-slide-in",
+                "animation-duration": "0.8s"
+            });
+            $('#tag-3').css({
+                "animation-name": "tag-slide-in",
+                "animation-duration": "1s"
+            });
+            $('#tag-4').css({
+                "animation-name": "tag-slide-in",
+                "animation-duration": "1.2s"
+            });
+            console.log("confirm");
 
-        // } else if (scrollPos < 1100) {
-        //     if (isTagActive) {
-        //         $('.tags').css("display", "block");
-        //         $('#tag-1').css({
-        //             "animation-name": "tag-slide-out",
-        //             "animation-duration": "0.5s",
-        //             "animation-iteration-count": "1",
-        //             "animation-fill-mode": "forwards"
-        //         });
-        //         $('#tag-2').css({
-        //             "animation-name": "tag-slide-out",
-        //             "animation-duration": "0.4s",
-        //             "animation-iteration-count": "1",
-        //             "animation-fill-mode": "forwards"
-        //         });
-        //         $('#tag-3').css({
-        //             "animation-name": "tag-slide-out",
-        //             "animation-duration": "0.3s",
-        //             "animation-iteration-count": "1",
-        //             "animation-fill-mode": "forwards"
-        //         });
-        //         $('#tag-4').css({
-        //             "animation-name": "tag-slide-out",
-        //             "animation-duration": "0.2s",
-        //             "animation-iteration-count": "1",
-        //             "animation-fill-mode": "forwards"
-        //         });
-        //     }
-        //     isTagActive = false;
-        // }
+        } else if (scrollPos < 1400) {
+            if (isTagActive) {
+                $('.tags').css("display", "block");
+                $('#tag-1').css({
+                    "animation-name": "tag-slide-out",
+                    "animation-duration": "0.5s",
+                    "animation-iteration-count": "1",
+                    "animation-fill-mode": "forwards"
+                });
+                $('#tag-2').css({
+                    "animation-name": "tag-slide-out",
+                    "animation-duration": "0.4s",
+                    "animation-iteration-count": "1",
+                    "animation-fill-mode": "forwards"
+                });
+                $('#tag-3').css({
+                    "animation-name": "tag-slide-out",
+                    "animation-duration": "0.3s",
+                    "animation-iteration-count": "1",
+                    "animation-fill-mode": "forwards"
+                });
+                $('#tag-4').css({
+                    "animation-name": "tag-slide-out",
+                    "animation-duration": "0.2s",
+                    "animation-iteration-count": "1",
+                    "animation-fill-mode": "forwards"
+                });
+            }
+            isTagActive = false;
+        }
     });
 
     $("a").on('click', function (event) {
