@@ -1,9 +1,12 @@
-body, html {
+body,
+html {
     height: 100%;
     margin: 0 0 0 0;
     overflow-x: hidden;
     background-color: rgb(9, 41, 17);
-} * {
+}
+
+* {
     text-decoration: none;
 }
 
@@ -15,14 +18,13 @@ body, html {
     /* CHANGE TO POS FROM BOTTOM */
     /* TODO top: -17vh; */
     background-repeat: no-repeat;
-    height: 800px;
+    height: 96vh;
     /* border: solid white 2px; */
 }
 
 #background-image {
-    min-width: 100%;
-    min-height: 100%;
-    max-height: 100%;
+    width: auto;
+
     z-index: 0;
 }
 
@@ -148,7 +150,7 @@ body, html {
     color: rgb(253, 249, 244);
     text-shadow: 3px 3px 1px rgb(14, 29, 6);
     top: -374px;
-        height: 55px;
+    height: 55px;
     z-index: 4;
     background-color: rgb(36, 58, 34);
     border-top: 6px solid rgb(24, 39, 22);
@@ -183,7 +185,7 @@ body, html {
     text-shadow: 3px 3px 1px rgb(14, 29, 6);
     position: relative;
     top: -593px;
-        height: 55px;
+    height: 55px;
     z-index: 4;
     border-top: 6px solid rgb(24, 39, 22);
     border-bottom: 6px solid rgb(24, 39, 22);
