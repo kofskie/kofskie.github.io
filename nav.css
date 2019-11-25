@@ -18,7 +18,7 @@ html {
     /* CHANGE TO POS FROM BOTTOM */
     /* TODO top: -17vh; */
     background-repeat: no-repeat;
-    height: 96vh;
+    height: 100vh;
     /* border: solid white 2px; */
 }
 
@@ -37,7 +37,7 @@ html {
     text-align: center;
     width: 100vw;
     font-size: 1.5em;
-    top: 200px;
+    top: 35%;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -52,7 +52,7 @@ html {
     text-align: center;
     width: 100vw;
     position: absolute;
-    top: 175px;
+    top: 35%;
     font-size: 2.3em;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -61,16 +61,24 @@ html {
     z-index: 1;
 }
 
+.menu-container {
+    position: absolute;
+    background-color: aqua;
+    top: 80vh;
+    height: 60vh;
+    width: 100vw;
+    z-index: 10;
+}
 
 .selector-border-container {
-    position: absolute;
-    top: 80vh;
-    width: 110vw;
-    height: 390px;
-    margin-bottom: 6px;
-    left: -2vw;
+    position: relative;
+    top: 0;
+    width: 105vw;
+    height: 61vh;
+    margin-bottom: 2vh;
     background-color: white;
     z-index: 2;
+    left: -1.5vw;
     transform: rotate(-9deg) skew(-9deg);
 }
 
@@ -80,14 +88,14 @@ html {
     position: relative;
     overflow: hidden;
     top: 5px;
-    left: -2vw;
     background-color: white;
     gap: 5px;
-    width: 110vw;
-    height: 380px;
+    width: inherit;
+    height: 60vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     z-index: 3;
+    left: -1.5vw;
 }
 
 #select-oak {
@@ -97,7 +105,6 @@ html {
     background-color: rgb(94, 80, 21);
     top: 0;
     width: 100%;
-    height: 200%;
 }
 
 #select-oak img {
@@ -108,20 +115,22 @@ html {
 }
 
 #inner-oak {
-    position: relative;
+    position: absolute;
+    margin-bottom: 10%;
+    width: 100%;
+    bottom: 0;
+    height: 12%;
     text-decoration: none;
     font-family: "Raleway", serif;
     font-style: italic;
-    font-size: 50px;
+    font-size: 6.5vh;
     color: rgb(253, 249, 244);
     text-shadow: 3px 3px 1px rgb(14, 29, 6);
-    top: -390px;
     z-index: 4;
     background-color: rgb(36, 58, 34);
     border-top: 6px solid rgb(24, 39, 22);
     border-bottom: 6px solid rgb(24, 39, 22);
     box-shadow: 0px 0px 5px 1px rgb(1, 5, 0);
-    height: 55px;
 }
 
 #select-redwood {
@@ -131,7 +140,6 @@ html {
     background-color: rgb(151, 21, 21);
     top: 0vh;
     width: 100%;
-    height: 200%;
 }
 
 #select-redwood img {
@@ -142,15 +150,17 @@ html {
 }
 
 #inner-redwood {
-    position: relative;
+    position: absolute;
+    margin-bottom: 10%;
+    width: 100%;
+    bottom: 0;
+    height: 12%;
     text-decoration: none;
     font-family: "Raleway", serif;
     font-style: italic;
-    font-size: 50px;
+    font-size: 6.5vh;
     color: rgb(253, 249, 244);
     text-shadow: 3px 3px 1px rgb(14, 29, 6);
-    top: -374px;
-    height: 55px;
     z-index: 4;
     background-color: rgb(36, 58, 34);
     border-top: 6px solid rgb(24, 39, 22);
@@ -165,7 +175,6 @@ html {
     background-color: green;
     top: 0vh;
     width: 100%;
-    height: 200%;
 }
 
 #select-birch img {
@@ -176,16 +185,18 @@ html {
 }
 
 #inner-birch {
+    position: absolute;
+    margin-bottom: 10%;
+    width: 100%;
+    bottom: 0;
+    height: 12%;
     text-decoration: none;
     font-family: "Raleway", serif;
     background-color: rgb(36, 58, 34);
     font-style: italic;
-    font-size: 50px;
+    font-size: 6.5vh;
     color: rgb(253, 249, 244);
     text-shadow: 3px 3px 1px rgb(14, 29, 6);
-    position: relative;
-    top: -593px;
-    height: 55px;
     z-index: 4;
     border-top: 6px solid rgb(24, 39, 22);
     border-bottom: 6px solid rgb(24, 39, 22);
@@ -198,7 +209,6 @@ html {
     text-align: center;
     top: 0vh;
     width: 100%;
-    height: 200%;
 }
 
 #select-pine img {
@@ -209,15 +219,17 @@ html {
 }
 
 #inner-pine {
+    position: absolute;
+    margin-bottom: 10%;
+    width: 100%;
+    bottom: 0;
+    height: 12%;
     text-decoration: none;
     font-family: "Raleway", serif;
     font-style: italic;
-    font-size: 50px;
+    font-size: 6.5vh;
     color: rgb(253, 249, 244);
     text-shadow: 3px 3px 1px rgb(14, 29, 6);
-    position: relative;
-    top: -517px;
-    height: 55px;
     z-index: 4;
     background-color: rgb(36, 58, 34);
     border-top: 6px solid rgb(24, 39, 22);
@@ -428,48 +440,24 @@ html {
         grid-template-rows: 1fr 1fr;
     }
 
-    #select-oak {
-        left: 0vw;
-        top: -100%;
-    }
-
-    #select-oak img {
-        left: -30vw;
-    }
-
     #inner-oak {
-        top: -380px;
-        height: 45px;
-        font-size: 40px;
-    }
-
-    #select-redwood {
-        left: 0vw;
-        top: -100%;
-    }
-
-    #select-redwood img {
-        top: 20vh;
+        height: 25%;
+        margin-bottom: 3vw;
     }
 
     #inner-redwood {
-        top: -364px;
-        height: 45px;
-        font-size: 40px;
+        height: 25%;
+        margin-bottom: 3vw;
     }
 
-
     #inner-birch {
-        top: -771px;
-        height: 45px;
-        font-size: 40px;
-
+        height: 25%;
+        margin-bottom: 3vw;
     }
 
     #inner-pine {
-        top: -695px;
-        height: 45px;
-        font-size: 40px;
+        height: 25%;
+        margin-bottom: 3vw;
     }
 
 }
