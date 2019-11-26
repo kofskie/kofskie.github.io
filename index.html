@@ -19,10 +19,11 @@
 
     <a id="about-link" href="about.html">About</a>
 
-    <div class="background-container" data-rellax-speed="-7">
+    <div class="background-container" data-rellax-speed="-6">
         <img id="background-image" src="resources/mountainous_forest_banner.jpg">
-        <div class="title-intro" data-rellax-speed="-2.5">Welcome to The</div>
-        <div class="title" data-rellax-speed="-3.3">
+        <!-- These speeds are relatiave to the speed of the parent container -->
+        <div class="title-intro" data-rellax-speed="-0.4">Welcome to The</div>
+        <div class="title" data-rellax-speed="-1">
             <h1>Forest Club.</h1>
         </div>
     </div>
@@ -30,7 +31,7 @@
     <script src="https://cdn.jsdelivr.net/npm/rellax@1.10.0/rellax.min.js"></script>
 
     <script>
-        var rellaxBackground = new Rellax('.background-head');
+        var rellaxBackground = new Rellax('.background-container');
         var rellaxTitleIntro = new Rellax('.title-intro');
         var rellaxTitle = new Rellax('.title');
     </script>
@@ -62,12 +63,22 @@
 
 
     <div id="main-layout">
+
+        <div id="padd"></div>
+
+        <h2 id="main-content-header">
+            <span class="content-head-main">White Oak </span>
+            <span class="content-head-taxonomic"> (Fagaceae Quercus)</span>
+        </h2>
+
+        <p id="article"></p>
+
         <div class="tags">
             <a id="tag-1" href="#article">
                 <span>
                     Overview
                 </span>
-                <svg id="tag-1-shadow" width="600" height="200">
+                <svg viewBox="0 0 100 100">
                     <polygon points="9.345 0 36 27 9 54 216 54 252 27 216 0 9.345 0" />
                 </svg>
             </a>
@@ -75,7 +86,7 @@
                 <span>
                     Attributes
                 </span>
-                <svg width="600" height="200">
+                <svg>
                     <polygon points="9.345 0 36 27 9 54 216 54 252 27 216 0 9.345 0" />
                 </svg>
             </a>
@@ -84,7 +95,7 @@
                 <span>
                     Location
                 </span>
-                <svg width="600" height="200">
+                <svg>
                     <polygon points="9.345 0 36 27 9 54 216 54 252 27 216 0 9.345 0" />
                 </svg>
             </a>
@@ -93,17 +104,16 @@
                 <span>
                     Gallery
                 </span>
-                <svg width="600" height="200">
+                <svg>
                     <polygon points="9.345 0 36 27 9 54 216 54 252 27 216 0 9.345 0" />
                 </svg>
             </a>
         </div>
 
-        <h2 id="main-content-header">
-            <span class="content-head-main">White Oak </span>
-            <span class="content-head-taxonomic"> (Fagaceae Quercus)</span>
-        </h2>
-        <p id="article"></p>
+        <div class="footer">
+            Footer!
+        </div>
+
     </div>
 
 
