@@ -257,7 +257,7 @@ html {
     width: 100%;
     height: 150vh;
     top: 120vh;
-    grid-template-columns: 17.5% auto;
+    grid-template-columns: 335px auto;
     grid-template-rows: 20% 13% 57% 10%;
     grid-template-areas:
         "sidebar padd"
@@ -267,11 +267,69 @@ html {
     background-color: rgb(9, 41, 17);
 }
 
-/* #main-content {
-    display: none;
-    position: absolute;
-    background-color: rgb(14, 49, 23);
-} */
+/* Sidebar Tags */
+.tags {
+    background-color: rgb(13, 63, 26);
+    width: auto;
+    grid-area: sidebar;
+    z-index: 4;
+    margin-left: 10px;
+    border-left: 10px solid rgb(2, 22, 8);
+    box-shadow: 2px 0px 5px 1px rgba(0, 0, 0, 0.377);
+}
+
+/* Vector information */
+.cls-1 {
+    fill: rgb(3, 26, 10);
+    /* Using a stroke here prevents drop-shadow from bleeding out */
+    stroke: rgb(3, 26, 10);
+    stroke-miterlimit: 10;
+    position: inherit;
+}
+
+/* Tag container */
+.tags a {
+    position: fixed;
+    z-index: 10;
+    display: grid;
+    margin-left: 20px;
+    filter: drop-shadow(-6px 0px rgb(13, 63, 26)) drop-shadow(-6px 0px wheat) drop-shadow(12px 0px rgb(13, 63, 26)) drop-shadow(2px 0px 5px rgba(0, 0, 0, 0.377));
+}
+
+/* Contains the span and SVG into grid for 1:1 resize using only width */
+.tags a>* {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.tags span {
+    display: inherit;
+    font-family: "Yellowtail",
+        serif;
+    font-size: 2.5em;
+    position: relative;
+    top: 10%;
+    left: 30%;
+    color: white;
+    z-index: 1;
+    filter: none;
+}
+
+#tag-1 {
+    top: 30%;
+}
+
+#tag-2 {
+    top: 45%;
+}
+
+#tag-3 {
+    top: 60%;
+}
+
+#tag-4 {
+    top: 75%;
+}
+
 
 #main-content-header {
     display: inline-block;
@@ -300,10 +358,11 @@ html {
     text-shadow: 3px 3px 2px black;
 }
 
+/* Covers up background that shows between main grid and menu grid */
 #padd {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 110%;
     z-index: 3;
     grid-area: padd;
     background-color: rgb(9, 41, 17);
@@ -317,106 +376,6 @@ html {
     height: 100%;
     grid-area: content;
 }
-
-
-/* Sidebar Tags */
-/* - the sidebar con */
-.tags {
-    position: absolute;
-    width: 100%;
-    background-color: rgb(13, 63, 26);
-    grid-area: sidebar;
-    z-index: 1;
-    margin-left: 0.75vw;
-    border-left: 10px solid rgb(2, 22, 8);
-    box-shadow: 2px 0px 5px 1px rgba(0, 0, 0, 0.377);
-}
-
-#tag-1 {
-    position: fixed;
-    top: 30%;
-    fill: rgb(2, 22, 8);
-    z-index: 1;
-    filter: drop-shadow(-2px 4px wheat);
-}
-
-/* #tag-1 svg {
-    position: absolute;
-    width: 36vw;
-    height: 9vw;
-} */
-
-#tag-1 span {
-    display: inherit;
-    font-family: "Yellowtail", serif;
-    font-size: 2vw;
-    position: relative;
-    top: 5.75vh;
-    left: 3.5vw;
-    color: white;
-    z-index: 1;
-}
-
-
-#tag-2 {
-    position: fixed;
-    top: 40%;
-    fill: rgb(2, 22, 8);
-    z-index: 1;
-    filter: drop-shadow(-2px 4px wheat)
-}
-
-#tag-2 span {
-    display: inherit;
-    font-family: "Yellowtail", serif;
-    font-size: 2vw;
-    position: relative;
-    top: 5.75vh;
-    left: 3.5vw;
-    color: white;
-    z-index: 1;
-}
-
-
-#tag-3 {
-    position: fixed;
-    top: 50%;
-    fill: rgb(2, 22, 8);
-    z-index: 1;
-    filter: drop-shadow(-2px 4px wheat)
-}
-
-#tag-3 span {
-    display: inherit;
-    font-family: "Yellowtail", serif;
-    font-size: 2vw;
-    position: relative;
-    top: 5.75vh;
-    left: 3.5vw;
-    color: white;
-    z-index: 1;
-}
-
-
-#tag-4 {
-    position: fixed;
-    top: 60%;
-    fill: rgb(2, 22, 8);
-    z-index: 1;
-    filter: drop-shadow(-2px 4px wheat)
-}
-
-#tag-4 span {
-    display: inherit;
-    font-family: "Yellowtail", serif;
-    font-size: 2vw;
-    position: relative;
-    top: 5.75vh;
-    left: 3.5vw;
-    color: white;
-    z-index: 1;
-}
-
 
 /* FOOTER */
 .footer {
@@ -472,12 +431,12 @@ html {
 
 @keyframes tag-slide-in {
     from {
-        left: -10vw;
+        left: -600px;
         opacity: 0;
     }
 
     to {
-        left: 2.5vw;
+        left: 21px;
         opacity: 1;
     }
 }
@@ -496,7 +455,7 @@ html {
 
 
 /* Responsive functions */
-@media only screen and (max-width: 900px) and (min-width: 501px) {
+@media only screen and (max-width: 1000px) {
     .selector-block {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -522,6 +481,72 @@ html {
         margin-bottom: 3vw;
     }
 
+    #main-layout {
+        grid-template-columns: 100%;
+        grid-template-areas:
+            "padd"
+            "sidebar"
+            "header"
+            "footer";
+    }
+
+    .tags {
+        display: grid;
+        position: absolute;
+        width: 100%;
+        grid-template-columns: repeat(4, 25%);
+        justify-items: center;
+        margin-left: 0px;
+        border: none;
+        z-index: 4;
+        background-color: rgba(0, 0, 0, 0);
+        box-shadow: none;
+    }
+
+
+    .tags a {
+        position: relative;
+        transform: rotate(90deg);
+        left: 0px;
+        top: 0px;
+        bottom: 0px;
+        margin-left: 0px;
+        width: 400%;
+        z-index: 4;
+    }
+
+    .tags svg {
+        transform: scaleX(0.25);
+        z-index: 4;
+    }
+
+    .tags span {
+        text-align: center;
+        width: 25%;
+        position: relative;
+        transform: rotate(-90deg);
+        top: 0%;
+        left: 51%;
+        margin-left: 0px;
+        z-index: 5;
+    }
+
+    /* Must manually clear top, order of precedence! */
+    #tag-1 {
+        top: -45%;
+    }
+
+    #tag-2 {
+        top: -62%;
+    }
+
+    #tag-3 {
+        top: -79%;
+    }
+
+    #tag-4 {
+        top: -96%;
+    }
 }
 
 @media only screen and (max-width: 500px) {

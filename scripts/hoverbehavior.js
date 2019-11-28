@@ -4,7 +4,7 @@ $(function () {
     let elapsed = 0;
     let rafHandle;
 
-    let medQMed = window.matchMedia("(max-width: 900px)");
+    let medQMed = window.matchMedia("(max-width: 1000px)");
     let medQSm = window.matchMedia("(max-width: 500px)");
     window.addEventListener("resize", checkGrid);
 

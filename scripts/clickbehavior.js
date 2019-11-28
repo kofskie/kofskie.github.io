@@ -1,4 +1,7 @@
 $(function () {
+
+    let medQMed = window.matchMedia("(max-width: 1000px)");
+
     // Add smooth scrolling to all links
     var oakStrM = "White Oak ";
     var oakStrT = " (Fagaceae Quercus)";
@@ -102,27 +105,30 @@ $(function () {
         scrollPos = $(document).scrollTop();
         scrollTarget = $('#main-layout').offset().top;
 
-        if (scrollPos >= scrollTarget * 0.85) {
+        if (!medQMed.matches) {
 
-            if (!isScrolling) {
-                slideInAnimation();
-                isTagActive = true;
-                isBarActive = true;
-            }
+            if (scrollPos >= scrollTarget * 0.85) {
 
-        } else if (scrollPos < scrollTarget * 0.9 && isTagActive) {
+                if (!isScrolling) {
+                    slideInAnimation();
+                    isTagActive = true;
+                    isBarActive = true;
+                }
 
-            if (!isScrolling) {
-                slideOutAnimation();
-                isTagActive = false;
-            }
+            } else if (scrollPos < scrollTarget * 0.9 && isTagActive) {
 
-        } else if (scrollPos < scrollTarget * 0.85) {
+                if (!isScrolling) {
+                    slideOutAnimation();
+                    isTagActive = false;
+                }
 
-            if (!isScrolling) {
-                if (isBarActive) {
-                    sidebarOutAnimation();
-                    isBarActive = false;
+            } else if (scrollPos < scrollTarget * 0.85) {
+
+                if (!isScrolling) {
+                    if (isBarActive) {
+                        sidebarOutAnimation();
+                        isBarActive = false;
+                    }
                 }
             }
         }
