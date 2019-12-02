@@ -2,22 +2,32 @@ $(function () {
 
     let medQMed = window.matchMedia("(max-width: 1000px)");
 
+    var tagW2 = $('.tags').width();
+
+    $('.tags a').css("width", `${tagW2}px`);
+
     if (medQMed.matches) {
         // $('.selector-block a').on("click", calculateHeight);
+        // $(window).resize(function () {
+
+        // });
     } else {
-        $('.selector-block a').on("click", calculateWidth);
-        $(window).on("resize", calculateWidth);
+        $('.selector-block a').on("click", function () {
+            var tagW2 = $('.tags').width();
+
+            $('.tags a').css("width", `${tagW2}px`);
+        });
+
+        $(window).resize(function () {
+            var tagW = $('.tags').width();
+
+            $('.tags a').css("width", `${tagW}px`);
+        });
     }
 
-    function calculateHeight() {
-        var tagW = $('.tags').height() * 1.05;
+    var calculateHeight = function () {
+        var tagH = $('.tags').height();
 
-        $('.tags a').css("width", `${tagW}px`);
+        $('.tags a').css("height", `${tagH}px`);
     };
-
-    function calculateWidth() {
-        var tagW = $('.tags').width() * 1.05;
-
-        $('.tags a').css("width", `${tagW}px`);
-    };
-})
+});

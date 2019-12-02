@@ -15,8 +15,6 @@ html {
     position: absolute;
     text-align: center;
     overflow-x: hidden;
-    /* CHANGE TO POS FROM BOTTOM */
-    /* TODO top: -17vh; */
     background-repeat: no-repeat;
     height: 100vh;
     z-index: 2;
@@ -257,7 +255,7 @@ html {
     width: 100%;
     height: 150vh;
     top: 120vh;
-    grid-template-columns: 335px auto;
+    grid-template-columns: 285px auto;
     grid-template-rows: 20% 13% 57% 10%;
     grid-template-areas:
         "sidebar padd"
@@ -292,7 +290,7 @@ html {
     position: fixed;
     z-index: 10;
     display: grid;
-    margin-left: 20px;
+    margin-left: 26px;
     filter: drop-shadow(-6px 0px rgb(13, 63, 26)) drop-shadow(-6px 0px wheat) drop-shadow(12px 0px rgb(13, 63, 26)) drop-shadow(2px 0px 5px rgba(0, 0, 0, 0.377));
 }
 
@@ -307,8 +305,8 @@ html {
         serif;
     font-size: 2.5em;
     position: relative;
-    top: 10%;
-    left: 30%;
+    top: 0%;
+    left: 25%;
     color: white;
     z-index: 1;
     filter: none;
@@ -335,8 +333,9 @@ html {
     display: inline-block;
     position: relative;
     text-align: center;
-    padding-left: 17.5vh;
-    margin-top: -2vh;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: -1%;
     /* Position determined by header2-slide-in animation */
     grid-area: header;
     z-index: 4;
@@ -345,7 +344,7 @@ html {
 
 .content-head-main {
     font-family: "Playfair Display SC", serif;
-    font-size: 6vw;
+    font-size: 4em;
     color: white;
     text-shadow: 3px 3px 2px black;
 }
@@ -353,7 +352,7 @@ html {
 .content-head-taxonomic {
     font-family: "Great Vibes", serif;
     font-style: italic;
-    font-size: 4vw;
+    font-size: 2.25em;
     color: wheat;
     text-shadow: 3px 3px 2px black;
 }
@@ -371,10 +370,17 @@ html {
 #article {
     position: relative;
     display: hidden;
-    font-size: 2vw;
+    padding-left: 7.5%;
+    padding-right: 5%;
+    font-size: 2.5em;
     color: white;
     height: 100%;
+    opacity: 0.7;
+    width: auto;
     grid-area: content;
+    word-wrap: break-word;
+    overflow-wrap: normal;
+    font-family: monospace;
 }
 
 /* FOOTER */
@@ -387,71 +393,7 @@ html {
 
 
 /* Animations */
-@keyframes header2-slide-in {
-    from {
-        top: -500px;
-        opacity: 0;
-    }
 
-    to {
-        top: 0px;
-        opacity: 1;
-    }
-}
-
-@keyframes article-fade-in {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 0.7;
-    }
-}
-
-@keyframes sidebar-slide-in {
-    from {
-        height: 0%;
-    }
-
-    to {
-        height: 100%;
-    }
-}
-
-@keyframes sidebar-slide-out {
-    from {
-        height: 100%;
-    }
-
-    to {
-        height: 0%;
-    }
-}
-
-@keyframes tag-slide-in {
-    from {
-        left: -600px;
-        opacity: 0;
-    }
-
-    to {
-        left: 21px;
-        opacity: 1;
-    }
-}
-
-@keyframes tag-slide-out {
-    from {
-        left: 2.5vw;
-        opacity: 1;
-    }
-
-    to {
-        left: -10vw;
-        opacity: 0;
-    }
-}
 
 
 /* Responsive functions */
@@ -483,11 +425,31 @@ html {
 
     #main-layout {
         grid-template-columns: 100%;
+        grid-template-rows: auto auto 15% 40% 10%;
         grid-template-areas:
             "padd"
             "sidebar"
             "header"
+            "content"
             "footer";
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    #main-content-header {
+        top: -25%;
+        position: relative;
+        display: block;
+        grid-area: header;
+    }
+
+    #article {
+        position: relative;
+        display: inline-block;
+        top: 0%;
+        margin-top: 0%;
+        padding-top: 0%;
+        grid-area: content;
     }
 
     .tags {
@@ -495,16 +457,16 @@ html {
         position: absolute;
         width: 100%;
         grid-template-columns: repeat(4, 25%);
-        justify-items: center;
-        margin-left: 0px;
         border: none;
         z-index: 4;
         background-color: rgba(0, 0, 0, 0);
         box-shadow: none;
+        margin-left: 0px;
     }
 
 
     .tags a {
+        justify-self: center;
         position: relative;
         transform: rotate(90deg);
         left: 0px;
@@ -518,6 +480,8 @@ html {
     .tags svg {
         transform: scaleX(0.25);
         z-index: 4;
+        left: 0px;
+        margin-left: 0px;
     }
 
     .tags span {
@@ -526,7 +490,7 @@ html {
         position: relative;
         transform: rotate(-90deg);
         top: 0%;
-        left: 51%;
+        left: 50%;
         margin-left: 0px;
         z-index: 5;
     }

@@ -4,18 +4,18 @@ $(function () {
 
     // Add smooth scrolling to all links
     var oakStrM = "White Oak ";
-    var oakStrT = " (Fagaceae Quercus)";
+    var oakStrT = " (Fagaceae&nbsp;Quercus)";
 
     var redwoodStrM = "Redwood ";
-    var redwoodStrT = " (Sequoia Sempervirens)";
+    var redwoodStrT = " (Sequoia&nbsp;Sempervirens)";
 
     var pineStrM = "Pine ";
-    var pineStrT = " (Pinus lambertiana)";
+    var pineStrT = " (Pinus&nbsp;lambertiana)";
 
     var birchStrM = "Birch ";
-    var birchStrT = " (Betula Alleghaniensis)";
+    var birchStrT = " (Betula&nbsp;Alleghaniensis)";
 
-    var loremText = `<pre>
+    var loremText = `
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Dolor alias nisi voluptate quisquam asperiores, tenetur
         officia amet aspernatur at praesentium voluptatum perferendis
@@ -24,7 +24,7 @@ $(function () {
         Dolor alias nisi voluptate quisquam asperiores, tenetur
         officia amet aspernatur at praesentium voluptatum perferendis
         cumque repudiandae voluptatem sint sed neque harum.
-        </pre>`;
+        `;
 
     function slideInAnimation() {
         $('.tags').css({
@@ -102,36 +102,11 @@ $(function () {
     var isScrolling = false;
 
     $(window).scroll(function () {
-        scrollPos = $(document).scrollTop();
-        scrollTarget = $('#main-layout').offset().top;
-
-        if (!medQMed.matches) {
-
-            if (scrollPos >= scrollTarget * 0.85) {
-
-                if (!isScrolling) {
-                    slideInAnimation();
-                    isTagActive = true;
-                    isBarActive = true;
-                }
-
-            } else if (scrollPos < scrollTarget * 0.9 && isTagActive) {
-
-                if (!isScrolling) {
-                    slideOutAnimation();
-                    isTagActive = false;
-                }
-
-            } else if (scrollPos < scrollTarget * 0.85) {
-
-                if (!isScrolling) {
-                    if (isBarActive) {
-                        sidebarOutAnimation();
-                        isBarActive = false;
-                    }
-                }
-            }
+        if (!isScrolling) {
+            scrollPos = $(document).scrollTop();
+            scrollTarget = $('#main-layout').offset().top;
         }
+
     });
 
     $("a").on('click', function (event) {
@@ -205,11 +180,12 @@ $(function () {
             // The optional number specifies the number of milliseconds it takes to scroll to the specified area
             isScrolling = true;
             $('html, body').animate({
-                scrollTop: $(hash).offset().top * 1.1
+                // scrolls top of page to the bottom middle of menu
+                scrollTop: $(hash).offset().top * 1.179
             }, 500, function () {
                 isScrolling = false;
                 // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
+                // window.location.hash = hash;
             });
         } // End if
     });
