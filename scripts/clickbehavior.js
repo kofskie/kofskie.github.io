@@ -4,7 +4,7 @@ $(function () {
 
     // Add smooth scrolling to all links
     var oakStrM = "White Oak ";
-    var oakStrT = " (Fagaceae&nbsp;Quercus)";
+    var oakStrT = " (Fagaceae&nbsp;alba)";
 
     var redwoodStrM = "Redwood ";
     var redwoodStrT = " (Sequoia&nbsp;Sempervirens)";
@@ -95,6 +95,67 @@ $(function () {
         });
     }
 
+    var currentContext = 0;
+
+    // true = create, false = remove
+    function switchMenu(mode) {
+
+        if (!mode) {
+            switch (currentContext) {
+                case 0:
+                    $('#article').css({
+                        "display": "none"
+                        // TODO: handle animation here
+                    })
+                    break;
+
+                case 1:
+                    $('#article').css({
+                        "display": "none"
+                    })
+                    break;
+
+                case 2:
+                    $('#map').css({
+                        "display": "none"
+                    })
+                    break;
+
+                case 3:
+                    $('#article').css({
+                        "display": "none"
+                    })
+                    break;
+            }
+        } else {
+            switch (currentContext) {
+                case 0:
+                    $('#article').css({
+                        "display": "block"
+                        // TODO: handle animation here
+                    })
+                    break;
+
+                case 1:
+                    $('#article').css({
+                        "display": "block"
+                    })
+                    break;
+
+                case 2:
+                    $('#map').css({
+                        "display": "block"
+                    })
+                    break;
+
+                case 3:
+                    $('#article').css({
+                        "display": "block"
+                    })
+                    break;
+            }
+        }
+    }
 
     var scrollPos;
     var isTagActive = false;
@@ -108,6 +169,7 @@ $(function () {
         }
 
     });
+
 
     $("a").on('click', function (event) {
 
@@ -131,6 +193,7 @@ $(function () {
                 $('.content-head-taxonomic').html(oakStrT);
                 $('#article').html(loremText);
                 $('#article').css({
+                    "display": "block",
                     "animation-name": "article-fade-in",
                     "animation-duration": "2.5s",
                     "animation-iteration-count": "1",
@@ -142,6 +205,7 @@ $(function () {
                 $('.content-head-taxonomic').html(redwoodStrT);
                 $('#article').html(loremText);
                 $('#article').css({
+                    "display": "block",
                     "animation-name": "article-fade-in",
                     "animation-duration": "2.5s",
                     "animation-iteration-count": "1",
@@ -153,6 +217,7 @@ $(function () {
                 $('.content-head-taxonomic').html(birchStrT);
                 $('#article').html(loremText);
                 $('#article').css({
+                    "display": "block",
                     "animation-name": "article-fade-in",
                     "animation-duration": "2.5s",
                     "animation-iteration-count": "1",
@@ -164,11 +229,40 @@ $(function () {
                 $('.content-head-taxonomic').html(pineStrT);
                 $('#article').html(loremText);
                 $('#article').css({
+                    "display": "block",
                     "animation-name": "article-fade-in",
                     "animation-duration": "2.5s",
                     "animation-iteration-count": "1",
                     "animation-fill-mode": "forwards"
                 })
+
+            }
+
+            // SIDEBAR TAGS
+            else if ($(target).parents('#tag-1').length) {
+
+                switchMenu(false);
+                currentContext = 0;
+                switchMenu(true);
+
+            } else if ($(target).parents('#tag-2').length) {
+
+                switchMenu(false);
+                currentContext = 1;
+                switchMenu(true);
+
+            } else if ($(target).parents('#tag-3').length) {
+
+                switchMenu(false);
+                currentContext = 2;
+                switchMenu(true);
+
+            } else if ($(target).parents('#tag-4').length) {
+
+                switchMenu(false);
+                currentContext = 3;
+                switchMenu(true);
+
             }
             // Prevent default anchor click behavior
             event.preventDefault();

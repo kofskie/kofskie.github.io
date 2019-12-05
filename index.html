@@ -72,9 +72,10 @@
         </h2>
 
         <p id="article"></p>
+        <div id="map"></div>
 
         <div class="tags">
-            <a id="tag-1" href="#main-content-header">
+            <a id="tag-1" href="#main-layout">
                 <span>
                     Overview
                 </span>
@@ -83,7 +84,7 @@
                         points="1.552 0.5 28.207 27.5 1.207 54.5 208.207 54.5 244.207 27.5 208.207 0.5 1.552 0.5" />
                 </svg>
             </a>
-            <a id="tag-2" href="#main-content-header">
+            <a id="tag-2" href="#main-layout">
                 <span>
                     Attributes
                 </span>
@@ -93,7 +94,7 @@
                 </svg>
             </a>
 
-            <a id="tag-3" href="#maincontent-header">
+            <a id="tag-3" href="#main-layout">
                 <span>
                     Location
                 </span>
@@ -103,7 +104,7 @@
                 </svg>
             </a>
 
-            <a id="tag-4" href="#main-content-header">
+            <a id="tag-4" href="#main-layout">
                 <span>
                     Gallery
                 </span>
@@ -124,49 +125,11 @@
     <script src="scripts/hoverbehavior.js"></script>
     <script src="scripts/clickbehavior.js"></script>
     <script src="scripts/sidebarhandler.js"></script>
+    <script src="scripts/maps.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDK0J7gg_KDKIJ3vJ2Scvos3k-AgOO9MfU&callback=initMap"
+        async defer></script>
 
 
-    <!-- <script>
-        $(function () {
-            let w = screen.width;
-            let h = screen.height;
-            let bLPin = (h * 0.535) + (w * 0.1575);
-            $('.selector-block').css('clip-path', `polygon(0 15.75vw, 100% 0, 100% 53.5vh, 0 7in)`)
-        });
-    </script> -->
-
-    <!--LIST MENU<div class="selector-block">
-        <ul>
-            <li>
-                <div id="select-oak">
-                    Oak
-                </div>
-            </li>
-            <li>
-                <div id="select-cherry">
-                    Cherry
-                </div>
-            </li>
-            <li>
-                <div id="select-spruce">
-                    Spruce
-                </div>
-            <li>
-            </li>
-            <div id="select-pine">
-                Pine
-            </div>
-            </li>
-            <li>
-                <div id="select-redwood">
-                </div>
-            </li>
-            <li>
-                <div id="select-palm">
-                </div>
-            </li>
-        </ul>
-    </div>-->
 </body>
 
 </html>
