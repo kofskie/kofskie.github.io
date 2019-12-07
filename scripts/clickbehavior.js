@@ -1,34 +1,75 @@
 $(function () {
 
+
+    var firebaseConfig = {
+        apiKey: "AIzaSyDm-5in9gdCL0j3BHGg067bXdsMidAL8CY",
+        authDomain: "forest-club-34a79.firebaseapp.com",
+        databaseURL: "https://forest-club-34a79.firebaseio.com",
+        projectId: "forest-club-34a79",
+        storageBucket: "forest-club-34a79.appspot.com",
+        messagingSenderId: "27216799359",
+        appId: "1:27216799359:web:195fdf2d08c54755d4014a",
+        measurementId: "G-T43R8VB7Y2"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+
+    var dbTitle = document.getElementById('header');
+    var fNameKey = document.getElementById('fname-key');
+    var fName = document.getElementById('fname');
+    var lNameKey = document.getElementById('lname-key');
+    var lName = document.getElementById('lname');
+    var errorText = document.getElementById('error');
+
+    var loremText;
+
+    var oakStrM;
+    var oakStrT;
+
+    var redwoodStrM;
+    var redwoodStrT;
+
+    var birchStrM;
+    var birchStrT;
+
+    var pineStrM;
+    var pineStrT;
+
+
+    var dbRef = firebase.database().ref();
+
+    dbRef.once('value').then(function (snapshot) {
+
+        var data = [];
+
+        loremText = snapshot.child('paragraphs').child('lorem').val();
+
+        oakStrM = snapshot.child('titles').child('titleOak').val();
+        oakStrT = snapshot.child('titles').child('taxonOak').val();
+
+        redwoodStrM = snapshot.child('titles').child('titleRedwood').val();
+        redwoodStrT = snapshot.child('titles').child('taxonRedwood').val();
+
+        birchStrM = snapshot.child('titles').child('titleBirch').val();
+        birchStrT = snapshot.child('titles').child('taxonBirch').val();
+
+        pineStrM = snapshot.child('titles').child('titlePine').val();
+        pineStrT = snapshot.child('titles').child('taxonPine').val();
+    });
+
+
+
+
+
+
     let medQMed = window.matchMedia("(max-width: 1000px)");
 
     // Add smooth scrolling to all links
-    var oakStrM = "White Oak ";
-    var oakStrT = " (Fagaceae&nbsp;alba)";
-
-    var redwoodStrM = "Redwood ";
-    var redwoodStrT = " (Sequoia&nbsp;Sempervirens)";
-
-    var pineStrM = "Pine ";
-    var pineStrT = " (Pinus&nbsp;lambertiana)";
-
-    var birchStrM = "Birch ";
-    var birchStrT = " (Betula&nbsp;Alleghaniensis)";
-
-    var loremText = `
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Dolor alias nisi voluptate quisquam asperiores, tenetur
-        officia amet aspernatur at praesentium voluptatum perferendis
-        cumque repudiandae voluptatem sint sed neque harum.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Dolor alias nisi voluptate quisquam asperiores, tenetur
-        officia amet aspernatur at praesentium voluptatum perferendis
-        cumque repudiandae voluptatem sint sed neque harum.
-        `;
 
     function slideInAnimation() {
         $('.tags').css({
-            "animation-name": "sidebar-slide-in",
+            "animation-name": "sidebar-slide-in-l",
             "animation-duration": "1s",
             "animation-iteration-count": "1",
             "animation-fill-mode": "forwards"
@@ -157,9 +198,11 @@ $(function () {
         }
     }
 
+    // TODO: get rid of these
     var scrollPos;
     var isTagActive = false;
     var isBarActive = false;
+
     var isScrolling = false;
 
     $(window).scroll(function () {

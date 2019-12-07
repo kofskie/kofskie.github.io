@@ -405,14 +405,21 @@ html {
 
 
 /* Animations */
+@keyframes sidebar-slide-in-l {
+    from {}
 
+    to {}
+}
 
 
 /* Responsive functions */
 
-
-
 @media only screen and (max-width: 1000px) {
+
+    #article {
+        font-size: 2em;
+    }
+
     .selector-block {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
