@@ -52,7 +52,7 @@ html {
     width: 100vw;
     position: absolute;
     top: 27.5%;
-    font-size: 4.75vh;
+    font-size: 2.5em;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -263,6 +263,7 @@ html {
         "sidebar content"
         "footer footer";
     background-color: rgb(9, 41, 17);
+    z-index: 3;
 }
 
 /* Sidebar Tags */
@@ -276,8 +277,25 @@ html {
     box-shadow: 2px 0px 5px 1px rgba(0, 0, 0, 0.377);
 }
 
+#pre-tag {
+    position: fixed;
+    top: -250px;
+    left: 175px;
+    width: 60px;
+}
+
+#post-tag {
+    position: fixed;
+    top: 800px;
+    left: 75px;
+    width: 60px;
+    transform: rotate(180deg);
+    z-index: inherit;
+}
+
 /* Vector information */
 .cls-1 {
+    display: block;
     fill: rgb(3, 26, 10);
     /* Using a stroke here prevents drop-shadow from bleeding out */
     stroke: rgb(3, 26, 10);
@@ -285,9 +303,20 @@ html {
     position: inherit;
 }
 
+.cls-4 {
+    display: block;
+    fill: rgb(3, 26, 10);
+    /* Using a stroke here prevents drop-shadow from bleeding out */
+    stroke: rgb(3, 26, 10);
+    stroke-miterlimit: 10;
+    position: inherit;
+    top: -500vh;
+}
+
 /* Tag container */
 .tags a {
     position: fixed;
+    width: 100%;
     z-index: 10;
     display: grid;
     margin-left: 26px;
@@ -296,11 +325,12 @@ html {
 
 /* Contains the span and SVG into grid for 1:1 resize using only width */
 .tags a>* {
+    display: block;
     grid-area: 1 / 1 / 2 / 2;
 }
 
 .tags span {
-    display: inherit;
+    display: block;
     font-family: "Yellowtail",
         serif;
     font-size: 2.5em;
@@ -334,6 +364,7 @@ html {
     position: relative;
     text-align: center;
     padding-left: 10%;
+    /* background-color: rgb(9, 41, 17); */
     padding-right: 10%;
     margin-top: -1%;
     /* Position determined by header2-slide-in animation */
@@ -380,8 +411,10 @@ html {
     word-wrap: break-word;
     overflow-wrap: normal;
     font-family: monospace;
+    /* background-color: rgb(9, 41, 17); */
     grid-area: content;
     display: none;
+    z-index: 3;
 }
 
 #map {
@@ -395,12 +428,14 @@ html {
     border: solid 5px rgb(13, 63, 26);
 }
 
+
 /* FOOTER */
 .footer {
     width: 100%;
     height: 100%;
     background-color: rgb(3, 29, 10);
     grid-area: footer;
+    z-index: 9;
 }
 
 
@@ -414,11 +449,9 @@ html {
 
 /* Responsive functions */
 
+/* Stack menu - 2x2 */
+/* Move sidebar tags to top */
 @media only screen and (max-width: 1000px) {
-
-    #article {
-        font-size: 2em;
-    }
 
     .selector-block {
         grid-template-columns: 1fr 1fr;
@@ -535,7 +568,38 @@ html {
     }
 }
 
+/* Change font sizes */
+/* Move sidebar tags to sidebar - pullout menu */
+@media only screen and (max-width: 675px) {
+
+    #main-content-header {
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+
+    .content-head-main {
+        font-size: 3.25em;
+    }
+
+    .content-head-taxonomic {
+        font-size: 1.75em;
+    }
+
+    #article {
+        font-size: 2em;
+    }
+}
+
+/* Stack menu - 1x4 */
 @media only screen and (max-width: 500px) {
+
+    .content-head-main {
+        font-size: 2.6em;
+    }
+
+    .content-head-taxonomic {
+        font-size: 1.2em;
+    }
 
     #select-oak img {
         left: -20%;
@@ -567,4 +631,14 @@ html {
         font-size: 5.2vh;
     }
 
+    #article {
+        font-size: 1.8em;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    #article {
+        font-size: 1.6em;
+    }
 }

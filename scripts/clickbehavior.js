@@ -14,14 +14,7 @@ $(function () {
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
 
-
-    var dbTitle = document.getElementById('header');
-    var fNameKey = document.getElementById('fname-key');
-    var fName = document.getElementById('fname');
-    var lNameKey = document.getElementById('lname-key');
-    var lName = document.getElementById('lname');
-    var errorText = document.getElementById('error');
-
+    // all text fields
     var loremText;
 
     var oakStrM;
@@ -57,10 +50,6 @@ $(function () {
         pineStrM = snapshot.child('titles').child('titlePine').val();
         pineStrT = snapshot.child('titles').child('taxonPine').val();
     });
-
-
-
-
 
 
     let medQMed = window.matchMedia("(max-width: 1000px)");

@@ -7,10 +7,17 @@ $(function () {
     $('.tags a').css("width", `${tagW2}px`);
 
     if (medQMed.matches) {
-        // $('.selector-block a').on("click", calculateHeight);
-        // $(window).resize(function () {
+        $('.selector-block a').on("click", function () {
+            var tagW2 = $('.tags').width();
 
-        // });
+            $('.tags a').css("width", `${tagW2}px`);
+        });
+
+        $(window).resize(function () {
+            var tagW = $('.tags').width();
+
+            $('.tags a').css("width", `${tagW}px`);
+        });
     } else {
         $('.selector-block a').on("click", function () {
             var tagW2 = $('.tags').width();
