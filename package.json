@@ -1,0 +1,26 @@
+{
+  "name": "kofskie.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kofskie/kofskie.github.io.git"
+  },
+  "author": "Justin Kofskie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kofskie/kofskie.github.io/issues"
+  },
+  "homepage": "https://github.com/kofskie/kofskie.github.io#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5"
+  }
+}

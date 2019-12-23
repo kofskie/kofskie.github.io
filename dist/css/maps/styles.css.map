@@ -1,0 +1,1 @@
+{"version":3,"sources":["styles.scss"],"names":[],"mappings":"AAAA,MACI,aAAc,CACd,mBAAS,CAAT,mBAAS,CAAT,YAAa","file":"../styles.css","sourcesContent":[".test {\r\n    font-size: 1em;\r\n    display: flex;\r\n}"]}
