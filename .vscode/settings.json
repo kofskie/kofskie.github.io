@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/6fa3af1d-ee80-4cd7-87e6-b6b778191fde/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/JustinKofskie",
+    "appService.deploySubpath": ""
+}
