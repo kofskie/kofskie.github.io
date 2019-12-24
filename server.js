@@ -19,7 +19,6 @@ const mimeType = {
     '.svg': 'image/svg+xml',
     '.pdf': 'application/pdf',
     '.doc': 'application/msword',
-    '.eot': 'appliaction/vnd.ms-fontobject',
     '.ttf': 'aplication/font-sfnt'
 };
 
