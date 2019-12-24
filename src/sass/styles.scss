@@ -1,5 +1,20 @@
-.h1 {
-    font-size: 1em;
-    color: red;
-    display: flex;
-}
+@import 'config/config';
+
+@import 'mixins/mixins_general';
+@import 'mixins/mixins_breakpoints';
+@import 'mixins/mixins_grids';
+
+@import 'base/reset';
+@import 'base/helper_classes';
+@import 'base/typography';
+
+@import 'structure/header';
+@import 'structure/sections';
+@import 'structure/footer';
+
+@import 'modules/grids';
+
+@import 'pages/home';
+@import 'pages/services';
+@import 'pages/portfolio';
+@import 'pages/contact';
