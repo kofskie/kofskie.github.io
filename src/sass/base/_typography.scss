@@ -1,3 +1,14 @@
+html,
 body {
-    background: $color-base;
+    background: #FFF;
+    color: #000;
+}
+
+body,
+input,
+select,
+textarea,
+button {
+    font-family: "Open Sans", sans-serif;
+    font-size: 100%;
 }
