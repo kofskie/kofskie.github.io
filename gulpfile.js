@@ -28,3 +28,8 @@ gulp.task('copy', function () {
     return gulp.src('src/*.html')
         .pipe(gulp.dest('dist'))
 });
+
+gulp.task('watch', ['css'], function () {
+    gulp.watch('src/sass/**/*.scss', ['css']);
+    gulp.watch('src/*.html', ['css']);
+});

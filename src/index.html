@@ -4,8 +4,13 @@
 <head>
     <meta charset="utf-8">
     <title>Justin Kofskie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="dist/css/styles.css" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200idisplay=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200idisplay=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/50d7e14fcb.js" crossorigin="anonymous"></script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -13,7 +18,255 @@
 
 <body>
 
+    <div class="page">
+
+        <header class="page-header">
+            <nav class="page-nav">
+                <ul>
+                    <li class="page-nav__li">
+                        <a href="#services" class="page-nav__item">
+                            Skills
+                        </a>
+                    </li>
+                    <li class="page-nav__li">
+                        <a href="#portfolio" class="page-nav__item">
+                            Portfolio
+                        </a>
+                    </li>
+                    <li class="page-nav__li">
+                        <a href="#blog" class="page-nav__item">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="page-nav__li">
+                        <a href="#contact" class="page-nav__item">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="home section">
+            <h1 class="home__title">
+                Justin Kofskie
+                <span class="home__title-complement">
+                    personal portfolio
+                </span>
+            </h1>
+        </section>
+
+        <section class="services section" id="services">
+            <h2 class="services__title section__title">Skills</h2>
+
+            <p class="services__intro-text section__intro-text">
+                What I do to ensure a perfect website for clients and their users
+            </p>
+
+            <ul class="services__list">
+                <li class="services__item services--1">
+                    <div class="services__item-icon"></div>
+                    <h3 class="portfolio__item-title">
+                        Website Design
+                    </h3>
+                    <p class="services__item-description">
+                        Portotyping and designing beautiful and elegant websites,
+                        centered around the needs of the client.
+                    </p>
+                </li>
+
+
+                <li class="services__item services--2">
+                    <div class="services__item-icon"></div>
+                    <h3 class="services__item-title">
+                        Front-end Development
+                    </h3>
+                    <p class="services__item-description">
+                        Creating a fully-integrated and functional user experience,
+                        allowing website visitors to find and use the information and features
+                        they need as efficiently as possible.
+                    </p>
+                </li>
+
+                <li class="services__item services--3">
+                    <div class="services__item-icon"></div>
+                    <h3 class="services__item-title">
+                        Back-end Services
+                    </h3>
+                    <p class="services__item-description">
+                        Realtime databases with user authentication to allow for secure
+                        creation of blog posts, articles, site updates, and more, hosted
+                        with Microsoft Azure.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="portfolio section" id="portfolio">
+            <h2 class="portfolio__title section__title">Portfolio</h2>
+
+            <p class="services__intro-text section__intro-text">
+                All my projects
+            </p>
+
+            <div class="portfolio__nav-column">
+                <ul class="portfolio__nav">
+                    <li class="portfolio__nav-li">
+                        <a href="#" class="portfolio__nav-item">All</a>
+                    </li>
+                    <li class="portfolio__nav-li">
+                        <a href="#" class="portfolio__nav-item is-active">Websites</a>
+                    </li>
+                    <li class="portfolio__nav-li">
+                        <a href="#" class="portfolio__nav-item">JS Apps</a>
+                    </li>
+                    <li class="portfolio__nav-li">
+                        <a href="#" class="portfolio__nav-item">Portotypes/Designs</a>
+                    </li>
+                    <li class="portfolio__nav-li">
+                        <a href="#" class="portfolio__nav-item">Misc</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="portfolio__list-column">
+                <ul class="portfolio__list">
+                    <li class="portfolio__list-li">
+                        <a href="#" class="portfolio__list-item">
+                            <img src="dist/images/html5logo.png" alt="">
+                        </a>
+                    </li>
+                    <li class="portfolio__list-li">
+                        <a href="#" class="portfolio__list-item">
+                            <img src="dist/images/html5logo.png" alt="">
+                        </a>
+                    </li>
+                    <li class="portfolio__list-li">
+                        <a href="#" class="portfolio__list-item">
+                            <img src="dist/images/html5logo.png" alt="">
+                        </a>
+                    </li>
+                    <li class="portfolio__list-li">
+                        <a href="#" class="portfolio__list-item">
+                            <img src="dist/images/html5logo.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section class="blog section" id="blog">
+            <h2 class="blog__title section__title">Blog</h2>
+
+            <p class="blog__intro-text section__intro-text">
+                Lorem ipsum...
+            </p>
+
+            <ul class="blog__list">
+                <li class="blog__item">
+                    <div class="blog__item-image">
+                        <a href="#">
+                            <img src="dist/images/jslogo.png" alt="">
+                        </a>
+                    </div>
+                    <header class="blog__item-header">
+                        <span class="blog__item-tags">
+                            <a href="#" class="blog__item-tag">General</a>
+                        </span>
+                        <h3 class="blog__item-title">
+                            Blog Post
+                        </h3>
+                    </header>
+                    <div class="blog__item-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quasi saepe beatae dignissimos, obcaecati perspiciatis enim alias itaque.
+                            Blanditiis consequatur nesciunt sapiente repellat, voluptate,
+                            neque et quibusdam ratione optio delectus excepturi.
+                        </p>
+                        <a href="#" class="blog__item-expand">View full post</a>
+                    </div>
+                </li>
+
+                <li class="blog__item">
+                    <div class="blog__item-image">
+                        <a href="#">
+                            <img src="dist/images/jslogo.png" alt="">
+                        </a>
+                    </div>
+                    <header class="blog__item-header">
+                        <span class="blog__item-tags">
+                            <a href="#" class="blog__item-tag">General</a>
+                        </span>
+                        <h3 class="blog__item-title">
+                            Blog Post
+                        </h3>
+                    </header>
+                    <div class="blog__item-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quasi saepe beatae dignissimos, obcaecati perspiciatis enim alias itaque.
+                            Blanditiis consequatur nesciunt sapiente repellat, voluptate,
+                            neque et quibusdam ratione optio delectus excepturi.
+                        </p>
+                        <a href="#" class="blog__item-expand">View full post</a>
+                    </div>
+                </li>
+
+                <li class="blog__item">
+                    <div class="blog__item-image">
+                        <a href="#">
+                            <img src="dist/images/jslogo.png" alt="">
+                        </a>
+                    </div>
+                    <header class="blog__item-header">
+                        <span class="blog__item-tags">
+                            <a href="#" class="blog__item-tag">General</a>
+                        </span>
+                        <h3 class="blog__item-title">
+                            Blog Post
+                        </h3>
+                    </header>
+                    <div class="blog__item-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quasi saepe beatae dignissimos, obcaecati perspiciatis enim
+                            alias itaque.
+                            Blanditiis consequatur nesciunt sapiente repellat,
+                            voluptate,
+                            neque et quibusdam ratione optio delectus excepturi.
+                        </p>
+                        <a href="#" class="blog__item-expand">View full post</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+
+        <section class="contact section" id="contact"></section>
+
+        <footer class="page-footer">
+            <div class="footer-module footer-module--email">
+                <div class="footer-module__icon">
+                    <div class="footer-module__content">
+                        <h2 class="footer-module__title">Email</h2>
+                        <p class="footer-module__text">
+                            <a href="mailto:justinkofskie@yahoo.com">justinkofskie@yahoo.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-module footer-module--social">
+                <div class="footer-module__icon">
+                    <div class="footer-module__content">
+                        <h2 class="footer-module__title">Social</h2>
+                        <p class="footer-module__text">
+                            <a href="https://twitter.com">Twitter</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 
 </body>
+
 
 </html>

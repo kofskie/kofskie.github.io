@@ -1,3 +1,6 @@
+// Entry point for node server, used to allow for
+// hosting and parsing of static files
+
 const http = require('http');
 const url = require('url');
 const fs = require('fs');
