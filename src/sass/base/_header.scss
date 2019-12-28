@@ -1,0 +1,40 @@
+// .head {
+//     position: fixed;
+//     width: 100%;
+// }
+
+.nav {
+    position: fixed;
+    width: 45%;
+    margin-left: 50%;
+    top: 40px;
+}
+
+.nav__list {
+    list-style: none;
+    height: 2em;
+    display: flex;
+}
+
+.nav__item {
+    padding: 0 2%;
+    width: 20%;
+}
+
+.nav__link {
+    position: absolute;
+    text-decoration: none;
+    text-align: center;
+    font-family: "Open Sans",
+        sans-serif;
+    font-weight: 800;
+    font-size: 1.3em;
+    color: black;
+    transform-origin: 50% 75%;
+    transition: transform 0.2s ease-in-out;
+    width: 20%;
+
+    &:hover {
+        transform: scale(1.5);
+    }
+}

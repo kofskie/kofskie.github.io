@@ -29,7 +29,7 @@ gulp.task('copy', function () {
         .pipe(gulp.dest('dist'))
 });
 
-gulp.task('watch', ['css'], function () {
-    gulp.watch('src/sass/**/*.scss', ['css']);
-    gulp.watch('src/*.html', ['css']);
+gulp.task('watch', function () {
+    gulp.watch('src/sass/**/*.scss', gulp.series('css'));
+    gulp.watch('src/*.html', gulp.series('copy'));
 });
