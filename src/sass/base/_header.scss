@@ -1,14 +1,12 @@
-// .head {
-//     position: fixed;
-//     width: 100%;
-// }
+// Nav menu
 
 .nav {
     position: fixed;
     width: 46%;
-    margin-left: 50%;
-    top: 35px;
+    right: 10%;
+    margin-top: 35px;
     height: 3em;
+    z-index: 2;
 }
 
 .nav__list {

@@ -1,3 +1,8 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -6,7 +11,7 @@ html {
 .section {
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    z-index: 1;
 }
 
 .about-section {
@@ -14,16 +19,20 @@ html {
     background-size: cover;
 }
 
-.about-section__header {
-    // position is randomly selected in app.js
-    display: none;
+.about-section__container {
     position: absolute;
+    display: block;
+    visibility: hidden;
+    width: auto;
+    height: auto;
+    left: 0;
+    top: 0;
+}
+
+.about-section__header {
     color: white;
-    // font-weight: 800;
-    font-size: 4em;
-    animation: opacIn 1s forwards;
+    font-size: 3.5em;
     font-family: 'Abril Fatface';
-    // mix-blend-mode: difference;
 }
 
 .about-section__paragraph {
