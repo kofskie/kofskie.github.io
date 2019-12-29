@@ -9,32 +9,40 @@ html {
     width: 100vw;
     height: 100vh;
     scroll-snap-align: start;
+}
 
-    &.about-section {
-        // background: rgb(255, 72, 0);
-        // background: linear-gradient(180deg, rgba(255, 72, 0, 1) 0%, rgba(255, 0, 146, 1) 100%);
-        background-image: url("../../../mountain-background.png.jpg");
-        background-size: cover;
-    }
+.about-section {
+    background-image: url("../../../mountain-background.png.jpg");
+    background-size: cover;
+}
 
-    &.skills-section {
+.about-section__header {
+    // position is randomly selected in app.js
+    display: none;
+    position: absolute;
+    color: white;
+    font-weight: 800;
+    font-size: 3em;
+    animation: opacIn 1s forwards;
+}
 
-        background: rgb(0, 224, 127);
-        background: linear-gradient(180deg, rgba(0, 224, 127, 1) 0%, rgba(0, 42, 175, 1) 100%);
-    }
+.skills-section {
 
-    &.portfolio-section {
-        background: rgb(233, 223, 0);
-        background: linear-gradient(180deg, rgba(233, 223, 0, 1) 0%, rgba(119, 201, 0, 1) 100%);
-    }
+    background: rgb(0, 224, 127);
+    background: linear-gradient(180deg, rgba(0, 224, 127, 1) 0%, rgba(0, 42, 175, 1) 100%);
+}
 
-    &.blog-section {
-        background: rgb(233, 0, 0);
-        background: linear-gradient(180deg, rgba(233, 0, 0, 1) 0%, rgba(201, 0, 173, 1) 100%);
-    }
+.portfolio-section {
+    background: rgb(233, 223, 0);
+    background: linear-gradient(180deg, rgba(233, 223, 0, 1) 0%, rgba(119, 201, 0, 1) 100%);
+}
 
-    &.contact-section {
-        background: rgb(74, 0, 233);
-        background: linear-gradient(180deg, rgba(74, 0, 233, 1) 0%, rgba(251, 115, 255, 1) 100%);
-    }
+.blog-section {
+    background: rgb(233, 0, 0);
+    background: linear-gradient(180deg, rgba(233, 0, 0, 1) 0%, rgba(201, 0, 173, 1) 100%);
+}
+
+.contact-section {
+    background: rgb(74, 0, 233);
+    background: linear-gradient(180deg, rgba(74, 0, 233, 1) 0%, rgba(251, 115, 255, 1) 100%);
 }
