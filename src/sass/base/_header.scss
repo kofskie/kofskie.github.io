@@ -29,7 +29,7 @@
     font-family: "Open Sans",
         sans-serif;
     font-weight: 800;
-    padding: 1% 0;
+    padding: 10px 0;
 
     background-color: black;
     color: rgb(92, 166, 226);
@@ -41,8 +41,9 @@
 
     &:hover {
         width: 17.5%;
+        padding: 8px 0;
         border-radius: 15px;
         font-style: italic;
-        transform: translateX(7.5%);
+        transform: translateX(7.5%) translateY(5px);
     }
 }
