@@ -5,14 +5,15 @@
 
 .nav {
     position: fixed;
-    width: 45%;
+    width: 46%;
     margin-left: 50%;
-    top: 40px;
+    top: 35px;
+    height: 3em;
 }
 
 .nav__list {
     list-style: none;
-    height: 2em;
+    height: 3em;
     display: flex;
 }
 
@@ -28,13 +29,20 @@
     font-family: "Open Sans",
         sans-serif;
     font-weight: 800;
+    padding: 1% 0;
+
+    background-color: black;
+    color: rgb(92, 166, 226);
+
     font-size: 1.3em;
-    color: black;
     transform-origin: 50% 75%;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.1s ease-in-out, width 0.1s ease-in-out, border-radius 0.2s ease-in-out;
     width: 20%;
 
     &:hover {
-        transform: scale(1.5);
+        width: 17.5%;
+        border-radius: 15px;
+        font-style: italic;
+        transform: translateX(7.5%);
     }
 }

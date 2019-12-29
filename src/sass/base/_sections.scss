@@ -11,8 +11,9 @@ html {
     scroll-snap-align: start;
 
     &.about-section {
-        background: rgb(255, 72, 0);
-        background: linear-gradient(180deg, rgba(255, 72, 0, 1) 0%, rgba(255, 0, 146, 1) 100%);
+        // background: rgb(255, 72, 0);
+        // background: linear-gradient(180deg, rgba(255, 72, 0, 1) 0%, rgba(255, 0, 146, 1) 100%);
+        background-image: url("../../../mountain-background.png.jpg");
     }
 
     &.skills-section {
