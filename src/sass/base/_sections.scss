@@ -10,7 +10,8 @@ html {
 
 .section {
     width: 100vw;
-    height: 100vh;
+    height: 100vh !important;
+    max-width: 100%;
     z-index: 1;
 }
 
@@ -33,6 +34,7 @@ html {
     color: white;
     font-size: 3.5em;
     font-family: 'Abril Fatface';
+    animation: opacIn 1.2s forwards;
 }
 
 .about-section__paragraph {
