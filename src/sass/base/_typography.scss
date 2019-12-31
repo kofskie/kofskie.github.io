@@ -12,3 +12,21 @@ button {
     font-family: "Open Sans", sans-serif;
     font-size: 100%;
 }
+
+.about-section__header {
+    position: relative;
+    left: 5%;
+    color: white;
+    font-size: 3.5em;
+    font-family: 'Abril Fatface';
+    animation: header-opac-in 2s forwards;
+}
+
+.about-section__paragraph {
+    color: white;
+    font-size: 1.6em;
+    font-family: 'Noto Sans JP', sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.85em;
+    word-spacing: 0.125em;
+}

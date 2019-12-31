@@ -3,10 +3,10 @@
 .nav {
     position: fixed;
     width: 46%;
-    right: 10%;
-    margin-top: 35px;
+    right: 5%;
     height: 3em;
     z-index: 2;
+    animation: nav-slide-in 0.5s forwards;
 }
 
 .nav__list {

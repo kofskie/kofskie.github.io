@@ -1,9 +1,21 @@
-@keyframes opacIn {
+@keyframes header-opac-in {
     from {
         opacity: 0;
     }
 
     to {
         opacity: 0.9;
+    }
+}
+
+@keyframes nav-slide-in {
+    from {
+        margin-top: 0;
+        opacity: 0;
+    }
+
+    to {
+        margin-top: 35px;
+        opacity: 1;
     }
 }
