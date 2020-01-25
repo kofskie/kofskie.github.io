@@ -1,0 +1,35 @@
+.resizable {
+    background-color: gray;
+    height: 400px;
+    width: 600px;
+    position: absolute;
+    left: 0px;
+    top: 100px;
+    border: 5px solid black;
+
+    #trigger {
+        display: none;
+    }
+
+    label {
+        display: none;
+        font-size: 2em;
+        user-select: none;
+    }
+
+    nav {
+        height: 50px;
+        background-color: rgb(255, 253, 225);
+
+        ul {
+            list-style: none;
+            
+            a {
+                text-decoration: none;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                color: black;
+                cursor: pointer;
+            }
+        }
+    }
+}

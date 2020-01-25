@@ -9,21 +9,27 @@ html {
 }
 
 .section {
-    width: 100vw;
+    width: 100vw !important;
     height: 100vh !important;
     max-width: 100%;
     z-index: 1;
 }
 
 .about-section {
+    top: 0;
+    left: 0;
+    padding-top: 0;
+    margin-top: 0;
     background-image: url("../../../mountain-background.png.jpg");
     background-size: cover;
+    z-index: 4;
 }
 
 .about-section__container {
+    top: 20%;   
     position: relative;
     // width handled by app.js
-    height: 50%;
+    height: 65%;
 }
 
 .about-section__para-container {
@@ -34,12 +40,47 @@ html {
     padding: 4% 9% 5% 5%;
     border-radius: 15px;
     mix-blend-mode: difference;
-    visibility: hidden;
 }
 
 .blendfix {
     position: relative;
 }
+
+@include laptop {
+    .about-section__para-container {
+        visibility: hidden;
+    }
+}
+
+// .about-section {
+//     top: 0;
+//     left: 0;
+//     padding-top: 0;
+//     margin-top: 0;
+//     background-image: url("../../../mountain-background.png.jpg");
+//     background-size: cover;
+// }
+
+// .about-section__container {
+//     position: relative;
+//     // width handled by app.js
+//     height: 21em;
+// }
+
+// .about-section__para-container {
+//     position: relative;
+//     background-color: rgba(156, 156, 156, 0.35);
+//     width: 100%;
+//     height: 100%;
+//     padding: 4% 9% 5% 5%;
+//     border-radius: 15px;
+//     mix-blend-mode: difference;
+//     visibility: hidden;
+// }
+
+// .blendfix {
+//     position: relative;
+// }
 
 
 

@@ -1,47 +1,105 @@
+.site-title {
+    font-family: "Open Sans";
+    font-size: 5em;
+    position: fixed;
+    z-index: 10;
+    left: 0.5em;
+}
+
 // Nav menu
 
 .nav {
-    position: fixed;
-    width: 46%;
-    right: 5%;
+    position: absolute;
     height: 3em;
     z-index: 2;
     animation: nav-slide-in 0.5s forwards;
+    text-align: center;
+    width: 80vw;
+    margin-left: 10vw;
 }
 
 .nav__list {
+    background-color: black;
     list-style: none;
-    height: 3em;
-    display: flex;
+    border-radius: 20px;
 }
 
-.nav__item {
-    padding: 0 2%;
-    width: 20%;
+.nav__list-item {
+    padding: 0 2em;
 }
 
 .nav__link {
-    position: absolute;
     text-decoration: none;
     text-align: center;
     font-family: "Open Sans",
         sans-serif;
     font-weight: 800;
-    padding: 10px 0;
+    width: 100%;
 
-    background-color: black;
     color: rgb(92, 166, 226);
 
     font-size: 1.3em;
     transform-origin: 50% 75%;
-    transition: transform 0.1s ease-in-out, width 0.1s ease-in-out, border-radius 0.2s ease-in-out, padding 0.1s ease-in-out;
-    width: 20%;
+    transition: transform 0.1s ease-in-out, width 0.1s ease-in-out;
 
-    &:hover {
-        width: 17.5%;
-        padding: 8px 0;
-        border-radius: 15px;
-        font-style: italic;
-        transform: translateX(7.5%) translateY(4px);
-    }
 }
+
+// expanded menu code
+
+// .site-title {
+//     font-family: "Open Sans";
+//     font-size: 5em;
+//     position: fixed;
+//     z-index: 10;
+//     left: 0.5em;
+//     top: 0.1em;
+// }
+
+// // Nav menu
+
+// .nav {
+//     position: fixed;
+//     width: 46%;
+//     right: 5%;
+//     height: 3em;
+//     z-index: 2;
+//     animation: nav-slide-in 0.5s forwards;
+// }
+
+// .nav__list {
+//     list-style: none;
+//     height: 3em;
+//     display: flex;
+// }
+
+// .nav__item {
+//     padding: 0 2%;
+//     width: 20%;
+// }
+
+// .nav__link {
+//     position: absolute;
+//     text-decoration: none;
+//     text-align: center;
+//     font-family: "Open Sans",
+//         sans-serif;
+//     font-weight: 800;
+//     padding: 10px 0;
+
+//     background-color: black;
+//     color: rgb(92, 166, 226);
+
+//     font-size: 1.3em;
+//     transform-origin: 50% 75%;
+//     transition: transform 0.1s ease-in-out, width 0.1s ease-in-out, border-radius 0.2s ease-in-out, padding 0.1s ease-in-out;
+//     width: 20%;
+
+//     &:hover {
+//         width: 17.5%;
+//         padding: 8px 0;
+//         border-radius: 15px;
+//         font-style: italic;
+//         transform: translateX(7.5%) translateY(4px);
+//     }
+// }
+

@@ -1,0 +1,1 @@
+{"version":3,"sources":["menus/m-1-expanded.scss"],"names":[],"mappings":"AAAA,YAGQ,iBAAkB,CAH1B,YAOQ,oBAAqB,CACrB,eAAgB","file":"../../menus/m-1-expanded.css","sourcesContent":["#style-1 {\r\n\r\n    ul {\r\n        text-align: center;\r\n    }\r\n\r\n    li {\r\n        display: inline-block;\r\n        padding: 1em 2em;\r\n    }\r\n}"]}

@@ -1,22 +1,28 @@
-@mixin phone-portrait {
+@mixin mobile-s {
+    @media (min-width: $smallest-width) {
+        @content;
+    }
+}
+
+@mixin mobile-m {
     @media (min-width: $very-small-width) {
         @content;
     }
 }
 
-@mixin tablet-portrait {
+@mixin mobile-l {
     @media (min-width: $small-width) {
         @content;
     }
 }
 
-@mixin tablet-landscape {
+@mixin tablet {
     @media (min-width: $medium-width) {
         @content;
     }
 }
 
-@mixin wide {
+@mixin laptop {
     @media (min-width: $large-width) {
         @content;
     }

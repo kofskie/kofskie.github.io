@@ -1,0 +1,36 @@
+#style-1 {
+    
+    label {
+        position: absolute;
+        display: inline-block;
+        right: 0px;
+        padding-right: 20px;
+    }
+
+    nav {
+        background-color: rgb(255, 173, 173);
+    }
+
+    ul {
+        display: none;
+        a {
+            cursor: grab;
+            color: red;
+        }
+    }
+
+    #trigger:checked ~ nav {
+        ul {
+            position: absolute;
+            display: block;
+            margin-top: 50px;
+            right: 0;
+            a {
+                display: block;
+                background-color: rgb(255, 173, 173);
+                width: 200px;
+                border-top: 2px solid rgb(255, 150, 150);
+            }
+        }
+    }
+}
