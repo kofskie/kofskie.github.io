@@ -31,10 +31,8 @@ http.createServer(function (req, res) {
     // parse URL
     const parsedUrl = url.parse(req.url);
 
-    // extract URL path
-    // Avoid https://en.wikipedia.org/wiki/Directory_traversal_attack
-    // e.g curl --path-as-is http://localhost:9000/../fileInDanger.txt
-    // by limiting the path to current directory only
+    /* extract URL path, avoid directory traversal
+       by limiting the path to current directory only */
     const sanitizePath = path.normalize(parsedUrl.pathname).replace(/^(\.\.[\/\\])+/, '');
     let pathname = path.join(__dirname, sanitizePath);
 
@@ -42,7 +40,7 @@ http.createServer(function (req, res) {
         if (!exist) {
             // if the file is not found, return 404
             res.statusCode = 404;
-            res.end(`File ${pathname} not found!`);
+            res.end(`File ${pathname} not found.`);
             return;
         }
 

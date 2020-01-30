@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
 
     $('.resizable').resizable({
         handles: "e"
@@ -6,22 +6,26 @@ $(function() {
 
     var isExpanded = true;
 
-    $('.resizable').resize(function() {
-        if($('.resizable').width() <= 550) {
-            switchMode(false);
-        } else {
-            switchMode(true);
-        }
+    $('.resizable').each(function () {
+        $(this).resize(function (event) {
+            if ($(this).width() <= 550) {
+                switchMode(false, event.target.id);
+            } else {
+                switchMode(true, event.target.id);
+            }
+        })
     })
 
-    function switchMode(mode) {
+    function switchMode(mode, id) {
         if (mode && !isExpanded) {
-            $('#trigger-small').attr('media', '(max-width: 550px)');
+            $(`#trigger-small-${id.charAt(id.length -1)}`).attr('media', '(max-width: 550px)');
             isExpanded = true;
+            console.log("expanded mode " + id)
 
-        } else if(!mode && isExpanded) {
-            $('#trigger-small').attr('media', 'all');
+        } else if (!mode && isExpanded) {
+            $(`#trigger-small-${id.charAt(id.length -1)}`).attr('media', 'all');
             isExpanded = false;
+            console.log("mobile mode " + id)
         }
     }
 })

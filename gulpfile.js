@@ -8,9 +8,7 @@ gulp.task('css', function () {
     // scan for all sass css files
     return gulp.src('src/sass/**/*.scss')
         .pipe(sourcemaps.init())
-        .pipe(sass({
-            outputStyle: 'compressed'
-        }).on('error', sass.logError))
+        .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 2 versions']
         }))

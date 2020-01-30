@@ -1,33 +1,66 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Menus Demo</title>
-    <link rel="stylesheet" href="css/menus.css">
-    
+    <link rel="stylesheet" href="css/menus/menus.css">
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
         integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
 
     <link rel="stylesheet" media="all" href="css/menus/m-1-expanded.css">
-    <link rel="stylesheet" media="(max-width: 600px)"href="css/menus/m-1-mobile.css" id="trigger-small">
+    <link rel="stylesheet" media="(max-width: 600px)" href="css/menus/m-1-mobile.css" id="trigger-small-1">
+
+    <link rel="stylesheet" media="all" href="css/menus/m-2-expanded.css">
+    <link rel="stylesheet" media="(max-width: 600px)" href="css/menus/m-2-mobile.css" id="trigger-small-2">
 </head>
 
 <body>
-    
+
     <div class="resizable" id="style-1">
-        <input id="trigger" name="trigger" type="checkbox">
-        <label for="trigger">&#9776;</label>
+        <input class="trigger" id="trigger-1" name="trigger-1" type="checkbox">
+        <label for="trigger-1">&#9776;</label>
         <nav>
             <ul class="nav-list">
-                <a><li>Home</li></a>
-                <a><li>About</li></a>
-                <a><li>Projects</li></a>
-                <a><li>Contact</li></a>
+                <a>
+                    <li>Home</li>
+                </a>
+                <a>
+                    <li>About</li>
+                </a>
+                <a>
+                    <li>Projects</li>
+                </a>
+                <a>
+                    <li>Contact</li>
+                </a>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="resizable" id="style-2">
+        <input class="trigger" id="trigger-2" name="trigger-2" type="checkbox">
+        <label for="trigger-2">&#9776;</label>
+        <nav>
+            <ul class="nav-list">
+                <a>
+                    <li>Home</li>
+                </a>
+                <a>
+                    <li>About</li>
+                </a>
+                <a>
+                    <li>Projects</li>
+                </a>
+                <a>
+                    <li>Contact</li>
+                </a>
             </ul>
         </nav>
     </div>
