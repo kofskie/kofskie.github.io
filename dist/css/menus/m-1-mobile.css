@@ -1,36 +1,28 @@
 #style-1 label {
-    position: absolute;
-    display: inline-block;
-    right: 0px;
-    padding-right: 20px
-}
+  position: absolute;
+  display: inline-block;
+  right: 0px;
+  padding-right: 20px; }
 
 #style-1 nav {
-    background-color: #ffadad
-}
+  background-color: #ffadad; }
 
 #style-1 ul {
-    display: none
-}
-
-#style-1 ul a {
+  display: none; }
+  #style-1 ul a {
     cursor: -webkit-grab;
     cursor: grab;
-    color: red
-}
+    color: red; }
 
-#style-1 #trigger-1:checked~nav ul {
-    position: absolute;
-    display: block;
-    margin-top: 50px;
-    right: 0
-}
-
-#style-1 #trigger-1:checked~nav ul a {
+#style-1 #trigger-1:checked ~ nav ul {
+  position: absolute;
+  display: block;
+  margin-top: 50px;
+  right: 0; }
+  #style-1 #trigger-1:checked ~ nav ul a {
     display: block;
     background-color: #ffadad;
     width: 200px;
-    border-top: 2px solid #ff9696
-}
+    border-top: 2px solid #ff9696; }
 
 /*# sourceMappingURL=../maps/menus/m-1-mobile.css.map */

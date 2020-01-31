@@ -1,36 +1,28 @@
 #style-2 label {
-    position: absolute;
-    display: inline-block;
-    right: 0px;
-    padding-right: 20px
-}
+  position: absolute;
+  display: inline-block;
+  right: 0px;
+  padding-right: 20px; }
 
 #style-2 nav {
-    background-color: #ffadad
-}
+  background-color: #ffadad; }
 
 #style-2 ul {
-    display: none
-}
-
-#style-2 ul a {
+  display: none; }
+  #style-2 ul a {
     cursor: -webkit-grab;
     cursor: grab;
-    color: red
-}
+    color: red; }
 
-#style-2 #trigger-2:checked~nav ul {
-    position: absolute;
-    display: block;
-    margin-top: 50px;
-    right: 0
-}
-
-#style-2 #trigger-2:checked~nav ul a {
+#style-2 #trigger-2:checked ~ nav ul {
+  position: absolute;
+  display: block;
+  margin-top: 50px;
+  right: 0; }
+  #style-2 #trigger-2:checked ~ nav ul a {
     display: block;
     background-color: #ffadad;
     width: 200px;
-    border-top: 2px solid #ff9696
-}
+    border-top: 2px solid #ff9696; }
 
 /*# sourceMappingURL=../maps/menus/m-2-mobile.css.map */
