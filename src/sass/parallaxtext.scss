@@ -1,0 +1,43 @@
+body {
+    background-color: rgb(38, 79, 99)
+}
+
+span {
+    font-size: 5em;
+    font-family: 'Rubik Mono One',
+        sans-serif;
+}
+
+.layer-container {
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    text-align: center;
+    height: auto;
+    top: 35%;
+}
+
+#layer-1 {
+    color: red;
+
+    span {
+        text-shadow:
+            -1px -1px 0 red,
+            1px -1px 0 red,
+            -1px 1px 0 red,
+            1px 1px 0 red;
+    }
+
+}
+
+#layer-2 {
+    color: orange;
+}
+
+#layer-3 {
+    color: yellow;
+}
+
+#layer-4 {
+    color: green;
+}

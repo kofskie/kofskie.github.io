@@ -1,39 +1,36 @@
 #style-2 {
 
-    label {
-        position: absolute;
-        display: inline-block;
-        right: 0px;
-        padding-right: 20px;
-    }
+    .carousel {
+        position: relative;
+        height: 100%;
 
-    nav {
-        background-color: rgb(255, 173, 173);
-    }
+        overflow: hidden;
 
-
-    ul {
-        display: none;
-
-        a {
-            cursor: grab;
-            color: red;
-        }
-    }
-
-    #trigger-2:checked~nav {
-        ul {
-            position: absolute;
+        .item {
+            position: relative;
             display: block;
-            margin-top: 50px;
-            right: 0;
-
-            a {
-                display: block;
-                background-color: rgb(255, 173, 173);
-                width: 200px;
-                border-top: 2px solid rgb(255, 150, 150);
-            }
+            height: 50px;
         }
+
+        #home {
+            background-color: blue;
+        }
+
+        #about {
+            background-color: red;
+        }
+
+        #skills {
+            background-color: green;
+        }
+
+        #projects {
+            background-color: pink;
+        }
+
+        #contact {
+            background-color: yellow;
+        }
+
     }
 }
