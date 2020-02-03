@@ -58,10 +58,6 @@ $(function () {
                 "top": l4PosY - (posY * .045)
             })
 
-            $("")
-
-            console.log(posX);
-
             posX = event.pageX;
             posY = event.pageY;
         } else {

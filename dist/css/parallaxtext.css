@@ -6,6 +6,7 @@ span {
   font-size: 5em;
   font-family: 'Rubik Mono One',
     sans-serif;
+  user-select: none;
 }
 
 
