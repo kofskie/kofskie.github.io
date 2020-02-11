@@ -42,8 +42,8 @@ $(function () {
 
         if (init) {
 
-            posX = posX - startX;
-            posY = posY - startY;
+            posX -= startX;
+            posY -= startY;
 
             $("#layer-2").css({
                 "left": l2PosX - (posX * .016),
@@ -58,15 +58,13 @@ $(function () {
                 "top": l4PosY - (posY * .045)
             })
 
-            posX = event.pageX;
-            posY = event.pageY;
         } else {
             startX = event.pageX;
             startY = event.pageY;
-
-            posX = event.pageX;
-            posY = event.pageY;
         }
+
+        posX = event.pageX;
+        posY = event.pageY;
 
         init = true;
     })

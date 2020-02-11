@@ -1,0 +1,292 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+.top-banner {
+  height: 30px;
+  background-color: black; }
+
+.top-banner__list {
+  list-style: none;
+  float: right; }
+
+.top-banner__item {
+  display: inline-block;
+  padding: 5px 10px;
+  color: white; }
+
+.nav {
+  height: 60px;
+  background-color: #fff9ec; }
+
+@media (max-width: 768px) {
+  .nav {
+    position: relative;
+    background-color: red; } }
+
+.nav__logo {
+  float: left;
+  padding: 0px 20px;
+  line-height: 55px; }
+
+.nav__cart {
+  float: right;
+  padding: 18px 20px;
+  font-size: 20px; }
+
+.nav__list {
+  position: relative;
+  height: 100%; }
+
+.nav__list-item:hover .submenu {
+  display: block; }
+
+.nav__link {
+  position: relative;
+  float: left;
+  text-transform: capitalize;
+  font-family: 'Crimson Text', serif;
+  font-size: 24px;
+  color: black;
+  padding: 20px 20px 16px 20px; }
+
+.submenu {
+  text-align: center;
+  top: 60px;
+  position: absolute;
+  display: none;
+  background-color: #ececec;
+  padding: 10px;
+  width: 100vw;
+  border-radius: 0px 0px 5px 5px;
+  z-index: 10; }
+
+.submenu__title {
+  text-align: center;
+  display: inline-block;
+  padding: 20px 60px; }
+
+.submenu__item {
+  text-align: center;
+  width: 100%;
+  color: black;
+  display: block;
+  padding: 20px 20px;
+  font-family: 'Cabin', sans-serif;
+  font-size: 20px;
+  border-radius: 4px; }
+
+body {
+  background-color: grey; }
+
+.head-container {
+  height: 877px; }
+
+.carousel {
+  position: relative;
+  background-color: red;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+
+.carousel__img {
+  width: 877px !important;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+
+.carousel__image-container-1 {
+  position: relative;
+  width: 100%;
+  height: 1000px;
+  background-size: cover;
+  background-position: 0% 20%;
+  background-image: url("https://envato-shoebox-0.imgix.net/cdee/d93b-66f8-46d4-b67e-ec7214119c13/DSC_4994+__________.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=800&s=cf9299689b6cd7eab162a0ecd0d26823"); }
+
+.carousel__dots {
+  position: relative;
+  width: auto;
+  height: 50px;
+  bottom: 125px; }
+
+.carousel__header-1 {
+  position: absolute;
+  top: 700px;
+  left: 32%;
+  width: 500px;
+  height: 80px;
+  line-height: 80px;
+  background-color: white;
+  -webkit-transform: skewX(-20deg);
+          transform: skewX(-20deg);
+  z-index: 10; }
+
+.carousel__header-text-1 {
+  position: absolute;
+  padding-left: 20px;
+  -webkit-transform: skewX(20deg);
+          transform: skewX(20deg);
+  font-size: 34px;
+  letter-spacing: 3px;
+  font-family: 'Volkhov', serif; }
+
+.carousel__tag-1 {
+  position: absolute;
+  top: 656px;
+  left: 32.5%;
+  width: 200px;
+  height: 35px;
+  background-color: black;
+  -webkit-transform: skewX(-20deg);
+          transform: skewX(-20deg); }
+
+.carousel__tag-text-1 {
+  padding-left: 30px;
+  position: absolute;
+  -webkit-transform: skewX(20deg);
+          transform: skewX(20deg);
+  font-size: 24px;
+  line-height: 35px;
+  letter-spacing: 3px;
+  font-family: 'Open Sans', sans-serif;
+  color: white; }
+
+.main-container {
+  position: relative;
+  width: 100%;
+  height: 1200px;
+  background-color: red; }
+
+/*# sourceMappingURL=maps/examplestore.css.map */

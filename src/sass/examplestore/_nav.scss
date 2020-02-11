@@ -1,0 +1,103 @@
+.top-banner {
+    height: 30px;
+    background-color: black;
+}
+
+.top-banner__list {
+    list-style: none;
+
+    float: right;
+}
+
+.top-banner__item {
+    display: inline-block;
+    padding: 5px 10px;
+    color: white;
+}
+
+
+
+// Main nav menu
+.nav {
+    height: 60px;
+    background-color: rgb(255, 249, 236);
+}
+
+@include tablet() {
+    .nav {
+        position: relative;
+        background-color: red;
+    }
+}
+
+.nav__logo {
+    float: left;
+    padding: 0px 20px;
+    line-height: 55px;
+}
+
+.nav__cart {
+    float: right;
+    padding: 18px 20px;
+    font-size: 20px;
+}
+
+.nav__list {
+    position: relative;
+    height: 100%;
+}
+
+.nav__list-item {
+    &:hover .submenu {
+        display: block;
+    }
+}
+
+// primary nav links
+.nav__link {
+    position: relative;
+    float: left;
+    text-transform: capitalize;
+    font-family: 'Crimson Text',
+        serif;
+    font-size: 24px;
+    color: black;
+    padding: 20px 20px 16px 20px;
+}
+
+.submenu {
+    text-align: center;
+    top: 60px;
+    position: absolute;
+    display: none;
+    background-color: rgb(236, 236, 236);
+    padding: 10px;
+    width: 100vw;
+    border-radius: 0px 0px 5px 5px;
+    z-index: 10;
+}
+
+.submenu__title {
+    text-align: center;
+    display: inline-block;
+    padding: 20px 60px;
+}
+
+.submenu__list {}
+
+.submenu__item {
+    text-align: center;
+    width: 100%;
+    color: black;
+    display: block;
+    padding: 20px 20px;
+    font-family: 'Cabin',
+        sans-serif;
+    font-size: 20px;
+    border-radius: 4px;
+
+    // &:hover {
+    //     background-color: rgb(216, 216, 216);
+    // }
+
+}
