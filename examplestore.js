@@ -62,6 +62,7 @@ $(function () {
         }
     }
 
+
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
@@ -69,15 +70,13 @@ $(function () {
     let ref = firebase.database().ref();
     ref.once("value").then(function (snapshot) {
 
-        // TODO: wrap in for loop to create all dropdown menus
-
         // array of individual items
         let itemsList = [];
 
         // array of all menu sections
         let subcategories = [];
 
-        // sublist --> subcategory*num --> title & li*num
+        // STRUCTURE: sublist --> subcategory*num --> title & li*num
         for (let i = 1; i < snapshot.child("sublist-1").numChildren() + 1; i++) { // get number of subcategories in sublist
 
             // object for menu sections
