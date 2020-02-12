@@ -1,8 +1,8 @@
 $(function () {
 
-    // -------------------------
-    // -- DATABASE MANAGEMENT --
-    // -------------------------
+    // --------------------
+    // -- DATABASE STUFF --
+    // --------------------
 
     // Config data
     let firebaseConfig = {
@@ -24,21 +24,20 @@ $(function () {
 
             console.log("Working title: " + subcategoryTitle);
 
-            // generate h3 element
+            // generate h3
             let titleElement = document.createElement("h3");
             titleElement.className = 'submenu__title';
             titleElement.innerHTML = subcategoryTitle;
 
             $('#menu-1').append(titleElement);
-            // DONE
 
-            // generate ul here
+
+            // generate ul
             let ulElement = document.createElement("ul");
             ulElement.className = 'submenu__list';
             ulElement.id = `submenu__list-${i+1}`
 
             $('#menu-1').append(ulElement);
-            // DONE
 
             console.log("Length: " + (subcategories[i].items.length - 1));
 
@@ -47,10 +46,16 @@ $(function () {
             for (let x = 0; x < subcategories[i].items.length - 1; x++) {
 
                 console.log("Item at i: " + subcategories[i].items[x]);
-                // generate li here
+
+                // generate li
                 let liElement = document.createElement("li");
                 liElement.className = 'submenu__item';
-                liElement.innerHTML = subcategories[i].items[x];
+
+                // generate anchor
+                let anchor = document.createElement("a");
+                liElement.appendChild(anchor)
+                anchor.href = "#";
+                anchor.innerHTML = subcategories[i].items[x];
 
                 $(`#submenu__list-${i + 1}`).append(liElement);
             }

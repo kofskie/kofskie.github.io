@@ -194,6 +194,7 @@ a {
   padding: 20px 60px; }
 
 .submenu__item {
+  position: relative;
   text-align: center;
   width: 100%;
   color: black;
