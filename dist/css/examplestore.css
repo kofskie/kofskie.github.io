@@ -193,6 +193,10 @@ a {
   display: inline-block;
   padding: 20px 60px; }
 
+.submenu__container {
+  display: inline-block;
+  position: relative; }
+
 .submenu__item {
   position: relative;
   text-align: center;

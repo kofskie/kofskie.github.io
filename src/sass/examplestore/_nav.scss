@@ -83,7 +83,10 @@
     padding: 20px 60px;
 }
 
-.submenu__list {}
+.submenu__container {
+    display: inline-block;
+    position: relative;
+}
 
 .submenu__item {
     position: relative;

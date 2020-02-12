@@ -20,28 +20,29 @@ $(function () {
 
         for (let i = 0; i < subcategories.length; i++) {
 
-            let subcategoryTitle = subcategories[i].title;
+            // generate container
+            let containerElement = document.createElement("div");
+            containerElement.className = 'submenu__container';
+            containerElement.id = 'container-1';
 
-            console.log("Working title: " + subcategoryTitle);
+            $('#menu-1').append(containerElement);
 
             // generate h3
+            let subcategoryTitle = subcategories[i].title;
+
             let titleElement = document.createElement("h3");
             titleElement.className = 'submenu__title';
             titleElement.innerHTML = subcategoryTitle;
 
-            $('#menu-1').append(titleElement);
+            containerElement.append(titleElement);
 
 
             // generate ul
             let ulElement = document.createElement("ul");
             ulElement.className = 'submenu__list';
-            ulElement.id = `submenu__list-${i+1}`
+            ulElement.id = `submenu__list-${i + 1}`;
 
-            $('#menu-1').append(ulElement);
-
-            console.log("Length: " + (subcategories[i].items.length - 1));
-
-            console.log("All items: " + subcategories[i].items);
+            containerElement.append(ulElement);
 
             for (let x = 0; x < subcategories[i].items.length - 1; x++) {
 
@@ -53,7 +54,7 @@ $(function () {
 
                 // generate anchor
                 let anchor = document.createElement("a");
-                liElement.appendChild(anchor)
+                liElement.appendChild(anchor);
                 anchor.href = "#";
                 anchor.innerHTML = subcategories[i].items[x];
 
@@ -103,12 +104,6 @@ $(function () {
 
             // store list of items in subcategory object
             subcategory.items = itemsList;
-
-            // title of subcategory is currently stored in object
-            console.log("Subcategory title: " + subcategory.title);
-
-            // array of items currently contains subcategory items
-            console.log("List items: " + subcategory.items);
 
             // store subcategory into array
             subcategories.push(subcategory);
