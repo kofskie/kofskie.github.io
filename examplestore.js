@@ -71,9 +71,6 @@ $(function () {
 
         // TODO: wrap in for loop to create all dropdown menus
 
-        let key = snapshot.key;
-        console.log(snapshot.numChildren())
-
         // array of individual items
         let itemsList = [];
 
