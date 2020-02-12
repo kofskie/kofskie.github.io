@@ -77,20 +77,21 @@
     z-index: 10;
 }
 
+.submenu__container {
+    text-align: right;
+    display: inline-block;
+    position: relative;
+}
+
 .submenu__title {
-    text-align: center;
+    text-align: right;
     display: inline-block;
     padding: 20px 60px;
 }
 
-.submenu__container {
-    display: inline-block;
-    position: relative;
-}
-
 .submenu__item {
     position: relative;
-    text-align: center;
+    text-align: left;
     width: 100%;
     color: black;
     display: block;

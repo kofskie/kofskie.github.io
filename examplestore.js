@@ -23,9 +23,9 @@ $(function () {
             // generate container
             let containerElement = document.createElement("div");
             containerElement.className = 'submenu__container';
-            containerElement.id = 'container-1';
+            containerElement.id = `submenu__container-${i}`;
 
-            $('#menu-1').append(containerElement);
+            $('#submenu-1').append(containerElement);
 
             // generate h3
             let subcategoryTitle = subcategories[i].title;
@@ -39,7 +39,6 @@ $(function () {
 
             // generate ul
             let ulElement = document.createElement("ul");
-            ulElement.className = 'submenu__list';
             ulElement.id = `submenu__list-${i + 1}`;
 
             containerElement.append(ulElement);

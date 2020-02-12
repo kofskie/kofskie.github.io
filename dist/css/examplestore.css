@@ -188,18 +188,19 @@ a {
   border-radius: 0px 0px 5px 5px;
   z-index: 10; }
 
-.submenu__title {
-  text-align: center;
-  display: inline-block;
-  padding: 20px 60px; }
-
 .submenu__container {
+  text-align: right;
   display: inline-block;
   position: relative; }
 
+.submenu__title {
+  text-align: right;
+  display: inline-block;
+  padding: 20px 60px; }
+
 .submenu__item {
   position: relative;
-  text-align: center;
+  text-align: left;
   width: 100%;
   color: black;
   display: block;
