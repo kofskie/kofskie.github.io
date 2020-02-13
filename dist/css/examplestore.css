@@ -177,10 +177,11 @@ html {
   color: #fff7e4;
   background-color: #352800; }
 
-.nav__cart {
+.nav__icons {
   float: right;
-  padding: 18px 20px;
-  font-size: 20px; }
+  font-size: 30px;
+  padding: 12px 30px 10px 20px;
+  color: #352800; }
 
 .nav__list {
   position: relative;

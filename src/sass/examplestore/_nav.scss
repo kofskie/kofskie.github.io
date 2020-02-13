@@ -56,10 +56,11 @@ html {
     background-color: $color-brand;
 }
 
-.nav__cart {
+.nav__icons {
     float: right;
-    padding: 18px 20px;
-    font-size: 20px;
+    font-size: 30px;
+    padding: 12px 30px 10px 20px;
+    color: $color-brand;
 }
 
 .nav__list {
