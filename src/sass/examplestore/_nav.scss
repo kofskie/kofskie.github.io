@@ -78,24 +78,29 @@
 }
 
 .submenu__container {
-    text-align: right;
     display: inline-block;
     position: relative;
 }
 
-.submenu__title {
-    text-align: right;
-    display: inline-block;
+.section {
+    text-align: left;
+    float: left;
     padding: 20px 60px;
 }
 
-.submenu__item {
+.section__title {
+    text-align: left;
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+.section__item {
     position: relative;
     text-align: left;
     width: 100%;
     color: black;
     display: block;
-    padding: 20px 20px;
+    padding: 10px 0px;
     font-family: 'Cabin',
         sans-serif;
     font-size: 20px;
