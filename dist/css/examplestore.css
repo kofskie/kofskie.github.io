@@ -132,6 +132,10 @@ table {
 a {
   text-decoration: none; }
 
+body,
+html {
+  overflow-x: hidden; }
+
 .top-banner {
   height: 30px;
   background-color: black; }
@@ -173,13 +177,13 @@ a {
   height: 100%; }
 
 .nav__list-item:hover .nav__link {
-  -webkit-animation: 0.3s ease-in-out forwards fadeInTabHighlight;
-          animation: 0.3s ease-in-out forwards fadeInTabHighlight; }
+  -webkit-animation: 0.2s ease-in-out forwards fadeInTabHighlight;
+          animation: 0.2s ease-in-out forwards fadeInTabHighlight; }
 
 .nav__list-item:hover .submenu {
   display: block;
-  -webkit-animation: 0.3s ease-in-out fadeInSubmenu;
-          animation: 0.3s ease-in-out fadeInSubmenu; }
+  -webkit-animation: 0.2s ease-in-out fadeInSubmenu;
+          animation: 0.2s ease-in-out fadeInSubmenu; }
 
 .nav__link {
   position: relative;
@@ -187,16 +191,17 @@ a {
   text-transform: capitalize;
   font-family: 'EB Garamond', serif;
   font-size: 24px;
-  padding: 20px 20px 16px 20px;
+  padding: 20px 25px 18px 25px;
   color: #fff9ec; }
 
 .submenu {
   text-align: center;
-  top: 60px;
+  top: 62px;
   position: absolute;
   display: none;
   background-color: #fff9ec;
-  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100vw;
   border-radius: 0px 0px 5px 5px;
   z-index: 9; }
@@ -208,14 +213,16 @@ a {
 .section {
   text-align: left;
   float: left;
-  padding: 20px 60px; }
+  padding: 45px 80px 40px 80px; }
 
 .section__title {
   text-align: left;
   display: inline-block;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
   font-weight: bold;
-  font-size: 24px; }
+  font-size: 24px;
+  font-family: 'EB Garamond', serif;
+  font-weight: 800; }
 
 .section__item {
   position: relative;
@@ -223,7 +230,7 @@ a {
   width: 100%;
   color: black;
   display: block;
-  padding: 10px 0px;
+  padding: 9px 0px;
   font-family: 'Cabin', sans-serif;
   font-size: 16px;
   border-radius: 4px; }
