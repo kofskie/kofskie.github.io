@@ -134,12 +134,12 @@ a {
 
 body,
 html {
-  overflow-x: hidden; }
+  overflow: hidden; }
 
 .top-banner {
   position: relative;
   height: 30px;
-  background-color: #fff6e2;
+  background-color: #fff7e4;
   z-index: 10; }
 
 .top-banner__list {
@@ -156,7 +156,7 @@ html {
 .nav {
   position: relative;
   height: 60px;
-  background-color: #352800;
+  background-color: rgba(255, 247, 228, 0.815);
   z-index: 9;
   -webkit-box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.666);
           box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.666); }
@@ -168,8 +168,14 @@ html {
 
 .nav__logo {
   float: left;
-  padding: 0px 20px;
-  line-height: 55px; }
+  padding: 2px 25px 0px 18px;
+  line-height: 58px;
+  font-family: 'Tangerine', cursive;
+  font-weight: 700;
+  font-size: 36px;
+  letter-spacing: 1px;
+  color: #fff7e4;
+  background-color: #352800; }
 
 .nav__cart {
   float: right;
@@ -185,6 +191,7 @@ html {
           animation: 0.2s ease-in-out forwards fadeInTabHighlight; }
 
 .nav__list-item:hover .submenu {
+  z-index: 4;
   display: block;
   -webkit-animation: 0.2s ease-in-out fadeInSubmenu;
           animation: 0.2s ease-in-out fadeInSubmenu; }
@@ -196,19 +203,21 @@ html {
   font-family: 'Lora', serif;
   font-size: 20px;
   padding: 20px 25px 20px 25px;
-  color: #fff6e2; }
+  font-weight: 700;
+  color: #352800; }
 
 .submenu {
   text-align: center;
   top: 60px;
   position: absolute;
   display: none;
-  background-color: #fff6e2;
+  background-color: #fff7e4;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100vw;
   border-radius: 0px 0px 5px 5px;
-  z-index: 9; }
+  -webkit-box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.666);
+          box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.666); }
 
 .submenu__container {
   display: inline-block;
@@ -261,27 +270,30 @@ html {
 
 @-webkit-keyframes fadeInTabHighlight {
   from {
-    background-color: #352800; }
+    background-color: unset; }
   to {
-    background-color: #fff6e2;
+    background-color: #fff7e4;
     color: black; } }
 
 @keyframes fadeInTabHighlight {
   from {
-    background-color: #352800; }
+    background-color: unset; }
   to {
-    background-color: #fff6e2;
+    background-color: #fff7e4;
     color: black; } }
 
 body {
   background-color: grey; }
 
 .head-container {
-  height: 847px;
-  z-index: 4; }
+  height: 870px;
+  z-index: 4;
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  margin-top: 0; }
 
 .carousel {
-  position: relative;
   background-color: red;
   height: 100%;
   width: 100%;
@@ -319,7 +331,7 @@ body {
   width: 500px;
   height: 80px;
   line-height: 80px;
-  background-color: #fff6e2;
+  background-color: #fff7e4;
   -webkit-transform: skewX(-20deg);
           transform: skewX(-20deg); }
 
@@ -351,12 +363,12 @@ body {
   line-height: 35px;
   letter-spacing: 3px;
   font-family: 'Open Sans', sans-serif;
-  color: #fff6e2; }
+  color: #fff7e4; }
 
 .main-container {
   position: relative;
   width: 100%;
   height: 1200px;
-  background-color: red; }
+  background-color: #fff7e4; }
 
 /*# sourceMappingURL=maps/examplestore.css.map */
