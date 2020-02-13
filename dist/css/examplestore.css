@@ -139,7 +139,7 @@ html {
 .top-banner {
   position: relative;
   height: 30px;
-  background-color: #FFF9EC;
+  background-color: #fff6e2;
   z-index: 10; }
 
 .top-banner__list {
@@ -151,12 +151,12 @@ html {
   font-weight: 900;
   display: inline-block;
   padding: 7px 15px;
-  color: #312707; }
+  color: #352800; }
 
 .nav {
   position: relative;
   height: 60px;
-  background-color: #312707;
+  background-color: #352800;
   z-index: 9;
   -webkit-box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.666);
           box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.666); }
@@ -196,14 +196,14 @@ html {
   font-family: 'Lora', serif;
   font-size: 20px;
   padding: 20px 25px 20px 25px;
-  color: #FFF9EC; }
+  color: #fff6e2; }
 
 .submenu {
   text-align: center;
   top: 60px;
   position: absolute;
   display: none;
-  background-color: #FFF9EC;
+  background-color: #fff6e2;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100vw;
@@ -261,16 +261,16 @@ html {
 
 @-webkit-keyframes fadeInTabHighlight {
   from {
-    background-color: #312707; }
+    background-color: #352800; }
   to {
-    background-color: #FFF9EC;
+    background-color: #fff6e2;
     color: black; } }
 
 @keyframes fadeInTabHighlight {
   from {
-    background-color: #312707; }
+    background-color: #352800; }
   to {
-    background-color: #FFF9EC;
+    background-color: #fff6e2;
     color: black; } }
 
 body {
@@ -319,7 +319,7 @@ body {
   width: 500px;
   height: 80px;
   line-height: 80px;
-  background-color: #FFF9EC;
+  background-color: #fff6e2;
   -webkit-transform: skewX(-20deg);
           transform: skewX(-20deg); }
 
@@ -351,7 +351,7 @@ body {
   line-height: 35px;
   letter-spacing: 3px;
   font-family: 'Open Sans', sans-serif;
-  color: #FFF9EC; }
+  color: #fff6e2; }
 
 .main-container {
   position: relative;
