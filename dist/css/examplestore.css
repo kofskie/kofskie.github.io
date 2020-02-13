@@ -150,13 +150,18 @@ html {
   font-family: 'Cabin', sans-serif;
   font-weight: 900;
   display: inline-block;
-  padding: 7px 15px;
+  padding: 7px 14px;
   color: #352800; }
+
+.top-banner__icons {
+  display: none;
+  position: absolute;
+  float: left; }
 
 .nav {
   position: relative;
   height: 60px;
-  background-color: rgba(255, 247, 228, 0.815);
+  background-color: rgba(255, 247, 228, 0.85);
   z-index: 9;
   -webkit-box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.666);
           box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.666); }
@@ -227,7 +232,7 @@ html {
 .section {
   text-align: left;
   float: left;
-  padding: 45px 80px 40px 80px; }
+  padding: 45px 70px 40px 70px; }
 
 .section__title {
   text-align: left;

@@ -20,8 +20,15 @@ html {
         sans-serif;
     font-weight: 900;
     display: inline-block;
-    padding: 7px 15px;
+    padding: 7px 14px;
     color: $color-brand;
+}
+
+.top-banner__icons {
+    // TODO: fix
+    display: none;
+    position: absolute;
+    float: left;
 }
 
 
@@ -113,7 +120,7 @@ html {
 .section {
     text-align: left;
     float: left;
-    padding: 45px 80px 40px 80px;
+    padding: 45px 70px 40px 70px;
 }
 
 .section__title {
