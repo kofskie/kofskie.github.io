@@ -24,8 +24,8 @@ $(function () {
             .submenu__container
                 .section #section-x
                     .section__title
-                    #section__list
-                        .section__item
+                    #section__list-x
+                        #section__item
                             a
         */
 
@@ -51,7 +51,6 @@ $(function () {
 
             sectionContainerElement.append(titleElement);
 
-
             // generate ul. ul is not styled
             let ulElement = document.createElement('ul');
             ulElement.id = `section__list-${i + 1}`;
@@ -60,14 +59,14 @@ $(function () {
 
             for (let x = 0; x < subcategories[i].items.length - 1; x++) {
 
-                // generate li
+                // generate li, which is unstyled
                 let liElement = document.createElement('li');
-                liElement.className = 'section__item';
 
                 // generate anchor
                 let anchor = document.createElement('a');
                 liElement.appendChild(anchor);
                 anchor.href = '#';
+                anchor.className = 'section__link';
                 anchor.innerHTML = subcategories[i].items[x];
 
                 $(`#section__list-${i + 1}`).append(liElement);
@@ -126,19 +125,19 @@ $(function () {
         // generate html from array of subcategory objects
         generateSubMenus(subcategories)
     });
-})
 
-// ----------------------------
-// -- CAROUSEL CONFIGURATION --
-// ----------------------------
+    // ----------------------------
+    // -- CAROUSEL CONFIGURATION --
+    // ----------------------------
 
-$('.carousel').slick({
-    dots: true,
-    arrows: true,
-    appendDots: $('.carousel__dots'),
-    infinite: true
+    $('.carousel').slick({
+        dots: true,
+        arrows: true,
+        appendDots: $('.carousel__dots'),
+        infinite: true
 
-    // TODO: make function to add html elements, call function in the data retrieval for loop, no need for async
+        // TODO: make function to add html elements, call function in the data retrieval for loop, no need for async
 
-    // TODO: add scroll event to trigger fade in animation, implement lazy loading
+        // TODO: add scroll event to trigger fade in animation, implement lazy loading
+    })
 })

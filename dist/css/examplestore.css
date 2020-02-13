@@ -137,23 +137,27 @@ html {
   overflow-x: hidden; }
 
 .top-banner {
+  position: relative;
   height: 30px;
-  background-color: black; }
+  background-color: #FFF9EC;
+  z-index: 10; }
 
 .top-banner__list {
   list-style: none;
   float: right; }
 
 .top-banner__item {
+  font-family: 'Cabin', sans-serif;
+  font-weight: 900;
   display: inline-block;
-  padding: 5px 10px;
-  color: white; }
+  padding: 7px 15px;
+  color: #312707; }
 
 .nav {
   position: relative;
-  height: 62px;
-  background-color: #664400;
-  z-index: 10;
+  height: 60px;
+  background-color: #312707;
+  z-index: 9;
   -webkit-box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.666);
           box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.666); }
 
@@ -189,17 +193,17 @@ html {
   position: relative;
   float: left;
   text-transform: capitalize;
-  font-family: 'EB Garamond', serif;
-  font-size: 24px;
-  padding: 20px 25px 18px 25px;
-  color: #fff9ec; }
+  font-family: 'Lora', serif;
+  font-size: 20px;
+  padding: 20px 25px 20px 25px;
+  color: #FFF9EC; }
 
 .submenu {
   text-align: center;
-  top: 62px;
+  top: 60px;
   position: absolute;
   display: none;
-  background-color: #fff9ec;
+  background-color: #FFF9EC;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100vw;
@@ -221,19 +225,27 @@ html {
   padding-bottom: 25px;
   font-weight: bold;
   font-size: 24px;
-  font-family: 'EB Garamond', serif;
+  font-family: 'Lora', serif;
   font-weight: 800; }
 
-.section__item {
+.section__link {
   position: relative;
   text-align: left;
   width: 100%;
   color: black;
+  opacity: 0.75;
   display: block;
   padding: 10px 0px;
   font-family: 'Cabin', sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   border-radius: 4px; }
+  .section__link:hover {
+    opacity: 1;
+    color: black;
+    -webkit-transition: 0.2s opacity ease-in-out;
+    transition: 0.2s opacity ease-in-out;
+    -webkit-transition: 0.2s color ease-in-out;
+    transition: 0.2s color ease-in-out; }
 
 @-webkit-keyframes fadeInSubmenu {
   from {
@@ -249,23 +261,23 @@ html {
 
 @-webkit-keyframes fadeInTabHighlight {
   from {
-    background-color: #664400; }
+    background-color: #312707; }
   to {
-    background-color: #fff9ec;
+    background-color: #FFF9EC;
     color: black; } }
 
 @keyframes fadeInTabHighlight {
   from {
-    background-color: #664400; }
+    background-color: #312707; }
   to {
-    background-color: #fff9ec;
+    background-color: #FFF9EC;
     color: black; } }
 
 body {
   background-color: grey; }
 
 .head-container {
-  height: 877px;
+  height: 847px;
   z-index: 4; }
 
 .carousel {
@@ -280,7 +292,7 @@ body {
           user-select: none; }
 
 .carousel__img {
-  width: 877px !important;
+  width: 877px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -292,7 +304,7 @@ body {
   height: 1000px;
   background-size: cover;
   background-position: 0% 20%;
-  background-image: url("https://envato-shoebox-0.imgix.net/cdee/d93b-66f8-46d4-b67e-ec7214119c13/DSC_4994+__________.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=800&s=cf9299689b6cd7eab162a0ecd0d26823"); }
+  background-image: url("https://i.pinimg.com/originals/55/80/5e/55805e6e5065998e2463e02aaffc8590.jpg"); }
 
 .carousel__dots {
   position: relative;
@@ -307,7 +319,7 @@ body {
   width: 500px;
   height: 80px;
   line-height: 80px;
-  background-color: white;
+  background-color: #FFF9EC;
   -webkit-transform: skewX(-20deg);
           transform: skewX(-20deg); }
 
@@ -339,7 +351,7 @@ body {
   line-height: 35px;
   letter-spacing: 3px;
   font-family: 'Open Sans', sans-serif;
-  color: white; }
+  color: #FFF9EC; }
 
 .main-container {
   position: relative;

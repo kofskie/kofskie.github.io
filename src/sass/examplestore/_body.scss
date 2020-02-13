@@ -3,7 +3,7 @@ body {
 }
 
 .head-container {
-    height: 877px;
+    height: 847px;
     z-index: 4;
 }
 
@@ -24,7 +24,7 @@ body {
 // }
 
 .carousel__img {
-    width: 877px !important;
+    width: 877px;
     user-select: none;
 }
 
@@ -34,7 +34,8 @@ body {
     height: 1000px;
     background-size: cover;
     background-position: 0% 20%;
-    background-image: url('https://envato-shoebox-0.imgix.net/cdee/d93b-66f8-46d4-b67e-ec7214119c13/DSC_4994+__________.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=800&s=cf9299689b6cd7eab162a0ecd0d26823');
+    // background-image: url('https://envato-shoebox-0.imgix.net/cdee/d93b-66f8-46d4-b67e-ec7214119c13/DSC_4994+__________.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=800&s=cf9299689b6cd7eab162a0ecd0d26823');
+    background-image: url('https://i.pinimg.com/originals/55/80/5e/55805e6e5065998e2463e02aaffc8590.jpg');
 }
 
 .carousel__dots {
@@ -52,7 +53,7 @@ body {
     height: 80px;
     line-height: 80px;
 
-    background-color: white;
+    background-color: $color-brand-secondary;
     transform: skewX(-20deg);
 }
 
@@ -85,7 +86,7 @@ body {
     letter-spacing: 3px;
     font-family: 'Open Sans',
         sans-serif;
-    color: white;
+    color: $color-brand-secondary;
 }
 
 
