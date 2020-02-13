@@ -29,6 +29,9 @@ $(function () {
                             a
         */
 
+        /* TODO: wrap this in a for loop that counts child elements 
+            in order to remove hardcoded container identifier */
+
         for (let i = 0; i < subcategories.length; i++) {
 
             console.log(subcategories.length);
