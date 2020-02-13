@@ -4,6 +4,7 @@ body {
 
 .head-container {
     height: 877px;
+    z-index: 4;
 }
 
 .carousel {
@@ -53,7 +54,6 @@ body {
 
     background-color: white;
     transform: skewX(-20deg);
-    z-index: 10;
 }
 
 .carousel__header-text-1 {

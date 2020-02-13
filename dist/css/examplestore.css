@@ -146,8 +146,12 @@ a {
   color: white; }
 
 .nav {
-  height: 60px;
-  background-color: #fff9ec; }
+  position: relative;
+  height: 62px;
+  background-color: #664400;
+  z-index: 10;
+  -webkit-box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.666);
+          box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.666); }
 
 @media (max-width: 768px) {
   .nav {
@@ -168,28 +172,34 @@ a {
   position: relative;
   height: 100%; }
 
+.nav__list-item:hover .nav__link {
+  -webkit-animation: 0.3s ease-in-out forwards fadeInTabHighlight;
+          animation: 0.3s ease-in-out forwards fadeInTabHighlight; }
+
 .nav__list-item:hover .submenu {
-  display: block; }
+  display: block;
+  -webkit-animation: 0.3s ease-in-out fadeInSubmenu;
+          animation: 0.3s ease-in-out fadeInSubmenu; }
 
 .nav__link {
   position: relative;
   float: left;
   text-transform: capitalize;
-  font-family: 'Crimson Text', serif;
+  font-family: 'EB Garamond', serif;
   font-size: 24px;
-  color: black;
-  padding: 20px 20px 16px 20px; }
+  padding: 20px 20px 16px 20px;
+  color: #fff9ec; }
 
 .submenu {
   text-align: center;
   top: 60px;
   position: absolute;
   display: none;
-  background-color: #ececec;
+  background-color: #fff9ec;
   padding: 10px;
   width: 100vw;
   border-radius: 0px 0px 5px 5px;
-  z-index: 10; }
+  z-index: 9; }
 
 .submenu__container {
   display: inline-block;
@@ -203,7 +213,9 @@ a {
 .section__title {
   text-align: left;
   display: inline-block;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  font-weight: bold;
+  font-size: 24px; }
 
 .section__item {
   position: relative;
@@ -213,14 +225,41 @@ a {
   display: block;
   padding: 10px 0px;
   font-family: 'Cabin', sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   border-radius: 4px; }
+
+@-webkit-keyframes fadeInSubmenu {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeInSubmenu {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes fadeInTabHighlight {
+  from {
+    background-color: #664400; }
+  to {
+    background-color: #fff9ec;
+    color: black; } }
+
+@keyframes fadeInTabHighlight {
+  from {
+    background-color: #664400; }
+  to {
+    background-color: #fff9ec;
+    color: black; } }
 
 body {
   background-color: grey; }
 
 .head-container {
-  height: 877px; }
+  height: 877px;
+  z-index: 4; }
 
 .carousel {
   position: relative;
@@ -263,8 +302,7 @@ body {
   line-height: 80px;
   background-color: white;
   -webkit-transform: skewX(-20deg);
-          transform: skewX(-20deg);
-  z-index: 10; }
+          transform: skewX(-20deg); }
 
 .carousel__header-text-1 {
   position: absolute;

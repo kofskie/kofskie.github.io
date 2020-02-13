@@ -19,8 +19,12 @@
 
 // Main nav menu
 .nav {
-    height: 60px;
-    background-color: rgb(255, 249, 236);
+    position: relative;
+    height: 62px;
+    background-color: rgb(102, 68, 0);
+    // background-color: rgb(255, 249, 236);
+    z-index: 10;
+    box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.666);
 }
 
 @include tablet() {
@@ -48,8 +52,13 @@
 }
 
 .nav__list-item {
+    &:hover .nav__link {
+        animation: 0.3s ease-in-out forwards fadeInTabHighlight;
+    }
+
     &:hover .submenu {
         display: block;
+        animation: 0.3s ease-in-out fadeInSubmenu;
     }
 }
 
@@ -58,11 +67,11 @@
     position: relative;
     float: left;
     text-transform: capitalize;
-    font-family: 'Crimson Text',
+    font-family: 'EB Garamond',
         serif;
     font-size: 24px;
-    color: black;
     padding: 20px 20px 16px 20px;
+    color: rgb(255, 249, 236);
 }
 
 .submenu {
@@ -70,11 +79,11 @@
     top: 60px;
     position: absolute;
     display: none;
-    background-color: rgb(236, 236, 236);
+    background-color: rgb(255, 249, 236);
     padding: 10px;
     width: 100vw;
     border-radius: 0px 0px 5px 5px;
-    z-index: 10;
+    z-index: 9;
 }
 
 .submenu__container {
@@ -92,6 +101,8 @@
     text-align: left;
     display: inline-block;
     padding-bottom: 20px;
+    font-weight: bold;
+    font-size: 24px;
 }
 
 .section__item {
@@ -103,11 +114,34 @@
     padding: 10px 0px;
     font-family: 'Cabin',
         sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     border-radius: 4px;
 
     // &:hover {
     //     background-color: rgb(216, 216, 216);
     // }
+}
 
+// ANIMATIONS
+
+@keyframes fadeInSubmenu {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInTabHighlight {
+    from {
+        background-color: rgb(102, 68, 0);
+
+    }
+
+    to {
+        background-color: rgb(255, 249, 236);
+        color: black;
+    }
 }
