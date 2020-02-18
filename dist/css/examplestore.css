@@ -180,7 +180,7 @@ html {
 .nav__icons {
   float: right;
   font-size: 24px;
-  padding: 16px 22px 14px 22px;
+  padding: 16px 22px 18px 22px;
   color: #352800; }
   .nav__icons:hover {
     -webkit-animation: 0.2s ease-in-out forwards fadeInTabHighlight;
@@ -341,7 +341,8 @@ label {
     position: relative;
     display: inline-block;
     cursor: pointer;
-    float: right; }
+    float: right;
+    padding: 13px 10px 13px 10px; }
   .nav {
     height: 60px; }
   .nav__logo {
@@ -353,6 +354,8 @@ label {
     padding: 2px 25px 0px 18px;
     line-height: 58px;
     text-align: center; }
+  .nav__icons {
+    padding: 16px 12px 18px 10px; }
   .submenu__container {
     display: none; }
   .nav__list-item {

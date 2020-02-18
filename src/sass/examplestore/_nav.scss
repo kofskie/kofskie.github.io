@@ -60,7 +60,7 @@ html {
 .nav__icons {
     float: right;
     font-size: 24px;
-    padding: 16px 22px 14px 22px;
+    padding: 16px 22px 18px 22px;
     color: $color-brand;
 
     &:hover {
@@ -251,7 +251,6 @@ label {
     .submenu {
         top: 100px;
     }
-
 }
 
 // up to 768px
@@ -262,6 +261,7 @@ label {
         display: inline-block;
         cursor: pointer;
         float: right;
+        padding: 13px 10px 13px 10px;
     }
 
     .nav {
@@ -277,6 +277,10 @@ label {
         padding: 2px 25px 0px 18px;
         line-height: 58px;
         text-align: center;
+    }
+
+    .nav__icons {
+        padding: 16px 12px 18px 10px;
     }
 
     .submenu__container {
