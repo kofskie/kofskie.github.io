@@ -151,7 +151,7 @@ html {
   font-weight: 900;
   display: inline-block;
   padding: 7px 14px;
-  color: #352800; }
+  color: black; }
 
 .top-banner__icons {
   display: none;
@@ -162,14 +162,7 @@ html {
   position: relative;
   height: 60px;
   background-color: rgba(255, 247, 228, 0.85);
-  z-index: 9;
-  -webkit-box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.666);
-          box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.666); }
-
-@media (max-width: 768px) {
-  .nav {
-    position: relative;
-    background-color: red; } }
+  z-index: 9; }
 
 .nav__logo {
   float: left;
@@ -179,14 +172,19 @@ html {
   font-weight: 700;
   font-size: 36px;
   letter-spacing: 1px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: #fff7e4;
   background-color: #352800; }
 
 .nav__icons {
   float: right;
   font-size: 30px;
-  padding: 12px 30px 10px 20px;
+  padding: 14px 25px 14px 25px;
   color: #352800; }
+  .nav__icons:hover {
+    -webkit-animation: 0.2s ease-in-out forwards fadeInTabHighlight;
+            animation: 0.2s ease-in-out forwards fadeInTabHighlight; }
 
 .nav__list {
   position: relative;
@@ -199,6 +197,7 @@ html {
 .nav__list-item:hover .submenu {
   z-index: 4;
   display: block;
+  opacity: 1;
   -webkit-animation: 0.2s ease-in-out fadeInSubmenu;
           animation: 0.2s ease-in-out fadeInSubmenu; }
 
@@ -213,6 +212,7 @@ html {
   color: #352800; }
 
 .submenu {
+  opacity: 0;
   text-align: center;
   top: 60px;
   position: absolute;
@@ -221,18 +221,28 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100vw;
-  border-radius: 0px 0px 5px 5px;
-  -webkit-box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.666);
-          box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.666); }
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.666);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.666); }
 
 .submenu__container {
   display: inline-block;
   position: relative; }
 
+.promo-section {
+  float: left;
+  text-align: center;
+  padding: 0 50px 0 50px; }
+
+.promo-section__content {
+  background-image: url("../images/coffee-promo-1.png");
+  width: calc(380px/2);
+  height: calc(504px/2);
+  background-size: contain; }
+
 .section {
   text-align: left;
   float: left;
-  padding: 45px 70px 40px 70px; }
+  padding: 45px 60px 40px 60px; }
 
 .section__title {
   text-align: left;
@@ -248,12 +258,11 @@ html {
   text-align: left;
   width: 100%;
   color: black;
-  opacity: 0.75;
+  opacity: 0.66;
   display: block;
   padding: 10px 0px;
   font-family: 'Cabin', sans-serif;
-  font-size: 17px;
-  border-radius: 4px; }
+  font-size: 17px; }
   .section__link:hover {
     opacity: 1;
     color: black;
@@ -288,6 +297,12 @@ html {
     background-color: #fff7e4;
     color: black; } }
 
+@media (max-width: 576px) {
+  .nav {
+    background-color: green; }
+  .nav__list-item {
+    display: block; } }
+
 body {
   background-color: grey; }
 
@@ -300,7 +315,7 @@ body {
   margin-top: 0; }
 
 .carousel {
-  background-color: red;
+  background-color: grey;
   height: 100%;
   width: 100%;
   overflow: hidden;

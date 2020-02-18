@@ -162,14 +162,6 @@ button {
   line-height: 1.85em;
   word-spacing: 0.125em; }
 
-@media (max-width: 425px) {
-  .about-section__paragraph {
-    font-size: 1.2em; } }
-
-@media (max-width: 768px) {
-  .about-section__paragraph {
-    font-size: 1.5em; } }
-
 body {
   margin: 0;
   padding: 0; }
@@ -210,7 +202,7 @@ html {
 .blendfix {
   position: relative; }
 
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
   .about-section__para-container {
     visibility: hidden; } }
 

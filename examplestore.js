@@ -16,19 +16,17 @@ $(function () {
         measurementId: 'G-FYCQVYFTNC'
     };
 
-    function generateSubMenus(subcategories) {
+    function populateSubMenus(subcategories) {
 
         /* ----- HTML STRUCTURE -----
-
-        .submenu #submenu-x
-            .submenu__container
-                .section #section-x
-                    .section__title
-                    #section__list-x
-                        #section__item
+        .submenu #submenu-x -- div
+            .submenu__container -- div
+                .section #section-x -- div
+                    .section__title -- h3
+                    #section__list-x -- ul
+                        #section__item -- li
                             a
         */
-
         /* TODO: wrap this in a for loop that counts child elements 
             in order to remove hardcoded container identifier */
 
@@ -40,7 +38,9 @@ $(function () {
             sectionContainerElement.className = 'section';
             sectionContainerElement.id = `section-${i + 1}`;
 
-            $(`#submenu__container-1`).append(sectionContainerElement);
+            /* puts hardcoded promo elements at END of list by
+               putting the container of our generated elements first*/
+            $("#submenu__container-1").prepend(sectionContainerElement);
 
             // generate h3
             let subcategoryTitle = subcategories[i].title;
@@ -88,8 +88,8 @@ $(function () {
         // array of all menu sections
         let subcategories = [];
 
-        // STRUCTURE: sublist --> subcategory*num --> title & li*num
-        for (let i = 1; i < snapshot.child('sublist-1').numChildren() + 1; i++) { // get number of subcategories in sublist
+        // STRUCTURE: sublist --> special & subcategory*num --> title & li*num
+        for (let i = 1; i < snapshot.child('sublist-1').numChildren(); i++) { // get number of subcategories in sublist
 
             // object for menu sections
             let subcategory = {
@@ -123,7 +123,8 @@ $(function () {
         }
 
         // generate html from array of subcategory objects
-        generateSubMenus(subcategories)
+        subcategories.reverse();
+        populateSubMenus(subcategories)
     });
 
     // ----------------------------

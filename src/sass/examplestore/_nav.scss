@@ -8,6 +8,7 @@ html {
     height: 30px;
     background-color: $color-brand-secondary;
     z-index: 10;
+    // border-bottom: 1px solid rgba(75, 52, 8, 0.205);
 }
 
 .top-banner__list {
@@ -21,7 +22,7 @@ html {
     font-weight: 900;
     display: inline-block;
     padding: 7px 14px;
-    color: $color-brand;
+    color: black;
 }
 
 .top-banner__icons {
@@ -39,15 +40,7 @@ html {
     background-color: $color-brand-nav;
     // background-color: rgb(255, 249, 236);
     z-index: 9;
-    box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.666);
-}
-
-// TODO: responsive nav
-@include tablet() {
-    .nav {
-        position: relative;
-        background-color: red;
-    }
+    // box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.459);
 }
 
 .nav__logo {
@@ -59,6 +52,7 @@ html {
     font-weight: 700;
     font-size: 36px;
     letter-spacing: 1px;
+    box-sizing: border-box;
     color: $color-brand-secondary;
     background-color: $color-brand;
 }
@@ -66,8 +60,12 @@ html {
 .nav__icons {
     float: right;
     font-size: 30px;
-    padding: 12px 30px 10px 20px;
+    padding: 14px 25px 14px 25px;
     color: $color-brand;
+
+    &:hover {
+        animation: 0.2s ease-in-out forwards fadeInTabHighlight;
+    }
 }
 
 .nav__list {
@@ -83,6 +81,7 @@ html {
     &:hover .submenu {
         z-index: 4;
         display: block;
+        opacity: 1;
         animation: 0.2s ease-in-out fadeInSubmenu;
     }
 }
@@ -101,15 +100,19 @@ html {
 }
 
 .submenu {
+    // TODO: change back after debugging
+    opacity: 0;
+    // opacity: 1;
     text-align: center;
     top: 60px;
     position: absolute;
+    // TODO: change back after debugging
     display: none;
+    // display: block;
     background-color: $color-brand-secondary;
     box-sizing: border-box;
     width: 100vw;
-    border-radius: 0px 0px 5px 5px;
-    box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.666);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.666);
 }
 
 .submenu__container {
@@ -117,10 +120,23 @@ html {
     position: relative;
 }
 
+.promo-section {
+    float: left;
+    text-align: center;
+    padding: 0 50px 0 50px;
+}
+
+.promo-section__content {
+    background-image: url("../images/coffee-promo-1.png");
+    width: calc(380px/2);
+    height: calc(504px/2);
+    background-size: contain;
+}
+
 .section {
     text-align: left;
     float: left;
-    padding: 45px 70px 40px 70px;
+    padding: 45px 60px 40px 60px;
 }
 
 .section__title {
@@ -139,13 +155,12 @@ html {
     text-align: left;
     width: 100%;
     color: rgb(0, 0, 0);
-    opacity: 0.75;
+    opacity: 0.66;
     display: block;
     padding: 10px 0px;
     font-family: 'Cabin',
         sans-serif;
     font-size: 17px;
-    border-radius: 4px;
 
     &:hover {
         opacity: 1;
@@ -175,5 +190,17 @@ html {
     to {
         background-color: $color-brand-secondary;
         color: black;
+    }
+}
+
+// RESPONSIVENESS
+
+@include mobile {
+    .nav {
+        background-color: green;
+    }
+
+    .nav__list-item {
+        display: block;
     }
 }

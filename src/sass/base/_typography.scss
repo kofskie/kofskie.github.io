@@ -30,15 +30,3 @@ button {
     line-height: 1.85em;
     word-spacing: 0.125em;
 }
-
-@include mobile-l {
-    .about-section__paragraph {
-        font-size: 1.2em;
-    }
-}
-
-@include tablet {
-    .about-section__paragraph {
-        font-size: 1.5em;
-    }
-}
