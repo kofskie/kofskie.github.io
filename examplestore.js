@@ -24,7 +24,7 @@ $(function () {
                 .section #section-x -- div
                     .section__title -- h3
                     #section__list-x -- ul
-                        #section__item -- li
+                        .section__item -- li
                             a
         */
         /* TODO: wrap this in a for loop that counts child elements 

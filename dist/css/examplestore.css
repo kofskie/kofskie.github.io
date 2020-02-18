@@ -297,12 +297,6 @@ html {
     background-color: #fff7e4;
     color: black; } }
 
-@media (max-width: 576px) {
-  .nav {
-    background-color: green; }
-  .nav__list-item {
-    display: block; } }
-
 body {
   background-color: grey; }
 

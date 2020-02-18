@@ -193,14 +193,14 @@ html {
     }
 }
 
-// RESPONSIVENESS
+// TODO: RESPONSIVENESS
 
-@include mobile {
-    .nav {
-        background-color: green;
-    }
+// @include mobile {
+//     .nav {
+//         background-color: green;
+//     }
 
-    .nav__list-item {
-        display: block;
-    }
-}
+//     .nav__list-item {
+//         display: block;
+//     }
+// }
