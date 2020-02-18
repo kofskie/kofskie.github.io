@@ -154,13 +154,13 @@ html {
 .section {
     text-align: left;
     float: left;
-    padding: 45px 60px 40px 60px;
+    padding: 45px 50px 40px 50px;
 }
 
 .section__title {
     text-align: left;
     display: inline-block;
-    padding-bottom: 25px;
+    padding-bottom: 18px;
     font-weight: bold;
     font-size: 24px;
     font-family: 'Lora',
@@ -198,6 +198,7 @@ label {
     font-size: 34px;
     right: 0px;
     z-index: 10;
+    color: $color-brand;
 }
 
 // ANIMATIONS
@@ -233,6 +234,10 @@ label {
     //     display: none;
     // }
 
+    .top-banner__item {
+        padding: 6px 16px 0px 0px;
+    }
+
     .nav {
         height: 100px;
     }
@@ -266,6 +271,10 @@ label {
 
     .nav {
         height: 60px;
+    }
+
+    .top-banner__item {
+        padding: 6px 10px 0px 0px;
     }
 
     .nav__logo {
