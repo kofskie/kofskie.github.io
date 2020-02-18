@@ -27,7 +27,7 @@ $(function () {
                         .section__item -- li
                             a
         */
-        /* TODO: wrap this in a for loop that counts child elements 
+        /* TODO: wrap this in a for loop that counts nav li elements 
             in order to remove hardcoded container identifier */
 
         for (let i = 0; i < subcategories.length; i++) {
@@ -39,7 +39,8 @@ $(function () {
             sectionContainerElement.id = `section-${i + 1}`;
 
             /* puts hardcoded promo elements at END of list by
-               putting the container of our generated elements first*/
+               putting the container of our generated elements first,
+               requires array to be reversed before function call */
             $("#submenu__container-1").prepend(sectionContainerElement);
 
             // generate h3
@@ -89,7 +90,8 @@ $(function () {
         let subcategories = [];
 
         // STRUCTURE: sublist --> special & subcategory*num --> title & li*num
-        for (let i = 1; i < snapshot.child('sublist-1').numChildren(); i++) { // get number of subcategories in sublist
+        // get number of subcategories in sublist
+        for (let i = 1; i < snapshot.child('sublist-1').numChildren(); i++) {
 
             // object for menu sections
             let subcategory = {
@@ -137,8 +139,10 @@ $(function () {
         appendDots: $('.carousel__dots'),
         infinite: true
 
-        // TODO: make function to add html elements, call function in the data retrieval for loop, no need for async
-
         // TODO: add scroll event to trigger fade in animation, implement lazy loading
     })
+
+    // MENUS
+
+
 })

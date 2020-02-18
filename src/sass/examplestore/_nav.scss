@@ -59,8 +59,8 @@ html {
 
 .nav__icons {
     float: right;
-    font-size: 30px;
-    padding: 14px 25px 14px 25px;
+    font-size: 24px;
+    padding: 16px 22px 14px 22px;
     color: $color-brand;
 
     &:hover {
@@ -69,11 +69,29 @@ html {
 }
 
 .nav__list {
+    display: block;
     position: relative;
     height: 100%;
 }
 
 .nav__list-item {
+    display: block;
+
+    &:hover .nav__link {
+        animation: 0.2s ease-in-out forwards fadeInTabHighlight;
+    }
+
+    &:hover .submenu {
+        z-index: 4;
+        display: block;
+        opacity: 1;
+        animation: 0.2s ease-in-out fadeInSubmenu;
+    }
+}
+
+.nav__list-icon {
+    display: block;
+
     &:hover .nav__link {
         animation: 0.2s ease-in-out forwards fadeInTabHighlight;
     }
@@ -170,6 +188,18 @@ html {
     }
 }
 
+.nav__button {
+    display: none;
+}
+
+label {
+    display: none;
+    padding: 12px 20px 12px 20px;
+    font-size: 34px;
+    right: 0px;
+    z-index: 10;
+}
+
 // ANIMATIONS
 
 @keyframes fadeInSubmenu {
@@ -194,13 +224,92 @@ html {
 }
 
 // TODO: RESPONSIVENESS
+// mixins are max-width queries, "up to" device width
 
-// @include mobile {
-//     .nav {
-//         background-color: green;
-//     }
+// up to 992px
+@include laptop {
 
-//     .nav__list-item {
-//         display: block;
-//     }
-// }
+    // .nav__icons {
+    //     display: none;
+    // }
+
+    .nav {
+        height: 100px;
+    }
+
+    .nav__logo {
+        display: block;
+        width: 100%;
+        position: relative;
+        height: 40px;
+        font-size: 34px;
+        padding: 8px 25px 0px 18px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .submenu {
+        top: 100px;
+    }
+
+}
+
+// up to 768px
+@include tablet {
+
+    label {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        float: right;
+    }
+
+    .nav {
+        height: 60px;
+    }
+
+    .nav__logo {
+        display: inline-block;
+        width: auto;
+        position: relative;
+        height: 60px;
+        font-size: 34px;
+        padding: 2px 25px 0px 18px;
+        line-height: 58px;
+        text-align: center;
+    }
+
+    .submenu__container {
+        display: none;
+    }
+
+    .nav__list-item {
+        display: none;
+        float: right;
+        height: 100%;
+        width: 100%;
+        background-color: $color-brand-secondary;
+    }
+
+    .nav__link {
+        display: none;
+        float: left;
+    }
+}
+
+.nav__button:checked~*.nav__list {
+
+    .nav__list-item {
+        display: block;
+        text-align: center;
+
+        .nav__link {
+            float: none;
+            display: block;
+        }
+    }
+
+    .nav__icons {
+        display: inline;
+    }
+}
